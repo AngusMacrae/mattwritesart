@@ -1,0 +1,22 @@
+body {
+  font-family: 'EB Garamond', serif;
+  text-rendering: optimizeLegibility;
+  color: #181818;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.flow {
+  --flow-space: 1em;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space);
+}
