@@ -23,7 +23,7 @@ function App() {
         <p>Website under construction - stay tuned.</p>
         <ul class='social-links'>
           <li>
-            <a href='mailto:@gmail.com' target='_blank' rel='noopener noreferrer' title='Email'>
+            <a href='mailto:mattwritesart@gmail.com' target='_blank' rel='noopener noreferrer' title='Email'>
               <img src={email} alt='mattwritesart Email' class='email-icon' />
             </a>
           </li>
