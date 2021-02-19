@@ -24,7 +24,7 @@ export default function Header() {
             <img src={menuOpen ? close : menu} alt='Menu' />
           </button>
         </div>
-        <nav className={`header-nav ${menuOpen && 'active'}`}>
+        <nav className={`header-nav ${menuOpen ? 'active' : ''}`}>
           <ul className='header-nav__page-links'>
             {/* <li>
               <a href=''>Work</a>
