@@ -4,6 +4,15 @@ body {
   color: #181818;
 }
 
+main {
+  padding: 0 2rem;
+}
+
+main section {
+  margin: 2.5rem auto 0;
+  max-width: 1400px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -109,7 +118,14 @@ a:hover {
   padding: 0.5rem 1rem;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 730px) {
+  main {
+    padding: 0 1rem;
+  }
+
+  main section {
+    margin: 1.5rem auto 0;
+  }
   .header {
     padding: 1rem 1rem 0;
     /* display: flex; */
@@ -177,4 +193,14 @@ a:hover {
   .header h1 {
     font-size: 1.9rem;
   }
+}
+
+.gallery {
+  column-width: 15rem;
+  -webkit-column-fill: balance;
+  column-fill: balance;
+}
+
+.gallery-item {
+  margin-bottom: 1rem;
 }
