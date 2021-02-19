@@ -20,3 +20,75 @@ a:hover {
 .flow > * + * {
   margin-top: var(--flow-space);
 }
+
+* {
+  outline: 1px solid red;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: 0.5rem 1rem;
+}
+
+.header a:hover {
+  text-decoration: none;
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header .deemphasised {
+  font-weight: normal;
+}
+
+.header__content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.header-home {
+  display: flex;
+  position: relative;
+  bottom: 0.6rem;
+}
+
+.header-nav {
+  display: flex;
+  font-weight: bold;
+  /* align-items: flex-end; */
+  /* line-height: calc(1.5rem + 3vw); */
+}
+
+.header-nav__page-links,
+.header-nav__social-links {
+  display: flex;
+  font-size: 1.25rem;
+}
+
+.header-nav__page-links li,
+.header-nav__social-links li {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__social-links li {
+  padding: 0.5rem 0 0.5rem 1rem;
+}
+
+.header-nav__social-links a {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav__social-links img {
+  height: 30px;
+}
+
+.header-nav__page-links a {
+  padding: 0.5rem 1rem;
+}
