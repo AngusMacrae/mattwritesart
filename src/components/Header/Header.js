@@ -1,16 +1,30 @@
 import instagram from '../../assets/icons/instagram.svg';
 import twitter from '../../assets/icons/twitter.svg';
+import menu from '../../assets/icons/menu.svg';
+import close from '../../assets/icons/close.svg';
+import { useState } from 'react';
 
 export default function Header() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setMenuOpen(prevState => !prevState);
+  }
+
   return (
     <header className='header'>
       <div className='header__content-container'>
-        <a href='/' title='mattwritesart' className='header-home'>
-          <h1>
-            matt<span className='deemphasised'>writes</span>art<small className='deemphasised'>.co.uk</small>
-          </h1>
-        </a>
-        <nav className='header-nav'>
+        <div className='header__top-bar'>
+          <a href='/' title='mattwritesart' className='header-home'>
+            <h1>
+              matt<span className='deemphasised'>writes</span>art<small className='deemphasised'>.co.uk</small>
+            </h1>
+          </a>
+          <button onClick={toggleMenu} className='header__menu-toggle-btn'>
+            <img src={menuOpen ? close : menu} alt='Menu' />
+          </button>
+        </div>
+        <nav className={`header-nav ${menuOpen && 'active'}`}>
           <ul className='header-nav__page-links'>
             {/* <li>
               <a href=''>Work</a>

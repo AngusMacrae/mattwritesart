@@ -41,6 +41,15 @@ select {
   font: inherit;
 }
 
+button {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  display: block;
+  background-color: inherit;
+  cursor: pointer;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
