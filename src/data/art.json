@@ -1,6 +1,7 @@
 [
   {
     "name": "Swallow Study 1",
+    "slug": "swallow-study-1",
     "date": "2020/12/28",
     "width": 8.3,
     "height": 11.7,
@@ -16,8 +17,9 @@
     ]
   },
   {
-    "name": "Swallow Study 1",
-    "date": "2020/12/28",
+    "name": "Bee Study 1",
+    "slug": "bee-study-1",
+    "date": "2021/01/02",
     "width": 8.3,
     "height": 11.7,
     "price": 50,
@@ -25,15 +27,16 @@
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
-      "Swallow in flight, on the poem 'The Swallow', by Thomas Aird (1802-1876)."
+      "Bee study, on the poem 'The Humble Bee', by John Clare (1793-1864)"
     ],
     "tags": [
       "animals"
     ]
   },
   {
-    "name": "Swallow Study 1",
-    "date": "2020/12/28",
+    "name": "Butterfly Study 1",
+    "slug": "butterfly-study-1",
+    "date": "2021/02/03",
     "width": 8.3,
     "height": 11.7,
     "price": 50,
@@ -41,15 +44,31 @@
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
-      "Swallow in flight, on the poem 'The Swallow', by Thomas Aird (1802-1876)."
+      "Pair of Blue Morpho butterflies, in colour and monochrome"
+    ],
+    "tags": []
+  },
+  {
+    "name": "Frank Turner",
+    "slug": "frank-turner",
+    "date": "2021/01/02",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "sold": true,
+    "prints": true,
+    "medium": "Fineliner inked text on Bristol paper",
+    "description": [
+      "Portrait of Frank Turner with singer's lyrics"
     ],
     "tags": [
-      "animals"
+      "people"
     ]
   },
   {
-    "name": "Swallow Study 1",
-    "date": "2020/12/28",
+    "name": "Hand Study 1",
+    "slug": "hand-study-1",
+    "date": "2021/01/13",
     "width": 8.3,
     "height": 11.7,
     "price": 50,
@@ -57,47 +76,44 @@
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
-      "Swallow in flight, on the poem 'The Swallow', by Thomas Aird (1802-1876)."
+      "Line study of hands, on the poem 'On A Prayer in Time of War', by Alfred Noyes (1880-1958)"
     ],
-    "tags": [
-      "animals"
-    ]
+    "tags": []
   },
   {
-    "name": "Swallow Study 1",
-    "date": "2020/12/28",
+    "name": "Chino Moreno",
+    "slug": "chino-moreno",
+    "date": "2021/01/23",
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": false,
+    "sold": true,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
-      "Swallow in flight, on the poem 'The Swallow', by Thomas Aird (1802-1876)."
+      "Portrait of Chino Moreno with singer's lyrics"
     ],
-    "tags": [
-      "animals"
-    ]
+    "tags": []
   },
   {
-    "name": "Swallow Study 1",
-    "date": "2020/12/28",
+    "name": "Dustin Kensrue",
+    "slug": "dustin-kensrue",
+    "date": "2021/01/31",
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": false,
+    "sold": true,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
-      "Swallow in flight, on the poem 'The Swallow', by Thomas Aird (1802-1876)."
+      "Portrait of Dustin Kensrue with singer's lyrics"
     ],
-    "tags": [
-      "animals"
-    ]
+    "tags": []
   },
   {
-    "name": "Swallow Study 1",
-    "date": "2020/12/28",
+    "name": "After Rembrant",
+    "slug": "after-rembrant",
+    "date": "2021/02/03",
     "width": 8.3,
     "height": 11.7,
     "price": 50,
@@ -105,26 +121,8 @@
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
-      "Swallow in flight, on the poem 'The Swallow', by Thomas Aird (1802-1876)."
+      "Portrait study of Rembrandt, using selection of painter's own quotes"
     ],
-    "tags": [
-      "animals"
-    ]
-  },
-  {
-    "name": "Swallow Study 1",
-    "date": "2020/12/28",
-    "width": 8.3,
-    "height": 11.7,
-    "price": 50,
-    "sold": false,
-    "prints": true,
-    "medium": "Fineliner inked text on Bristol paper",
-    "description": [
-      "Swallow in flight, on the poem 'The Swallow', by Thomas Aird (1802-1876)."
-    ],
-    "tags": [
-      "animals"
-    ]
+    "tags": []
   }
 ]
