@@ -1,5 +1,6 @@
 body {
   font-family: 'EB Garamond', serif;
+  font-size: 1.25rem;
   text-rendering: optimizeLegibility;
   color: #181818;
 }
@@ -210,4 +211,8 @@ a:hover {
   -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
   box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+}
+
+.about {
+  text-align: center;
 }

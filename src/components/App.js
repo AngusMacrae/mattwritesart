@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './Header/Header';
 import Gallery from './Gallery/Gallery';
+import About from './About/About';
 import art from '../data/art.json';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <main>
         <Gallery art={art} />
+        <About />
       </main>
     </>
   );
