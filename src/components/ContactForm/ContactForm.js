@@ -1,6 +1,6 @@
-export default function Contact() {
+export default function ContactForm() {
   return (
-    <section className='contact'>
+    <section className='contact-form'>
       <form>
         <input type='text' name='name' placeholder='Your name' />
         <input type='email' name='email' placeholder='Your email' />
