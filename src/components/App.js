@@ -18,7 +18,7 @@ function App() {
             <Home art={art} />
           </Route>
           <Route path='/art'>
-            <Art />
+            <Art art={art} />
           </Route>
           <Route path='/commissions'>
             <Commissions />
