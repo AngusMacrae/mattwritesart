@@ -4,7 +4,7 @@ export default function Gallery({ art }) {
   return (
     <section className='gallery'>
       {art.map(artwork => (
-        <GalleryItem artwork={artwork} key={artwork.id} />
+        <GalleryItem artwork={artwork} key={artwork.slug} />
       ))}
     </section>
   );
