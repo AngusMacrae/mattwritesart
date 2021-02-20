@@ -42,6 +42,7 @@ a:hover {
   top: 0;
   padding: 1rem 2rem 0;
   display: flex;
+  z-index: 99;
 }
 
 .header a:hover {
@@ -206,6 +207,58 @@ a:hover {
 .gallery-item {
   padding: 0.5rem;
   margin-bottom: 1rem;
+  position: relative;
+  font-size: 1rem;
+}
+
+.gallery-item h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  font-size: 1.25rem;
+  background-color: white;
+  padding: 0.2rem 0.8rem;
+  -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  display: none;
+}
+
+.gallery-item__chips {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 1rem;
+  right: 1rem;
+  display: none;
+}
+
+.gallery-item__chips > * {
+  background-color: white;
+  padding: 0.3rem 0.8rem;
+  -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item__chips > span:not(:first-of-type) {
+  margin-left: 0.5rem;
+}
+
+.gallery-item button {
+  margin-left: auto;
+  color: white;
+  background-color: black;
+}
+
+.gallery-item:hover h2 {
+  display: block;
+}
+
+.gallery-item:hover .gallery-item__chips {
+  display: flex;
 }
 
 .gallery-item img {
