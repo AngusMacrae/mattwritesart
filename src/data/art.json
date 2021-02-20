@@ -124,5 +124,95 @@
       "Portrait study of Rembrandt, using selection of painter's own quotes"
     ],
     "tags": []
+  },
+  {
+    "name": "Adele",
+    "slug": "adele",
+    "date": "2017/03/23",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "sold": true,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of Adele with singer's lyrics"
+    ],
+    "tags": []
+  },
+  {
+    "name": "Albus Dumbledore",
+    "slug": "albus-dumbledore",
+    "date": "2017/04/26",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "sold": true,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of Albus Dumbledore with text from Harry Potter and the Philosopher's Stone"
+    ],
+    "tags": []
+  },
+  {
+    "name": "Aubade (Skull Study 1)",
+    "slug": "aubade-skull-study-1",
+    "date": "2017/06/19",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "sold": true,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Line skull study, on the poem 'Aubade', by Philip Larkin (1922-1985)"
+    ],
+    "tags": []
+  },
+  {
+    "name": "Dave Grohl",
+    "slug": "dave-grohl",
+    "date": "2017/12/22",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "sold": true,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of Dave Grohl with singer's lyrics"
+    ],
+    "tags": []
+  },
+  {
+    "name": "Paul McCartney",
+    "slug": "paul-mccartney",
+    "date": "2017/05/10",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "sold": true,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of Paul McCartney with singer's lyrics"
+    ],
+    "tags": []
+  },
+  {
+    "name": "John Lennon",
+    "slug": "john-lennon",
+    "date": "2017/05/14",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "sold": true,
+    "prints": true,
+    "medium": "Fineliner inked text and pencil on card",
+    "description": [
+      "Portrait of John Lennon with singer's lyrics"
+    ],
+    "tags": []
   }
 ]
