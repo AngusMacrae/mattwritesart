@@ -216,6 +216,7 @@ a:hover {
 
 .about {
   text-align: center;
+  max-width: 800px;
 }
 
 .contact form {
@@ -227,7 +228,7 @@ a:hover {
     'name email'
     'message message'
     'button button';
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .contact input[name='name'] {
@@ -251,9 +252,40 @@ a:hover {
 .contact input,
 .contact textarea,
 .contact button {
-  padding: 0.25rem 0.6rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+}
+
+.contact input,
+.contact textarea {
+  border: 1px solid #ddd;
+}
+
+.contact button {
+  color: white;
+  background-color: #181818;
+  width: max-content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  justify-self: end;
 }
 
 .contact *::placeholder {
-  opacity: 0.5;
+  opacity: 0.6;
+}
+
+@media (max-width: 730px) {
+  .contact form {
+    display: grid;
+    grid-template-areas:
+      'name'
+      'email'
+      'message'
+      'button';
+  }
+
+  .contact button {
+    width: auto;
+    justify-self: unset;
+  }
 }
