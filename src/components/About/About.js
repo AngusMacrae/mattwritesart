@@ -11,7 +11,7 @@ export default function About() {
         <Link to='/commissions' className='btn btn-secondary'>
           Commissions
         </Link>
-        <Link to='/browse' className='btn'>
+        <Link to='/art' className='btn'>
           Browse & Buy
         </Link>
       </div>

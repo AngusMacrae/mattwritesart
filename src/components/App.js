@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Contact from '../pages/Contact';
-import Browse from '../pages/Browse';
+import Art from '../pages/Art';
 import Commissions from '../pages/Commissions';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
@@ -17,8 +17,8 @@ function App() {
           <Route exact path='/'>
             <Home art={art} />
           </Route>
-          <Route path='/browse'>
-            <Browse />
+          <Route path='/art'>
+            <Art />
           </Route>
           <Route path='/commissions'>
             <Commissions />

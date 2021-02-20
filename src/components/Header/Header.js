@@ -33,7 +33,7 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link to='/browse' onClick={toggleMenu}>
+              <Link to='/art' onClick={toggleMenu}>
                 Browse & Buy
               </Link>
             </li>
