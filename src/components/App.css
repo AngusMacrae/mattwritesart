@@ -216,3 +216,43 @@ a:hover {
 .about {
   text-align: center;
 }
+
+.contact form {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-areas:
+    'name email'
+    'message message'
+    'button button';
+  gap: 1rem;
+}
+
+.contact input[name='name'] {
+  grid-area: name;
+}
+.contact input[name='email'] {
+  grid-area: email;
+}
+.contact textarea[name='message'] {
+  grid-area: message;
+}
+
+.contact textarea {
+  resize: vertical;
+}
+
+.contact button {
+  grid-area: button;
+}
+
+.contact input,
+.contact textarea,
+.contact button {
+  padding: 0.25rem 0.6rem;
+}
+
+.contact *::placeholder {
+  opacity: 0.5;
+}
