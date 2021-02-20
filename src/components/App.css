@@ -485,7 +485,13 @@ button.btn-secondary,
 
 .footer {
   text-align: right;
-  padding: 1rem;
+  padding: 1rem 2rem;
+}
+
+@media (max-width: 730px) {
+  .footer {
+    padding: 1rem;
+  }
 }
 
 .footer p {
