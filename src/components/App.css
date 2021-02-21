@@ -314,7 +314,7 @@ button.btn-secondary,
 
 .art-gallery {
   display: grid;
-  grid-template-columns: 210px 1fr;
+  grid-template-columns: 200px 1fr;
 }
 
 .art-filters {
@@ -336,12 +336,12 @@ button.btn-secondary,
   text-transform: uppercase;
   font-weight: bold;
   letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
 
 .art-filters .art-filters__radio-group {
   display: flex;
   flex-direction: column;
-  margin-top: 0.6rem;
 }
 
 .art-filters .art-filters__radio-group input {

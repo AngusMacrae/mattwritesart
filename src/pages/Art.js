@@ -11,9 +11,9 @@ export default function Art({ art }) {
               <input type='radio' id='availability-all' name='availability' value='all' defaultChecked />
               <label htmlFor='availability-all'>Show All</label>
               <input type='radio' id='availability-original' name='availability' value='original' />
-              <label htmlFor='availability-original'>Original Available</label>
+              <label htmlFor='availability-original'>Original</label>
               <input type='radio' id='availablitiy-prints' name='availability' value='prints' />
-              <label htmlFor='availablitiy-prints'>Prints Available</label>
+              <label htmlFor='availablitiy-prints'>Prints</label>
             </div>
           </fieldset>
           <fieldset>
