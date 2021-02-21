@@ -113,6 +113,7 @@ button.btn-secondary,
   display: flex;
   position: relative;
   bottom: 0.6rem;
+  transition: transform 0.2s;
 }
 
 .header__menu-toggle-btn {
@@ -152,6 +153,7 @@ button.btn-secondary,
 .header-nav__social-links a {
   display: flex;
   align-items: center;
+  transition: transform 0.2s;
 }
 
 .header-nav__social-links img {
@@ -160,6 +162,30 @@ button.btn-secondary,
 
 .header-nav__page-links a {
   padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.header-home:hover {
+  transform: scale(1.01);
+}
+
+.header-nav__page-links a::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  height: 2px;
+  width: 0;
+  bottom: 0.35rem;
+  left: 0.7rem;
+  transition: width 0.2s ease;
+}
+
+.header-nav__page-links a:hover::before {
+  width: calc(100% - 1.4rem);
+}
+
+.header-nav__social-links a:hover {
+  transform: scale(1.07);
 }
 
 @media (max-width: 1060px) {
