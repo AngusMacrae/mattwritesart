@@ -8,7 +8,7 @@ export default function GalleryItem({ artwork }) {
       </div>
       <div className='art-gallery__item--content'>
         <h3>{artwork.name}</h3>
-        <p className='art-gallery__item__availability'>{artwork.sold && !artwork.prints ? 'Unavailable' : artwork.sold && artwork.prints ? 'Prints' : !artwork.sold && artwork.prints ? 'Original & prints' : 'Original'}</p>
+        <p className='art-gallery__item__availability'>{!artwork.original && !artwork.prints ? 'Unavailable' : !artwork.original && artwork.prints ? 'Prints' : artwork.original && artwork.prints ? 'Original & prints' : 'Original'}</p>
       </div>
       <Link to={`/art/${artwork.slug}`} className='btn'>
         View

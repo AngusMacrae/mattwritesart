@@ -6,7 +6,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": false,
+    "original": true,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
@@ -23,7 +23,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": false,
+    "original": true,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
@@ -40,7 +40,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": false,
+    "original": true,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
@@ -55,7 +55,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
@@ -72,7 +72,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": false,
+    "original": true,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
@@ -87,7 +87,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
@@ -102,7 +102,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
@@ -117,7 +117,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": false,
+    "original": true,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
@@ -132,7 +132,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text on card",
     "description": [
@@ -147,7 +147,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text on card",
     "description": [
@@ -162,7 +162,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text on card",
     "description": [
@@ -177,7 +177,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text on card",
     "description": [
@@ -192,7 +192,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text on card",
     "description": [
@@ -207,7 +207,7 @@
     "width": 8.3,
     "height": 11.7,
     "price": 50,
-    "sold": true,
+    "original": false,
     "prints": true,
     "medium": "Fineliner inked text and pencil on card",
     "description": [

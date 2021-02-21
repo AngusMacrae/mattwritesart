@@ -3,7 +3,7 @@ export default function ShowcaseItem({ artwork }) {
     <div className='showcase-item'>
       <h2>{artwork.name}</h2>
       <div className='showcase-item__chips'>
-        {artwork.sold ? <span>Sold!</span> : null}
+        {!artwork.original ? <span>Sold!</span> : null}
         {artwork.prints ? <span>Prints available</span> : null}
         <button>Details</button>
       </div>
