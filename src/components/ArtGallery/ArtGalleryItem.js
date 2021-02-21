@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function ArtGalleryItem({ artwork }) {
   return (
-    <div className='art-gallery__item'>
+    <li className='art-gallery__item'>
       <div className='art-gallery__item--img-container'>
         <img src={`/art-images/${artwork.slug}.png`} alt='' />
       </div>
@@ -13,6 +13,6 @@ export default function ArtGalleryItem({ artwork }) {
       <Link to={`/art/${artwork.slug}`} className='btn'>
         View
       </Link>
-    </div>
+    </li>
   );
 }

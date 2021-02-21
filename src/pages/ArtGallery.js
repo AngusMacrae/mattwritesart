@@ -46,11 +46,11 @@ export default function ArtGallery({ art }) {
           </fieldset>
         </div>
       </aside>
-      <div className='art-gallery__gallery'>
+      <ul className='art-gallery__gallery'>
         {filteredArt.map(artwork => (
           <ArtGalleryItem key={artwork.slug} artwork={artwork} />
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
