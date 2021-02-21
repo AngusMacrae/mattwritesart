@@ -526,7 +526,7 @@ button.btn-secondary,
 
 .art-details__img-gallery-container img {
   margin: 0 auto;
-  max-width: 50vw;
+  max-width: min(50vw, 750px);
   max-height: 650px;
   -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
