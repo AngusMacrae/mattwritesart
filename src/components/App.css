@@ -507,21 +507,23 @@ button.btn-secondary,
 }
 
 .art-details {
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: 400px 1fr;
-  grid-template-areas: 'img text';
-  gap: 2rem;
-}
-
-.art-details__img-gallery-container {
-  grid-area: img;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
 }
 
 .art-details__img-gallery-container img {
+  margin: 0 auto;
+  max-width: 50vw;
+  max-height: 650px;
   -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
   box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+}
+
+.art-details__text-container {
+  max-width: 500px;
+  margin-left: 2rem;
 }
 
 .art-details__key-info {
@@ -539,6 +541,20 @@ button.btn-secondary,
 .art-details form input,
 .art-details form textarea {
   grid-column: span 2;
+}
+
+@media (max-width: 950px) {
+  .art-details {
+    flex-direction: column;
+  }
+  .art-details__img-gallery-container img {
+    max-width: 100%;
+  }
+  .art-details__text-container {
+    max-width: unset;
+    margin-left: 0;
+    margin-top: 2rem;
+  }
 }
 
 .contact-form form {
