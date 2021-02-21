@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function GalleryItem({ artwork }) {
   return (
     <div className='art-gallery__item'>
@@ -8,7 +10,9 @@ export default function GalleryItem({ artwork }) {
         <h3>{artwork.name}</h3>
         <p className='art-gallery__item__availability'>{artwork.sold && !artwork.prints ? 'Unavailable' : artwork.sold && artwork.prints ? 'Prints' : !artwork.sold && artwork.prints ? 'Original & prints' : 'Original'}</p>
       </div>
-      <button>Details</button>
+      <Link to={`/art/${artwork.slug}`} className='btn'>
+        View
+      </Link>
     </div>
   );
 }

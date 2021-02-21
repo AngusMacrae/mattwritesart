@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
-import Contact from '../pages/Contact';
 import Art from '../pages/Art';
+import Buy from '../pages/Buy';
 import Commissions from '../pages/Commissions';
+import Contact from '../pages/Contact';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import art from '../data/art.json';
@@ -16,6 +17,9 @@ function App() {
         <Switch>
           <Route exact path='/'>
             <Home art={art} />
+          </Route>
+          <Route path='/art/:slug'>
+            <Buy />
           </Route>
           <Route path='/art'>
             <Art art={art} />

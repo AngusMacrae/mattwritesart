@@ -23,6 +23,11 @@ main section {
   padding-bottom: 2.5rem;
 }
 
+main .btn,
+main button {
+  padding: 0.5rem 1.5rem;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -30,6 +35,19 @@ a {
 
 a:not(.btn):hover {
   text-decoration: underline;
+}
+
+input,
+textarea {
+  border: 1px solid #ddd;
+}
+
+textarea {
+  resize: vertical;
+}
+
+*::placeholder {
+  opacity: 0.6;
 }
 
 button,
@@ -297,10 +315,6 @@ button.btn-secondary,
   max-width: 800px;
 }
 
-.about .btn {
-  padding: 0.5rem 1.5rem;
-}
-
 .about .btn:not(:last-of-type) {
   margin-right: 1rem;
 }
@@ -403,7 +417,7 @@ button.btn-secondary,
   font-size: 1rem;
 }
 
-.art-gallery__item button {
+.art-gallery__item .btn {
   position: absolute;
   right: 1rem;
   bottom: -0.8rem;
@@ -411,8 +425,43 @@ button.btn-secondary,
   display: none;
 }
 
-.art-gallery__item:hover button {
+.art-gallery__item:hover .btn {
   display: block;
+}
+
+.buy-artwork {
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  grid-template-areas: 'img text';
+  gap: 2rem;
+}
+
+.buy-artwork__img-gallery-container {
+  grid-area: img;
+}
+
+.buy-artwork__img-gallery-container img {
+  -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+}
+
+.buy-artwork__details {
+  color: #999;
+  margin-top: var(--flow-space) !important;
+}
+
+.buy-artwork form {
+  margin-top: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.buy-artwork form input,
+.buy-artwork form textarea {
+  grid-column: span 2;
 }
 
 .contact-form form {
@@ -437,17 +486,13 @@ button.btn-secondary,
   grid-area: message;
 }
 
-.contact-form textarea {
-  resize: vertical;
-}
-
 .contact-form button {
   grid-area: button;
 }
 
-.contact-form input,
-.contact-form textarea,
-.contact-form button {
+form input,
+form textarea,
+form button {
   padding: 0.4rem 0.7rem;
 }
 
@@ -461,10 +506,6 @@ button.btn-secondary,
   padding-left: 3rem;
   padding-right: 3rem;
   justify-self: end;
-}
-
-.contact-form *::placeholder {
-  opacity: 0.6;
 }
 
 @media (max-width: 730px) {
