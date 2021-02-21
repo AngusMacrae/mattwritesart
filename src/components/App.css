@@ -240,6 +240,12 @@ button.btn-secondary,
   }
 }
 
+.about {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 0;
+}
+
 .showcase {
   column-width: 20rem;
   -webkit-column-fill: balance;
@@ -310,19 +316,18 @@ button.btn-secondary,
   box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
 }
 
-.about {
-  text-align: center;
-  max-width: 800px;
-}
-
-.about .btn:not(:last-of-type) {
-  margin-right: 1rem;
-}
-
-.about__cta {
+.home-ctas {
   display: flex;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 2.5rem;
+}
+
+.home-ctas .btn {
+  padding: 0.5rem 1.5rem;
+}
+
+.home-ctas .btn:not(:first-of-type) {
+  margin-left: 2rem;
 }
 
 .art-gallery {
