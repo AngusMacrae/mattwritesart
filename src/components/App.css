@@ -434,7 +434,7 @@ button.btn-secondary,
   display: block;
 }
 
-.buy-artwork {
+.art-details {
   max-width: 1000px;
   display: grid;
   grid-template-columns: 400px 1fr;
@@ -442,30 +442,30 @@ button.btn-secondary,
   gap: 2rem;
 }
 
-.buy-artwork__img-gallery-container {
+.art-details__img-gallery-container {
   grid-area: img;
 }
 
-.buy-artwork__img-gallery-container img {
+.art-details__img-gallery-container img {
   -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
   box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
 }
 
-.buy-artwork__details {
+.art-details__key-info {
   color: #999;
   margin-top: var(--flow-space) !important;
 }
 
-.buy-artwork form {
+.art-details form {
   margin-top: 1.5rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
 }
 
-.buy-artwork form input,
-.buy-artwork form textarea {
+.art-details form input,
+.art-details form textarea {
   grid-column: span 2;
 }
 

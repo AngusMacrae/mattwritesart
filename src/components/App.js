@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
 import Art from '../pages/Art';
-import Buy from '../pages/Buy';
+import ArtDetails from '../pages/ArtDetails';
 import Commissions from '../pages/Commissions';
 import Contact from '../pages/Contact';
 import Header from './Header/Header';
@@ -19,7 +19,7 @@ function App() {
             <Home art={art} />
           </Route>
           <Route path='/art/:slug'>
-            <Buy />
+            <ArtDetails />
           </Route>
           <Route path='/art'>
             <Art art={art} />
