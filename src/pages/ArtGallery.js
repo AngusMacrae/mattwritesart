@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
+import filterIcon from '../assets/icons/filter.svg';
 
 export default function ArtGallery({ art }) {
   const [availabilityFilter, setAvailabilityFilter] = useState('all');
@@ -19,7 +20,7 @@ export default function ArtGallery({ art }) {
   return (
     <section className='art-gallery'>
       <aside>
-        <div className='art-filters'>
+        <div className='art-filters-large'>
           <fieldset>
             <legend>Availability</legend>
             <div className='art-filters__radio-group'>
@@ -44,6 +45,30 @@ export default function ArtGallery({ art }) {
               <label htmlFor='category-anaglyph'>Anaglyph</label>
             </div>
           </fieldset>
+        </div>
+        <div className='art-filters-small'>
+          <h2>
+            <img src={filterIcon} alt=''></img>Filter Art
+          </h2>
+          <div className='availability-select-container select-container'>
+            <label htmlFor='availability-select'>Availability</label>
+            <select value={availabilityFilter} onChange={handleAvailabilityFilterChange} name='availability' id='availability-select'>
+              <option value='all'>Show All</option>
+              <option value='original'>Original</option>
+              <option value='prints'>Prints</option>
+            </select>
+          </div>
+          <div className='category-select-container select-container'>
+            <label htmlFor='category-select' id='category-select'>
+              Category
+            </label>
+            <select value={categoryFilter} onChange={handleCategoryFilterChange} name='category' id='category-select'>
+              <option value='all'>Show All</option>
+              <option value='people'>People</option>
+              <option value='animals'>Animals</option>
+              <option value='anaglyph'>Anaglyph</option>
+            </select>
+          </div>
         </div>
       </aside>
       <ul className='art-gallery__gallery'>
