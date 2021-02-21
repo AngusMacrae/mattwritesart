@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function GalleryItem({ artwork }) {
+export default function ArtGalleryItem({ artwork }) {
   return (
     <div className='art-gallery__item'>
       <div className='art-gallery__item--img-container'>

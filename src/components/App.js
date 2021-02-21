@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from '../pages/Home';
-import Art from '../pages/Art';
+import ArtGallery from '../pages/ArtGallery';
 import ArtDetails from '../pages/ArtDetails';
 import Commissions from '../pages/Commissions';
 import Contact from '../pages/Contact';
@@ -22,7 +22,7 @@ function App() {
             <ArtDetails />
           </Route>
           <Route path='/art'>
-            <Art art={art} />
+            <ArtGallery art={art} />
           </Route>
           <Route path='/commissions'>
             <Commissions />

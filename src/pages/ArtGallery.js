@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import GalleryItem from '../components/Gallery/GalleryItem';
+import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
 
-export default function Art({ art }) {
+export default function ArtGallery({ art }) {
   const [availabilityFilter, setAvailabilityFilter] = useState('all');
   function handleAvailabilityFilterChange(event) {
     setAvailabilityFilter(event.target.value);
@@ -48,7 +48,7 @@ export default function Art({ art }) {
       </aside>
       <div className='art-gallery__gallery'>
         {filteredArt.map(artwork => (
-          <GalleryItem key={artwork.slug} artwork={artwork} />
+          <ArtGalleryItem key={artwork.slug} artwork={artwork} />
         ))}
       </div>
     </section>
