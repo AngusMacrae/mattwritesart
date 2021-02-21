@@ -23,11 +23,6 @@ main section {
   padding-bottom: 2.5rem;
 }
 
-main .btn,
-main button {
-  padding: 0.5rem 1.5rem;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -50,14 +45,15 @@ textarea {
   opacity: 0.6;
 }
 
-button,
-.btn {
+main .btn,
+main button {
+  padding: 0.5rem 1.5rem;
   color: white;
   background-color: black;
 }
 
-button.btn-secondary,
-.btn.btn-secondary {
+main button.btn-secondary,
+main .btn.btn-secondary {
   color: black;
   background-color: white;
   border: 1px solid black;
@@ -130,8 +126,6 @@ button.btn-secondary,
 .header-nav {
   display: flex;
   font-weight: bold;
-  /* align-items: flex-end; */
-  /* line-height: calc(1.5rem + 3vw); */
 }
 
 .header-nav__page-links,
