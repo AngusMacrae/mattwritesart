@@ -376,7 +376,7 @@ button.btn-secondary,
   margin-top: 0.3rem;
 }
 
-.art-filters .art-filters__radio-group input[checked] + label {
+.art-filters .art-filters__radio-group input:checked + label {
   color: white;
   background-color: black;
 }
