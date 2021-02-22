@@ -261,23 +261,27 @@ main .btn.btn-secondary {
   margin-bottom: 0;
 }
 
-.showcase {
-  column-width: 20rem;
-  -webkit-column-fill: balance;
-  column-fill: balance;
+.showcase-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  /* grid-auto-rows and gap are set in JS */
 }
 
 .showcase-item {
-  padding: 0.5rem;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   font-size: 1rem;
+  -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
 }
 
 .showcase-item h2 {
   position: absolute;
-  left: 0.5rem;
-  bottom: 0.5rem;
+  left: 0;
+  bottom: 0;
   width: max-content;
   font-size: 1rem;
   background-color: white;
@@ -288,8 +292,8 @@ main .btn.btn-secondary {
 
 .showcase-item__link {
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
+  right: 0;
+  bottom: 0;
   width: max-content;
   font-size: 1rem;
   background-color: white;
@@ -322,12 +326,6 @@ main .btn.btn-secondary {
 .showcase-item:hover .showcase-item__link img {
   width: 1em;
   transition: width 0.2s 0.5s;
-}
-
-.showcase-item__main-img {
-  -webkit-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
-  box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
 }
 
 .home-ctas {
