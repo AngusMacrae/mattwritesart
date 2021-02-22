@@ -1,6 +1,6 @@
 export default function ShowcaseItem({ artwork }) {
   return (
-    <div className='showcase-item'>
+    <li className='showcase-item'>
       <h2>{artwork.name}</h2>
       <div className='showcase-item__chips'>
         {!artwork.original ? <span>Sold!</span> : null}
@@ -9,6 +9,6 @@ export default function ShowcaseItem({ artwork }) {
       </div>
       <img src={`/art-images/${artwork.slug}.png`} alt='' />
       {/* <img src={placeholder} alt='' /> */}
-    </div>
+    </li>
   );
 }
