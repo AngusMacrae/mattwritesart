@@ -109,7 +109,6 @@ main .btn.btn-secondary {
   display: flex;
   position: relative;
   bottom: 0.6rem;
-  transition: transform 0.2s;
 }
 
 .header__menu-toggle-btn {
@@ -157,10 +156,6 @@ main .btn.btn-secondary {
 .header-nav__page-links a {
   padding: 0.5rem 1rem;
   position: relative;
-}
-
-.header-home:hover {
-  transform: scale(1.01);
 }
 
 .header-nav__page-links a::before {
