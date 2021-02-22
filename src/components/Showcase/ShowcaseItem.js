@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom';
+import arrow from '../../assets/icons/right-arrow.svg';
+
 export default function ShowcaseItem({ artwork }) {
   return (
     <li className='showcase-item'>
       <h2>{artwork.name}</h2>
-      <div className='showcase-item__chips'>
-        {!artwork.original ? <span>Sold!</span> : null}
-        {artwork.prints ? <span>Prints available</span> : null}
-        <button>Details</button>
-      </div>
-      <img src={`/art-images/${artwork.slug}.png`} alt='' />
-      {/* <img src={placeholder} alt='' /> */}
+      <Link to={`/art/${artwork.slug}`} className='showcase-item__link'>
+        View
+        <img src={arrow} alt='' />
+      </Link>
+      <img className='showcase-item__main-img' src={`/art-images/${artwork.slug}.png`} alt='' />
     </li>
   );
 }
