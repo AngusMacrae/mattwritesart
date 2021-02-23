@@ -464,7 +464,7 @@ main .btn.btn-secondary {
   grid-template-columns: 1fr 1fr;
   grid-row: auto auto;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .art-filters-small h2 {
