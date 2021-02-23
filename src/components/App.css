@@ -280,6 +280,16 @@ main .btn.btn-secondary {
   box-shadow: 2px 3px 10px -3px rgba(0, 0, 0, 0.15);
 }
 
+.showcase-item.landscape {
+  grid-row-end: span 1;
+  grid-column-end: span 1;
+}
+
+.showcase-item.portrait {
+  grid-row-end: span 2;
+  grid-column-end: span 1;
+}
+
 .showcase-item h2 {
   position: absolute;
   left: 0;
@@ -329,6 +339,38 @@ main .btn.btn-secondary {
   width: 1em;
   transition: width 0.2s 0.5s;
 }
+
+@media (max-width: 600px) {
+  .showcase-list {
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 500px) {
+  .showcase-item.landscape.spotlight {
+    grid-row-end: span 2;
+    grid-column-end: span 2;
+  }
+
+  .showcase-item.portrait.spotlight {
+    grid-row-end: span 4;
+    grid-column-end: span 2;
+  }
+
+  /* .showcase-item.square.spotlight {
+    grid-row-end: span 3;
+    grid-column-end: span 2;
+  } */
+}
+
+/* @media (max-width: 500px) {
+  .showcase-item h2,
+  .showcase-item__link {
+    font-size: 0.8rem;
+    padding: 0.1rem 0.5rem;
+  }
+} */
 
 .home-ctas {
   display: flex;
