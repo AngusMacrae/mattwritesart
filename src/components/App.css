@@ -165,12 +165,11 @@ main .btn.btn-secondary {
   height: 2px;
   width: 0;
   bottom: 0.35rem;
-  left: 0.7rem;
-  transition: width 0.2s ease;
+  left: 1rem;
 }
 
 .header-nav__page-links a:hover::before {
-  width: calc(100% - 1.4rem);
+  width: calc(100% - 2rem);
 }
 
 .header-nav__social-links a:hover {
