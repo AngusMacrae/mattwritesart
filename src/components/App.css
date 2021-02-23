@@ -264,7 +264,8 @@ main .btn.btn-secondary {
 .showcase-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  /* grid-auto-rows and gap are set in JS */
+  grid-auto-flow: row dense;
+  gap: 2rem;
 }
 
 .showcase-item {

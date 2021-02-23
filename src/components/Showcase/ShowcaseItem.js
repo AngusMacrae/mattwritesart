@@ -2,13 +2,29 @@ import { useRef, useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import arrow from '../../assets/icons/right-arrow.svg';
 
-export default function ShowcaseItem({ artwork, rowHeight, rowGap }) {
+export default function ShowcaseItem({ artwork }) {
   const showcaseItem = useRef();
   const showcaseItemContent = useRef();
 
   function fitToGrid() {
-    const rowSpan = Math.ceil((showcaseItemContent.current.getBoundingClientRect().height + rowGap) / (rowHeight + rowGap));
-    showcaseItem.current.style.gridRowEnd = `span ${rowSpan}`;
+    const { height, width } = showcaseItemContent.current.getBoundingClientRect();
+    if (height > width) {
+      if (Math.random() > 0.8) {
+        showcaseItem.current.style.gridRowEnd = 'span 4';
+        showcaseItem.current.style.gridColumnEnd = 'span 2';
+      } else {
+        showcaseItem.current.style.gridRowEnd = 'span 2';
+        showcaseItem.current.style.gridColumnEnd = 'span 1';
+      }
+    } else {
+      if (Math.random() > 0.8) {
+        showcaseItem.current.style.gridRowEnd = 'span 2';
+        showcaseItem.current.style.gridColumnEnd = 'span 2';
+      } else {
+        showcaseItem.current.style.gridRowEnd = 'span 1';
+        showcaseItem.current.style.gridColumnEnd = 'span 1';
+      }
+    }
   }
 
   useLayoutEffect(() => {
