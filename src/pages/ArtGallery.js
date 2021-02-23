@@ -9,25 +9,30 @@ const AVAILABILITY_FILTERS = {
   prints: { caption: 'Prints', filterFunc: artwork => artwork.prints },
 };
 
-const CATEGORY_FILTERS = {
-  all: { caption: 'Show All', filterFunc: () => true },
-  // make new Set based on art.json (useContext) and dynamically create filter function for each
-};
-
 export default function ArtGallery() {
   const art = useContext(ArtContext);
-
   const [availabilityFilter, setAvailabilityFilter] = useState('all');
+  const [categoryFilter, setCategoryFilter] = useState('all');
+
+  const CATEGORIES = new Set(art.map(artwork => artwork.tags).flat());
+
+  const CATEGORY_FILTERS = {
+    all: { caption: 'Show All', filterFunc: () => true },
+  };
+
+  CATEGORIES.forEach(category => {
+    CATEGORY_FILTERS[category] = { caption: category, filterFunc: artwork => artwork.tags.includes(category) };
+  });
+
   function handleAvailabilityFilterChange(event) {
     setAvailabilityFilter(event.target.value);
   }
 
-  // const [categoryFilter, setCategoryFilter] = useState('all');
-  // function handleCategoryFilterChange(event) {
-  //   setCategoryFilter(event.target.value);
-  // }
+  function handleCategoryFilterChange(event) {
+    setCategoryFilter(event.target.value);
+  }
 
-  const filteredArt = art.filter(AVAILABILITY_FILTERS[availabilityFilter].filterFunc);
+  const filteredArt = art.filter(AVAILABILITY_FILTERS[availabilityFilter].filterFunc).filter(CATEGORY_FILTERS[categoryFilter].filterFunc);
 
   return (
     <section className='art-gallery'>
@@ -44,19 +49,17 @@ export default function ArtGallery() {
               ))}
             </div>
           </fieldset>
-          {/* <fieldset>
+          <fieldset>
             <legend>Category</legend>
             <div className='art-filters__radio-group'>
-              <input type='radio' id='category-all' value='all' checked={categoryFilter === 'all'} onChange={handleCategoryFilterChange} />
-              <label htmlFor='category-all'>Show All</label>
-              <input type='radio' id='category-people' value='people' checked={categoryFilter === 'people'} onChange={handleCategoryFilterChange} />
-              <label htmlFor='category-people'>People</label>
-              <input type='radio' id='category-animals' value='animals' checked={categoryFilter === 'animals'} onChange={handleCategoryFilterChange} />
-              <label htmlFor='category-animals'>Animals</label>
-              <input type='radio' id='category-anaglyph' value='anaglyph' checked={categoryFilter === 'anaglyph'} onChange={handleCategoryFilterChange} />
-              <label htmlFor='category-anaglyph'>Anaglyph</label>
+              {Object.keys(CATEGORY_FILTERS).map((filterName, i) => (
+                <Fragment key={i}>
+                  <input type='radio' id={`category-${filterName}`} value={filterName} checked={categoryFilter === filterName} onChange={handleCategoryFilterChange} />
+                  <label htmlFor={`category-${filterName}`}>{CATEGORY_FILTERS[filterName].caption}</label>
+                </Fragment>
+              ))}
             </div>
-          </fieldset> */}
+          </fieldset>
         </div>
         {/* <div className='art-filters-small'>
           <h2>

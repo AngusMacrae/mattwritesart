@@ -52,7 +52,9 @@
     "description": [
       "Pair of Blue Morpho butterflies, in colour and monochrome"
     ],
-    "tags": []
+    "tags": [
+      "animals"
+    ]
   },
   {
     "name": "Frank Turner",
@@ -105,7 +107,9 @@
     "description": [
       "Portrait of Chino Moreno with singer's lyrics"
     ],
-    "tags": []
+    "tags": [
+      "people"
+    ]
   },
   {
     "name": "Dustin Kensrue",
@@ -122,7 +126,9 @@
     "description": [
       "Portrait of Dustin Kensrue with singer's lyrics"
     ],
-    "tags": []
+    "tags": [
+      "people"
+    ]
   },
   {
     "name": "After Rembrandt",
@@ -156,7 +162,9 @@
     "description": [
       "Portrait of Adele with singer's lyrics"
     ],
-    "tags": []
+    "tags": [
+      "people"
+    ]
   },
   {
     "name": "Albus Dumbledore",
@@ -207,7 +215,9 @@
     "description": [
       "Portrait of Dave Grohl with singer's lyrics"
     ],
-    "tags": []
+    "tags": [
+      "people"
+    ]
   },
   {
     "name": "Paul McCartney",
@@ -224,7 +234,9 @@
     "description": [
       "Portrait of Paul McCartney with singer's lyrics"
     ],
-    "tags": []
+    "tags": [
+      "people"
+    ]
   },
   {
     "name": "John Lennon",
@@ -241,6 +253,8 @@
     "description": [
       "Portrait of John Lennon with singer's lyrics"
     ],
-    "tags": []
+    "tags": [
+      "people"
+    ]
   }
 ]

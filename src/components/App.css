@@ -458,6 +458,7 @@ main .btn.btn-secondary {
 }
 
 .art-filters-large .art-filters__radio-group label {
+  text-transform: capitalize;
   padding: 0.25rem 1rem;
   cursor: pointer;
   clip-path: polygon(0 0, calc(100% - 0.7rem) 0, 100% 50%, calc(100% - 0.7rem) 100%, 0 100%);
