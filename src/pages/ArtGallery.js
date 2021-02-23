@@ -28,8 +28,8 @@ export default function ArtGallery({ art }) {
               <label htmlFor='availability-all'>Show All</label>
               <input type='radio' id='availability-original' value='original' checked={availabilityFilter === 'original'} onChange={handleAvailabilityFilterChange} />
               <label htmlFor='availability-original'>Original</label>
-              <input type='radio' id='availablitiy-prints' value='prints' checked={availabilityFilter === 'prints'} onChange={handleAvailabilityFilterChange} />
-              <label htmlFor='availablitiy-prints'>Prints</label>
+              <input type='radio' id='availability-prints' value='prints' checked={availabilityFilter === 'prints'} onChange={handleAvailabilityFilterChange} />
+              <label htmlFor='availability-prints'>Prints</label>
             </div>
           </fieldset>
           <fieldset>
