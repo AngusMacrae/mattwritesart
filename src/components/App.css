@@ -257,7 +257,21 @@ main .btn.btn-secondary {
 .about {
   text-align: center;
   max-width: 800px;
-  margin-bottom: 0;
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 700px) {
+  .about {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .about {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 .showcase-list {
@@ -375,6 +389,7 @@ main .btn.btn-secondary {
   display: flex;
   justify-content: center;
   margin-top: 2.5rem;
+  margin-bottom: 5rem;
 }
 
 .home-ctas .btn {
@@ -390,6 +405,7 @@ main .btn.btn-secondary {
   .home-ctas {
     flex-direction: column;
     margin-top: 0;
+    margin-bottom: 3rem;
   }
   .home-ctas .btn:not(:first-of-type) {
     margin-left: 0;
