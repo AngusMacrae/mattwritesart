@@ -1,4 +1,5 @@
-import { useState, Fragment } from 'react';
+import { useState, useContext, Fragment } from 'react';
+import { ArtContext } from '../components/App';
 import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
 import filterIcon from '../assets/icons/filter.svg';
 
@@ -13,7 +14,9 @@ const CATEGORY_FILTERS = {
   // make new Set based on art.json (useContext) and dynamically create filter function for each
 };
 
-export default function ArtGallery({ art }) {
+export default function ArtGallery() {
+  const art = useContext(ArtContext);
+
   const [availabilityFilter, setAvailabilityFilter] = useState('all');
   function handleAvailabilityFilterChange(event) {
     setAvailabilityFilter(event.target.value);
