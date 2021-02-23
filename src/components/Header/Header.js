@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import instagram from '../../assets/icons/instagram.svg';
 import twitter from '../../assets/icons/twitter.svg';
@@ -16,11 +16,11 @@ export default function Header() {
     <header className='header'>
       <div className='header__content-container'>
         <div className='header__top-bar'>
-          <Link to='/' onClick={menuOpen ? toggleMenu : null} title='Home' className='header-home'>
+          <NavLink to='/' onClick={menuOpen ? toggleMenu : null} title='Home' className='header-home'>
             <h1>
               matt<span className='deemphasised'>writes</span>art<small className='deemphasised'>.co.uk</small>
             </h1>
-          </Link>
+          </NavLink>
           <button onClick={toggleMenu} className='header__menu-toggle-btn'>
             <img src={menuOpen ? close : menu} alt='Menu' />
           </button>
@@ -28,24 +28,24 @@ export default function Header() {
         <nav className={`header-nav ${menuOpen ? 'active' : ''}`}>
           <ul className='header-nav__page-links'>
             <li>
-              <Link to='/' onClick={toggleMenu}>
+              <NavLink to='/' exact onClick={toggleMenu}>
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to='/art' onClick={toggleMenu}>
+              <NavLink to='/art' onClick={toggleMenu}>
                 Browse & Buy
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to='/commissions' onClick={toggleMenu}>
+              <NavLink to='/commissions' onClick={toggleMenu}>
                 Commissions
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link to='/contact' onClick={toggleMenu}>
+              <NavLink to='/contact' onClick={toggleMenu}>
                 Contact
-              </Link>
+              </NavLink>
             </li>
           </ul>
           <ul className='header-nav__social-links'>

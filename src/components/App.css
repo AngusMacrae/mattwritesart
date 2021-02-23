@@ -168,7 +168,8 @@ main .btn.btn-secondary {
   left: 1rem;
 }
 
-.header-nav__page-links a:hover::before {
+.header-nav__page-links a:hover::before,
+.header-nav__page-links a.active::before {
   width: calc(100% - 2rem);
 }
 
