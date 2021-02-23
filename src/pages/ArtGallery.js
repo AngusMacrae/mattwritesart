@@ -1,6 +1,17 @@
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
 import filterIcon from '../assets/icons/filter.svg';
+
+const AVAILABILITY_FILTERS = {
+  all: { caption: 'Show All', filterFunc: () => true },
+  original: { caption: 'Original', filterFunc: artwork => artwork.original },
+  prints: { caption: 'Prints', filterFunc: artwork => artwork.prints },
+};
+
+const CATEGORY_FILTERS = {
+  all: { caption: 'Show All', filterFunc: () => true },
+  // make new Set based on art.json (useContext) and dynamically create filter function for each
+};
 
 export default function ArtGallery({ art }) {
   const [availabilityFilter, setAvailabilityFilter] = useState('all');
@@ -8,14 +19,12 @@ export default function ArtGallery({ art }) {
     setAvailabilityFilter(event.target.value);
   }
 
-  const [categoryFilter, setCategoryFilter] = useState('all');
-  function handleCategoryFilterChange(event) {
-    setCategoryFilter(event.target.value);
-  }
+  // const [categoryFilter, setCategoryFilter] = useState('all');
+  // function handleCategoryFilterChange(event) {
+  //   setCategoryFilter(event.target.value);
+  // }
 
-  const showOriginals = availabilityFilter !== 'prints';
-  const showPrints = availabilityFilter !== 'original';
-  const filteredArt = art.filter(artwork => (artwork.original && showOriginals) || (artwork.prints && showPrints));
+  const filteredArt = art.filter(AVAILABILITY_FILTERS[availabilityFilter].filterFunc);
 
   return (
     <section className='art-gallery'>
@@ -24,15 +33,15 @@ export default function ArtGallery({ art }) {
           <fieldset>
             <legend>Availability</legend>
             <div className='art-filters__radio-group'>
-              <input type='radio' id='availability-all' value='all' checked={availabilityFilter === 'all'} onChange={handleAvailabilityFilterChange} />
-              <label htmlFor='availability-all'>Show All</label>
-              <input type='radio' id='availability-original' value='original' checked={availabilityFilter === 'original'} onChange={handleAvailabilityFilterChange} />
-              <label htmlFor='availability-original'>Original</label>
-              <input type='radio' id='availability-prints' value='prints' checked={availabilityFilter === 'prints'} onChange={handleAvailabilityFilterChange} />
-              <label htmlFor='availability-prints'>Prints</label>
+              {Object.keys(AVAILABILITY_FILTERS).map((filterName, i) => (
+                <Fragment key={i}>
+                  <input type='radio' id={`availability-${filterName}`} value={filterName} checked={availabilityFilter === filterName} onChange={handleAvailabilityFilterChange} />
+                  <label htmlFor={`availability-${filterName}`}>{AVAILABILITY_FILTERS[filterName].caption}</label>
+                </Fragment>
+              ))}
             </div>
           </fieldset>
-          <fieldset>
+          {/* <fieldset>
             <legend>Category</legend>
             <div className='art-filters__radio-group'>
               <input type='radio' id='category-all' value='all' checked={categoryFilter === 'all'} onChange={handleCategoryFilterChange} />
@@ -44,9 +53,9 @@ export default function ArtGallery({ art }) {
               <input type='radio' id='category-anaglyph' value='anaglyph' checked={categoryFilter === 'anaglyph'} onChange={handleCategoryFilterChange} />
               <label htmlFor='category-anaglyph'>Anaglyph</label>
             </div>
-          </fieldset>
+          </fieldset> */}
         </div>
-        <div className='art-filters-small'>
+        {/* <div className='art-filters-small'>
           <h2>
             <img src={filterIcon} alt=''></img>Filter Art
           </h2>
@@ -69,7 +78,7 @@ export default function ArtGallery({ art }) {
               <option value='anaglyph'>Anaglyph</option>
             </select>
           </div>
-        </div>
+        </div> */}
       </aside>
       <ul className='art-gallery__gallery'>
         {filteredArt.map(artwork => (
