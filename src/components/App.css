@@ -316,42 +316,8 @@ main .btn.btn-secondary {
   transition: opacity 0.2s;
 }
 
-.showcase-item__link {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: max-content;
-  font-size: 1rem;
-  text-shadow: 2px 0 4px white, 2px 0 4px white, 0 2px 4px white, 0 -2px 4px white, 2px 0 4px white, 2px 0 4px white, 0 2px 4px white, 0 -2px 4px white, 2px 0 4px white, 2px 0 4px white, 0 2px 4px white, 0 -2px 4px white, 2px 0 4px white, 2px 0 4px white, 0 2px 4px white, 0 -2px 4px white;
-  padding: 0.2rem 0.8rem;
-  opacity: 0;
-  transition: opacity 0.2s;
-  display: flex;
-  font-weight: bold;
-}
-
-.showcase-item__link img {
-  width: 0;
-  margin-left: 0.2em;
-  transition: width 0.2s;
-}
-
 .showcase-item:hover h2 {
   opacity: 1;
-}
-
-.showcase-item:hover .showcase-item__link {
-  opacity: 1;
-  text-decoration: none;
-}
-
-.showcase-item__link:hover {
-  background-color: #f4f4f4;
-}
-
-.showcase-item:hover .showcase-item__link img {
-  width: 1em;
-  transition: width 0.2s 0.5s;
 }
 
 @media (max-width: 600px) {
@@ -379,8 +345,7 @@ main .btn.btn-secondary {
 }
 
 /* @media (max-width: 500px) {
-  .showcase-item h2,
-  .showcase-item__link {
+  .showcase-item h2 {
     font-size: 0.8rem;
     padding: 0.1rem 0.5rem;
   }
