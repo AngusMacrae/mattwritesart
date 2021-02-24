@@ -57,8 +57,8 @@
     ]
   },
   {
-    "name": "Frank Turner",
-    "slug": "frank-turner",
+    "name": "Frank Turner 3",
+    "slug": "frank-turner-3",
     "date": "2021/01/02",
     "width": 11.7,
     "height": 8.3,
@@ -252,6 +252,139 @@
     "medium": "Fineliner inked text and pencil on card",
     "description": [
       "Portrait of John Lennon with singer's lyrics"
+    ],
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "name": "Frank Turner 1",
+    "slug": "frank-turner-1",
+    "date": "08.01.17",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "showcase": true,
+    "spotlight": false,
+    "original": false,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of Frank Turner with singer's lyrics"
+    ],
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "name": "Frank Turner 2",
+    "slug": "frank-turner-2",
+    "date": "19.01.17",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "showcase": true,
+    "spotlight": false,
+    "original": false,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of Frank Turner with singer's lyrics"
+    ],
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "name": "George Michael",
+    "slug": "george-michael",
+    "date": "28.03.17",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "showcase": true,
+    "spotlight": true,
+    "original": false,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of George Michael with singer's lyrics"
+    ],
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "name": "Ian Brown",
+    "slug": "ian-brown",
+    "date": "11.04.17",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "showcase": true,
+    "spotlight": false,
+    "original": false,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of Ian Brown with singer's lyrics"
+    ],
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "name": "Mitski",
+    "slug": "mitski",
+    "date": "24.01.17",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "showcase": true,
+    "spotlight": false,
+    "original": false,
+    "prints": true,
+    "medium": "Fineliner inked text on card",
+    "description": [
+      "Portrait of Mitski with singer's lyrics"
+    ],
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "name": "Pete Doherty",
+    "slug": "pete-doherty",
+    "date": "30.10.17",
+    "width": 16.5,
+    "height": 11.7,
+    "price": 50,
+    "showcase": true,
+    "spotlight": false,
+    "original": false,
+    "prints": true,
+    "medium": "Fineliner inked text and pencil on card",
+    "description": [
+      "Portrait of Pete Doherty with singer's lyrics"
+    ],
+    "tags": [
+      "people"
+    ]
+  },
+  {
+    "name": "Ziggy",
+    "slug": "ziggy",
+    "date": "22.08.18",
+    "width": 11.7,
+    "height": 16.5,
+    "price": 50,
+    "showcase": true,
+    "spotlight": false,
+    "original": false,
+    "prints": true,
+    "medium": "Fineliner inked text and pencil on card",
+    "description": [
+      "Portrait of David Bowie with singer's lyrics"
     ],
     "tags": [
       "people"
