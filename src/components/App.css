@@ -32,6 +32,10 @@ a:not(.btn):hover {
   text-decoration: underline;
 }
 
+form {
+  margin-top: 2rem !important;
+}
+
 input,
 textarea {
   border: 1px solid #ddd;
@@ -587,7 +591,6 @@ main .btn.btn-secondary {
 }
 
 .art-details form {
-  margin-top: 1.5rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
@@ -612,10 +615,13 @@ main .btn.btn-secondary {
   }
 }
 
-.contact-form form {
+.contact-form {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.contact-form form {
   display: grid;
   grid-template-areas:
     'name email'
