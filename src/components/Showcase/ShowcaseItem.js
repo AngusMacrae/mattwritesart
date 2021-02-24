@@ -23,7 +23,7 @@ export default function ShowcaseItem({ artwork }) {
           View
           <img src={arrow} alt='' />
         </Link>
-        <img className='showcase-item__main-img' src={`/art-images/${artwork.slug}.webp`} alt='' />
+        <img className='showcase-item__main-img' src={`/art-images/${artwork.slug}.webp`} alt={artwork.description} />
       </div>
     </li>
   );

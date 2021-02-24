@@ -8,7 +8,7 @@ export default function ArtDetails() {
   return (
     <section className='art-details'>
       <div className='art-details__img-gallery-container'>
-        <img src={`/art-images/${artwork.slug}.webp`} alt='' />
+        <img src={`/art-images/${artwork.slug}.webp`} alt={artwork.description} />
       </div>
       <div className='art-details__text-container flow'>
         <h2>{artwork.name}</h2>
