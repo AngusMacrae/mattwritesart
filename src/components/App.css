@@ -615,6 +615,107 @@ main .btn.btn-secondary {
   }
 }
 
+.commissions {
+  display: grid;
+  grid-template-columns: [full-start] minmax(0, 1fr) [main-start] minmax(0, 800px) [main-end] minmax(0, 1fr) [full-end];
+}
+
+.commissions__img-carousel {
+  grid-column: full;
+  max-height: 350px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  gap: 1rem;
+}
+.commissions__img-container {
+  height: 100%;
+  max-width: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 33%;
+}
+
+.commissions__img-container img {
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.16);
+}
+
+.commissions__text-container {
+  grid-column: main;
+}
+
+@media (max-width: 767px) {
+  .commissions__img-carousel {
+    margin-bottom: 3rem;
+  }
+
+  .commissions__img-container:nth-of-type(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 499px) {
+  .commissions__img-carousel {
+    margin-bottom: 2rem;
+  }
+
+  .commissions__img-container:nth-of-type(1) {
+    display: none;
+  }
+}
+
+.commissions form {
+  margin-top: 3rem !important;
+  display: grid;
+  grid-template-areas:
+    'name email'
+    'message message'
+    'button button';
+  gap: 1.5rem;
+}
+
+.commissions form input[name='name'] {
+  grid-area: name;
+}
+.commissions form input[name='email'] {
+  grid-area: email;
+}
+.commissions form textarea[name='message'] {
+  grid-area: message;
+}
+
+.commissions form button {
+  grid-area: button;
+  width: max-content;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  justify-self: end;
+}
+
+@media (max-width: 730px) {
+  .commissions form {
+    grid-template-areas:
+      'name'
+      'email'
+      'message'
+      'button';
+  }
+  .commissions form button {
+    width: auto;
+    justify-self: unset;
+  }
+}
+
 .contact-form {
   max-width: 800px;
   margin-left: auto;
