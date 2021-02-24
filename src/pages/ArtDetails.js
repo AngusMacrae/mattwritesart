@@ -1,9 +1,10 @@
 import { useParams } from 'react-router-dom';
-import art from '../data/art.json';
+import art from '../data/art.js';
 
 export default function ArtDetails() {
   const { slug } = useParams();
   const artwork = art.find(item => item.slug === slug);
+
   return (
     <section className='art-details'>
       <div className='art-details__img-gallery-container'>

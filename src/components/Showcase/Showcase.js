@@ -1,10 +1,7 @@
-import { useContext } from 'react';
-import { ArtContext } from '../App';
 import ShowcaseItem from './ShowcaseItem';
+import art from '../../data/art.js';
 
 export default function Showcase() {
-  const art = useContext(ArtContext);
-
   return (
     <section className='showcase'>
       <ul className='showcase-list'>

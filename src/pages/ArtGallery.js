@@ -1,5 +1,5 @@
-import { useState, useContext, Fragment } from 'react';
-import { ArtContext } from '../components/App';
+import { useState, Fragment } from 'react';
+import art, { CATEGORIES } from '../data/art.js';
 import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
 import filterIcon from '../assets/icons/filter.svg';
 
@@ -9,20 +9,17 @@ const AVAILABILITY_FILTERS = {
   prints: { caption: 'Prints', filterFunc: artwork => artwork.prints },
 };
 
+const CATEGORY_FILTERS = {
+  all: { caption: 'Show All', filterFunc: () => true },
+};
+
+CATEGORIES.forEach(category => {
+  CATEGORY_FILTERS[category] = { caption: category, filterFunc: artwork => artwork.tags.includes(category) };
+});
+
 export default function ArtGallery() {
-  const art = useContext(ArtContext);
   const [availabilityFilter, setAvailabilityFilter] = useState('all');
   const [categoryFilter, setCategoryFilter] = useState('all');
-
-  const CATEGORIES = new Set(art.map(artwork => artwork.tags).flat());
-
-  const CATEGORY_FILTERS = {
-    all: { caption: 'Show All', filterFunc: () => true },
-  };
-
-  CATEGORIES.forEach(category => {
-    CATEGORY_FILTERS[category] = { caption: category, filterFunc: artwork => artwork.tags.includes(category) };
-  });
 
   function handleAvailabilityFilterChange(event) {
     setAvailabilityFilter(event.target.value);
