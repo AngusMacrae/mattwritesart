@@ -1,5 +1,6 @@
 import { useState, Fragment } from 'react';
 import art, { CATEGORIES } from '../data/art.js';
+import ArtGalleryFilterRadio from '../components/ArtGallery/ArtGalleryFilterRadio';
 import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
 import filterIcon from '../assets/icons/filter.svg';
 
@@ -39,10 +40,7 @@ export default function ArtGallery() {
             <legend>Availability</legend>
             <div className='art-filters__radio-group'>
               {Object.keys(AVAILABILITY_FILTERS).map((filterName, i) => (
-                <Fragment key={i}>
-                  <input type='radio' id={`availability-${filterName}`} value={filterName} checked={availabilityFilter === filterName} onChange={handleAvailabilityFilterChange} />
-                  <label htmlFor={`availability-${filterName}`}>{AVAILABILITY_FILTERS[filterName].caption}</label>
-                </Fragment>
+                <ArtGalleryFilterRadio key={i} idName='availability' filterName={filterName} checked={availabilityFilter === filterName} handleFilterChange={handleAvailabilityFilterChange} FILTERS={AVAILABILITY_FILTERS} />
               ))}
             </div>
           </fieldset>
@@ -50,10 +48,7 @@ export default function ArtGallery() {
             <legend>Category</legend>
             <div className='art-filters__radio-group'>
               {Object.keys(CATEGORY_FILTERS).map((filterName, i) => (
-                <Fragment key={i}>
-                  <input type='radio' id={`category-${filterName}`} value={filterName} checked={categoryFilter === filterName} onChange={handleCategoryFilterChange} />
-                  <label htmlFor={`category-${filterName}`}>{CATEGORY_FILTERS[filterName].caption}</label>
-                </Fragment>
+                <ArtGalleryFilterRadio key={i} idName='category' filterName={filterName} checked={categoryFilter === filterName} handleFilterChange={handleCategoryFilterChange} FILTERS={CATEGORY_FILTERS} />
               ))}
             </div>
           </fieldset>
