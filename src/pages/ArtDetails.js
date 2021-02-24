@@ -28,8 +28,8 @@ export default function ArtDetails() {
         <p>{artwork.description}</p>
         <p>To buy, fill out the form below, and I'll get back to you ASAP to discuss payment and shipping. Your details will not be stored or shared with any third parties.</p>
         <form action=''>
-          <input type='text' name='name' placeholder='Your name (required)' required />
-          <input type='email' name='email' placeholder='Your email (required)' required />
+          <input type='text' name='name' placeholder='Your name' required />
+          <input type='email' name='email' placeholder='Your email' required />
           <textarea name='message' placeholder='Message (optional)' rows='5'></textarea>{' '}
           <button type='submit' className='btn-secondary'>
             Buy Print
