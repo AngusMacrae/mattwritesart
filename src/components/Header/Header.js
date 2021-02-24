@@ -8,6 +8,10 @@ import close from '../../assets/icons/close.svg';
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
   function toggleMenu() {
     setMenuOpen(prevState => !prevState);
   }
@@ -28,22 +32,22 @@ export default function Header() {
         <nav className={`header-nav ${menuOpen ? 'active' : ''}`}>
           <ul className='header-nav__page-links'>
             <li>
-              <NavLink to='/' exact onClick={toggleMenu}>
+              <NavLink to='/' exact onClick={closeMenu}>
                 Home
               </NavLink>
             </li>
             <li>
-              <NavLink to='/art' onClick={toggleMenu}>
+              <NavLink to='/art' onClick={closeMenu}>
                 Browse & Buy
               </NavLink>
             </li>
             <li>
-              <NavLink to='/commissions' onClick={toggleMenu}>
+              <NavLink to='/commissions' onClick={closeMenu}>
                 Commissions
               </NavLink>
             </li>
             <li>
-              <NavLink to='/contact' onClick={toggleMenu}>
+              <NavLink to='/contact' onClick={closeMenu}>
                 Contact
               </NavLink>
             </li>
