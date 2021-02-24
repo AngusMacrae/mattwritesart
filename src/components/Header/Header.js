@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import instagram from '../../assets/icons/instagram.svg';
-import twitter from '../../assets/icons/twitter.svg';
 import menu from '../../assets/icons/menu.svg';
 import close from '../../assets/icons/close.svg';
 
@@ -53,11 +52,6 @@ export default function Header() {
             </li>
           </ul>
           <ul className='header-nav__social-links'>
-            <li>
-              <a href='https://twitter.com/mattwritesart' target='_blank' rel='noopener noreferrer' title='Twitter'>
-                <img src={twitter} alt='mattwritesart Twitter' />
-              </a>
-            </li>
             <li>
               <a href='https://www.instagram.com/mattwritesart/' target='_blank' rel='noopener noreferrer' title='Instagram'>
                 <img src={instagram} alt='mattwritesart Instagram' />

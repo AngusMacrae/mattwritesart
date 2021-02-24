@@ -181,7 +181,7 @@ main .btn.btn-secondary {
   transform: scale(1.07);
 }
 
-@media (max-width: 1060px) {
+@media (max-width: 1020px) {
   .header__content-container {
     flex-direction: column;
     justify-content: flex-start;
