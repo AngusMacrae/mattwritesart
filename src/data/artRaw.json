@@ -19,6 +19,26 @@
     ]
   },
   {
+    "name": "Le Cygne",
+    "slug": "le-cygne",
+    "date": "20.02.21",
+    "width": 11.7,
+    "height": 8.3,
+    "price": 50,
+    "showcase": true,
+    "spotlight": true,
+    "original": true,
+    "prints": true,
+    "medium": "Fineliner inked musical score on Bristol paper",
+    "description": [
+      "Portrait of Swan, with musical score of Le Cygne, by Camille Saint-Saëns (1835-1921)"
+    ],
+    "tags": [
+      "animals",
+      "music"
+    ]
+  },
+  {
     "name": "Bee Study 1",
     "slug": "bee-study-1",
     "date": "2021/01/02",
@@ -26,7 +46,7 @@
     "height": 11.7,
     "price": 50,
     "showcase": true,
-    "spotlight": true,
+    "spotlight": false,
     "original": true,
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
@@ -76,9 +96,45 @@
     ]
   },
   {
+    "name": "Bjoern Gelotte",
+    "slug": "bjoern-gelotte",
+    "date": "2021/01/02",
+    "width": 8.3,
+    "height": 11.7,
+    "price": 50,
+    "showcase": true,
+    "spotlight": true,
+    "original": false,
+    "prints": true,
+    "medium": "Fineliner inked text on Bristol paper",
+    "description": [
+      "Portrait of Bjoern Gelotte with lyrics of 'Take This Life'"
+    ],
+    "tags": [
+      "people"
+    ]
+  },
+  {
     "name": "Hand Study 1",
     "slug": "hand-study-1",
     "date": "2021/01/13",
+    "width": 11.7,
+    "height": 8.3,
+    "price": 50,
+    "showcase": true,
+    "spotlight": false,
+    "original": true,
+    "prints": true,
+    "medium": "Fineliner inked text on Bristol paper",
+    "description": [
+      "Line study of hands, on the poem 'On A Prayer in Time of War', by Alfred Noyes (1880-1958)"
+    ],
+    "tags": []
+  },
+  {
+    "name": "The Creation (Hand Study 2)",
+    "slug": "the-creation-hand-study-2",
+    "date": "23.02.21",
     "width": 11.7,
     "height": 8.3,
     "price": 50,
@@ -88,7 +144,7 @@
     "prints": true,
     "medium": "Fineliner inked text on Bristol paper",
     "description": [
-      "Line study of hands, on the poem 'On A Prayer in Time of War', by Alfred Noyes (1880-1958)"
+      "Line study of hand, on the poem 'The Creation', by James Weldon Johnson (1871-1938)"
     ],
     "tags": []
   },
@@ -110,6 +166,23 @@
     "tags": [
       "people"
     ]
+  },
+  {
+    "name": "Death, Be Not Proud (Skull Study 2)",
+    "slug": "death-be-not-proud-skull-study-2",
+    "date": "24.02.21",
+    "width": 11.7,
+    "height": 8.3,
+    "price": 50,
+    "showcase": true,
+    "spotlight": true,
+    "original": false,
+    "prints": false,
+    "medium": "Gel pen on black paper",
+    "description": [
+      "Skull study, on the poem 'Death, be not proud', by John Donne (1572-1631)"
+    ],
+    "tags": []
   },
   {
     "name": "Dustin Kensrue",
