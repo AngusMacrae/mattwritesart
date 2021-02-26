@@ -405,14 +405,14 @@ main .btn.btn-secondary {
 }
 
 .art-filters-large fieldset:not(:first-of-type) {
-  margin-top: 4rem;
+  margin-top: 2.5rem;
 }
 
 .art-filters-large fieldset legend {
   padding: 0;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 1rem;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
 }
@@ -427,14 +427,11 @@ main .btn.btn-secondary {
 }
 
 .art-filters-large .art-filters__radio-group label {
+  font-size: 1.15rem;
   text-transform: capitalize;
-  padding: 0.25rem 1rem;
+  padding: 0.15rem 1rem;
   cursor: pointer;
   clip-path: polygon(0 0, calc(100% - 0.7rem) 0, 100% 50%, calc(100% - 0.7rem) 100%, 0 100%);
-}
-
-.art-filters-large .art-filters__radio-group label:not(:first-of-type) {
-  margin-top: 0.3rem;
 }
 
 .art-filters-large .art-filters__radio-group label:hover {
