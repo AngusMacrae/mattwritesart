@@ -54,6 +54,7 @@ main button {
   padding: 0.5rem 1.5rem;
   color: white;
   background-color: black;
+  display: block;
 }
 
 main button.btn-secondary,
@@ -693,6 +694,34 @@ main .btn.btn-secondary {
 
   .commissions__img-container:nth-of-type(1) {
     display: none;
+  }
+}
+
+.commissions-ctas {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.commissions-ctas .btn {
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+}
+
+.commissions-ctas .btn:not(:first-of-type) {
+  margin-left: 2rem;
+}
+
+@media (max-width: 450px) {
+  .commissions-ctas {
+    flex-direction: column;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .commissions-ctas .btn:not(:first-of-type) {
+    margin-left: 0;
+    margin-top: 2rem;
   }
 }
 

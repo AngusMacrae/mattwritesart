@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export default function Commissions() {
   return (
     <section className='commissions'>
@@ -15,14 +17,16 @@ export default function Commissions() {
       <div className='commissions__text-container flow'>
         <h2>Commissions</h2>
         <p>I love the challenge and joy of commissions. From discussing a new idea with a potential customer, through the process of creation, to delivery - it's a unique journey.</p>
-        <p>If you're interested in an original commission, please get in touch by filling out the form below. I'll be happy to discuss ideas, cost, sizing and anything else that makes the piece special for you.</p>
+        <p>If you're interested in an original commission, please don't hesitate to get in touch! I'll be happy to discuss ideas, cost, sizing, and anything else that makes the piece special for you.</p>
         <p>Please note that unless discussed I reserve the right to make a copy and prints of any commissioned piece.</p>
-        <form action=''>
-          <input type='text' name='name' placeholder='Your name' required />
-          <input type='email' name='email' placeholder='Your email' required />
-          <textarea name='message' placeholder='Details of commission' rows='5' required></textarea>
-          <button type='submit'>Send!</button>
-        </form>
+        <div className='commissions-ctas'>
+          <Link to='/art' className='btn btn-secondary'>
+            View More Art
+          </Link>
+          <Link to='/contact' className='btn'>
+            Commission a Piece
+          </Link>
+        </div>
       </div>
     </section>
   );
