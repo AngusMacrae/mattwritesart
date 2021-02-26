@@ -578,24 +578,33 @@ main .btn.btn-secondary {
 }
 
 .art-details__text-container {
-  max-width: 500px;
+  max-width: 400px;
   margin-left: 2rem;
 }
 
 .art-details__key-info {
   color: #999;
   margin-top: var(--flow-space) !important;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.art-details form {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+.art-details__key-info li:first-of-type {
+  margin-right: 3rem;
 }
 
-.art-details form input,
-.art-details form textarea {
-  grid-column: span 2;
+.art-details__medium {
+  width: 100%;
+}
+
+.art-details__buy {
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+.art-details button {
+  width: 16rem;
 }
 
 @media (max-width: 950px) {
@@ -609,6 +618,9 @@ main .btn.btn-secondary {
     max-width: unset;
     margin-left: 0;
     margin-top: 2rem;
+  }
+  .art-details button {
+    width: 100%;
   }
 }
 
