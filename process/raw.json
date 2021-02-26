@@ -72,7 +72,7 @@
     "height": 8.3,
     "medium": "Fineliner inked text on Bristol paper",
     "description": "Portrait of Frank Turner with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Bjoern Gelotte",
@@ -87,7 +87,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on Bristol paper",
     "description": "Portrait of Bjoern Gelotte with lyrics of 'Take This Life'",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Hand Study 1",
@@ -102,7 +102,7 @@
     "height": 8.3,
     "medium": "Fineliner inked text on Bristol paper",
     "description": "Line study of hands, on the poem 'On A Prayer in Time of War', by Alfred Noyes (1880-1958)",
-    "tags": ""
+    "tags": "body studies,line drawings"
   },
   {
     "name": "The Creation (Hand Study 2)",
@@ -117,7 +117,7 @@
     "height": 8.3,
     "medium": "Fineliner inked text on Bristol paper",
     "description": "Line study of hand, on the poem 'The Creation', by James Weldon Johnson (1871-1938)",
-    "tags": ""
+    "tags": "body studies,line drawings"
   },
   {
     "name": "Chino Moreno",
@@ -132,7 +132,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on Bristol paper",
     "description": "Portrait of Chino Moreno with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Death, Be Not Proud (Skull Study 2)",
@@ -147,7 +147,7 @@
     "height": 8.3,
     "medium": "Gel pen on black paper",
     "description": "Skull study, on the poem 'Death, be not proud', by John Donne (1572-1631)",
-    "tags": ""
+    "tags": "body studies,line drawings"
   },
   {
     "name": "Dustin Kensrue",
@@ -162,7 +162,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on Bristol paper",
     "description": "Portrait of Dustin Kensrue with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "After Rembrandt",
@@ -177,7 +177,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on Bristol paper",
     "description": "Portrait study of Rembrandt, using selection of painter's own quotes",
-    "tags": ""
+    "tags": "portraits,after art"
   },
   {
     "name": "Adele",
@@ -192,7 +192,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Adele with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Albus Dumbledore",
@@ -207,7 +207,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Albus Dumbledore with text from Harry Potter and the Philosopher's Stone",
-    "tags": ""
+    "tags": "portraits"
   },
   {
     "name": "Aubade (Skull Study 1)",
@@ -222,7 +222,7 @@
     "height": 8.3,
     "medium": "Fineliner inked text on card",
     "description": "Line skull study, on the poem 'Aubade', by Philip Larkin (1922-1985)",
-    "tags": ""
+    "tags": "body studies,line drawings"
   },
   {
     "name": "Dave Grohl",
@@ -237,7 +237,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Dave Grohl with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Paul McCartney",
@@ -252,7 +252,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Paul McCartney with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "John Lennon",
@@ -267,7 +267,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text and pencil on card",
     "description": "Portrait of John Lennon with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Frank Turner 1",
@@ -282,7 +282,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Frank Turner with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Bee Study 2",
@@ -312,7 +312,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Frank Turner with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "George Michael",
@@ -327,7 +327,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of George Michael with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Ian Brown",
@@ -342,7 +342,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Ian Brown with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Mitski",
@@ -357,7 +357,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Mitski with singer's lyrics",
-    "tags": ""
+    "tags": "portraits"
   },
   {
     "name": "Pete Doherty",
@@ -372,7 +372,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text and pencil on card",
     "description": "Portrait of Pete Doherty with singer's lyrics",
-    "tags": "people"
+    "tags": "portraits"
   },
   {
     "name": "Ziggy",
@@ -387,7 +387,7 @@
     "height": 16.5,
     "medium": "Fineliner inked text and pencil on card",
     "description": "Portrait of David Bowie with singer's lyrics",
-    "tags": ""
+    "tags": "portraits"
   },
   {
     "name": "Andre3000",
@@ -402,7 +402,7 @@
     "height": 11.7,
     "medium": "Fineliner inked text on card",
     "description": "Portrait of Andre3000 with singer's lyrics",
-    "tags": ""
+    "tags": "portraits"
   },
   {
     "name": "Lana Del Rey",
