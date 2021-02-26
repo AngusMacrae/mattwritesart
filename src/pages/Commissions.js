@@ -3,10 +3,10 @@ export default function Commissions() {
     <section className='commissions'>
       <div className='commissions__img-carousel'>
         <div className='commissions__img-container'>
-          <img src={`/art-images/swallow-study-1.webp`} alt='Swallow' />
+          <img src={`/art-images/pete-doherty.webp`} alt='Pete Doherty' />
         </div>
         <div className='commissions__img-container'>
-          <img src={`/art-images/adele.webp`} alt='Adele' />
+          <img src={`/art-images/bjoern-gelotte.webp`} alt='Bjoern Gelotte' />
         </div>
         <div className='commissions__img-container'>
           <img src={`/art-images/frank-turner-3.webp`} alt='Frank Turner' />
