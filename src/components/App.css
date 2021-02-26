@@ -579,7 +579,10 @@ main .btn.btn-secondary {
 
 .art-details__text-container {
   max-width: 400px;
-  margin-left: 2rem;
+  margin-left: calc(2rem + 1vw);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .art-details__key-info {
