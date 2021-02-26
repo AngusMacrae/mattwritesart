@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import ScrollMemory from 'react-router-scroll-memory';
 import Home from '../pages/Home';
 import ArtGallery from '../pages/ArtGallery';
 import ArtDetails from '../pages/ArtDetails';
@@ -11,6 +12,7 @@ import './App.css';
 function App() {
   return (
     <Router>
+      <ScrollMemory />
       <Header />
       <main>
         <Switch>
