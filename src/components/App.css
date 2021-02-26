@@ -314,7 +314,7 @@ main .btn.btn-secondary {
   bottom: 0;
   width: max-content;
   font-size: 1rem;
-  text-shadow: 2px 0 4px white, 2px 0 4px white, 0 2px 4px white, 0 -2px 4px white, 2px 0 4px white, 2px 0 4px white, 0 2px 4px white, 0 -2px 4px white, 2px 0 4px white, 2px 0 4px white, 0 2px 4px white, 0 -2px 4px white, 2px 0 4px white, 2px 0 4px white, 0 2px 4px white, 0 -2px 4px white;
+  text-shadow: 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, 0 0 7px white, 0 0 8px white, 0 0 9px white;
   padding: 0.2rem 0.8rem;
   opacity: 0;
   transition: opacity 0.2s;
