@@ -1,7 +1,7 @@
 export default function ArtGalleryFilterSelect({ value, handleFilterChange, filterGroupName, options }) {
   return (
     <div className={`${filterGroupName}-select-container select-container`}>
-      <label htmlFor={`${filterGroupName}-select`}>Availability</label>
+      <label htmlFor={`${filterGroupName}-select`}>{filterGroupName}</label>
       <select value={value} onChange={handleFilterChange} name={filterGroupName} id={`${filterGroupName}-select`}>
         {options.map(option => {
           return (

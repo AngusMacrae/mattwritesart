@@ -488,6 +488,7 @@ main .btn.btn-secondary {
   padding: 0.25rem 0.5rem;
   border-color: black;
   text-transform: capitalize;
+  background-color: white;
 }
 
 .art-gallery__gallery {
