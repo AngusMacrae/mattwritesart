@@ -390,6 +390,8 @@ main .btn.btn-secondary {
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 2rem;
+  min-height: 75vh;
+  align-items: start;
 }
 
 .art-filters-small {
@@ -490,6 +492,12 @@ main .btn.btn-secondary {
   border-color: black;
   text-transform: capitalize;
   background-color: white;
+}
+
+.art-gallery__gallery--no-results {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
 }
 
 .art-gallery__gallery {

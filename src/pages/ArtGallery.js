@@ -43,11 +43,16 @@ export default function ArtGallery() {
           <ArtGalleryFilterSelect value={categoryFilter} handleFilterChange={handleCategoryFilterChange} filterGroupName='category' options={Object.keys(CATEGORY_FILTERS)} />
         </div>
       </aside>
-      <ul className='art-gallery__gallery'>
-        {filteredArt.map(artwork => (
-          <ArtGalleryItem key={artwork.slug} artwork={artwork} />
-        ))}
-      </ul>
+
+      {filteredArt.length ? (
+        <ul className='art-gallery__gallery'>
+          {filteredArt.map(artwork => (
+            <ArtGalleryItem key={artwork.slug} artwork={artwork} />
+          ))}
+        </ul>
+      ) : (
+        <p className='art-gallery__gallery--no-results'>Sorry - no results</p>
+      )}
     </section>
   );
 }
