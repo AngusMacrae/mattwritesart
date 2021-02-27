@@ -1,10 +1,8 @@
-import { Fragment } from 'react';
-
-export default function ArtGalleryFilterRadio({ idName, filterName, checked, handleFilterChange, FILTERS }) {
+export default function ArtGalleryFilterRadio({ filterGroupName, filterName, checked, handleFilterChange }) {
   return (
-    <Fragment>
-      <input type='radio' id={`${idName}-${filterName}`} value={filterName} checked={checked} onChange={handleFilterChange} />
-      <label htmlFor={`${idName}-${filterName}`}>{FILTERS[filterName].caption}</label>
-    </Fragment>
+    <>
+      <input type='radio' id={`${filterGroupName}-${filterName}`} value={filterName} checked={checked} onChange={handleFilterChange} />
+      <label htmlFor={`${filterGroupName}-${filterName}`}>{filterName}</label>
+    </>
   );
 }

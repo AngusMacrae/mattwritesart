@@ -487,6 +487,7 @@ main .btn.btn-secondary {
 .art-filters-small select {
   padding: 0.25rem 0.5rem;
   border-color: black;
+  text-transform: capitalize;
 }
 
 .art-gallery__gallery {
