@@ -5,35 +5,29 @@ import ArtGallery from '../pages/ArtGallery';
 import ArtDetails from '../pages/ArtDetails';
 import Commissions from '../pages/Commissions';
 import Contact from '../pages/Contact';
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <ScrollMemory />
-      <Header />
-      <main>
-        <Switch>
-          <Route exact path='/'>
-            <Home />
-          </Route>
-          <Route path='/art/:slug'>
-            <ArtDetails />
-          </Route>
-          <Route path='/art'>
-            <ArtGallery />
-          </Route>
-          <Route path='/commissions'>
-            <Commissions />
-          </Route>
-          <Route path='/contact'>
-            <Contact />
-          </Route>
-        </Switch>
-      </main>
-      <Footer />
+      <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route path='/art/:slug'>
+          <ArtDetails />
+        </Route>
+        <Route path='/art'>
+          <ArtGallery />
+        </Route>
+        <Route path='/commissions'>
+          <Commissions />
+        </Route>
+        <Route path='/contact'>
+          <Contact />
+        </Route>
+      </Switch>
     </Router>
   );
 }
