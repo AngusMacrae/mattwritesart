@@ -653,7 +653,7 @@ main .btn.btn-secondary {
 }
 
 @media (max-width: 950px) {
-  .art-details {
+  .art-details__content {
     flex-direction: column;
   }
   .art-details__img-gallery-container img {
