@@ -130,6 +130,7 @@ main .btn.btn-secondary {
 .header-nav {
   display: flex;
   font-weight: bold;
+  touch-action: none;
 }
 
 .header-nav__page-links,
