@@ -1,9 +1,12 @@
 import { useParams } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
 import art from '../data/art.js';
 
 export default function ArtDetails() {
   const { slug } = useParams();
   const artwork = art.find(item => item.slug === slug);
+
+  usePageTitle(`mattwritesart - ${artwork.name}`);
 
   return (
     <section className='art-details'>

@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
 
 export default function Commissions() {
+  usePageTitle('mattwritesart - Commissions');
+
   return (
     <section className='commissions'>
       <div className='commissions__img-carousel'>

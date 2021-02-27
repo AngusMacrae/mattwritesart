@@ -1,4 +1,8 @@
+import usePageTitle from '../hooks/usePageTitle';
+
 export default function Contact() {
+  usePageTitle('mattwritesart - Contact');
+
   return (
     <section className='contact-form flow'>
       <h2>Get in touch</h2>

@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import usePageTitle from '../hooks/usePageTitle';
 import Showcase from '../components/Showcase/Showcase';
 
 export default function Home() {
+  usePageTitle('mattwritesart');
+
   return (
     <>
       <section className='about flow'>
@@ -18,7 +21,7 @@ export default function Home() {
         <Link to='/art' className='btn'>
           Browse & Buy
         </Link>
-      </section>{' '}
+      </section>
     </>
   );
 }

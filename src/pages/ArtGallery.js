@@ -1,3 +1,4 @@
+import usePageTitle from '../hooks/usePageTitle';
 import useFilter from '../hooks/useFilter';
 import art, { CATEGORIES } from '../data/art.js';
 import ArtGalleryFilterRadioGroup from '../components/ArtGallery/ArtGalleryFilterRadioGroup';
@@ -20,8 +21,11 @@ CATEGORIES.forEach(category => {
 });
 
 export default function ArtGallery() {
+  usePageTitle('mattwritesart - Browse & Buy');
+
   const [availabilityFilter, handleAvailabilityFilterChange] = useFilter();
   const [categoryFilter, handleCategoryFilterChange] = useFilter();
+
   const filteredArt = art.filter(AVAILABILITY_FILTERS[availabilityFilter]).filter(CATEGORY_FILTERS[categoryFilter]);
 
   return (
