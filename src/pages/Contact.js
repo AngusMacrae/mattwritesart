@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <>
       <Header />
-      <main>
-        <section className='contact-form flow'>
+      <main className='contact'>
+        <section className='container-thin flow'>
           <h2>Get in touch</h2>
           <p>If you're interested in commissioning an original piece, have a question, suggestion or something you want to share with me, or anything else you'd like to reach out about, you can use the form below.</p>
           <p>My inbox is always open!*</p>

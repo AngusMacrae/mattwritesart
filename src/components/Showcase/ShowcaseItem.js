@@ -15,7 +15,7 @@ export default function ShowcaseItem({ artwork }) {
   }
 
   return (
-    <li className={`showcase-item ${gridClasses}`}>
+    <li className={`showcase-item shadow ${gridClasses}`}>
       <Link to={`/art/${artwork.slug}`} className='showcase-item-content'>
         <h2>{artwork.name}</h2>
         <img className='showcase-item__main-img' src={`/art-images/${artwork.slug}.webp`} alt={artwork.description} />

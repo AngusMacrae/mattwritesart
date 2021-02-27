@@ -33,8 +33,8 @@ export default function ArtGallery() {
   return (
     <>
       <Header />
-      <main>
-        <section className='art-gallery'>
+      <main className='art-gallery'>
+        <section className='art-gallery__content'>
           <aside>
             <div className='art-filters-large'>
               <ArtGalleryFilterRadioGroup FILTERS={AVAILABILITY_FILTERS} filterGroupName='availability' filter={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} />

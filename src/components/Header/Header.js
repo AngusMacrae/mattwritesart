@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header className='header'>
-      <div className='header__content-container'>
+      <div className='header__content-container container-wide'>
         <div className='header__top-bar'>
           <NavLink to='/' onClick={menuOpen ? toggleMenu : null} title='Home' className='header-home'>
             <h1>

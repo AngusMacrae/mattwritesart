@@ -10,15 +10,15 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main>
-        <section className='about flow'>
+      <main className='home'>
+        <section className='about container-thin flow'>
           <p>
             <strong>Hi! I'm matt and I write art.</strong>
           </p>
           <p>I form words into images, exploring the power of negative space and the illusion of distance.</p>
         </section>
         <Showcase />
-        <section className='home-ctas'>
+        <section className='cta-container'>
           <Link to='/commissions' className='btn btn-secondary'>
             Commissions
           </Link>

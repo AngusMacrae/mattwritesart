@@ -13,9 +13,9 @@ export default function ArtDetails() {
   return (
     <>
       <Header />
-      <main>
-        <section className='art-details'>
-          <div className='art-details__img-gallery-container'>
+      <main className='art-details'>
+        <section className='art-details__content container-med'>
+          <div className='art-details__img-gallery-container shadow'>
             <img src={`/art-images/${artwork.slug}.webp`} alt={artwork.description} />
           </div>
           <div className='art-details__text-container flow'>
