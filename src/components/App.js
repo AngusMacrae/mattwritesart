@@ -5,6 +5,7 @@ import ArtGallery from '../pages/ArtGallery';
 import ArtDetails from '../pages/ArtDetails';
 import Commissions from '../pages/Commissions';
 import Contact from '../pages/Contact';
+import Thankyou from '../pages/Thankyou';
 import './App.css';
 
 function App() {
@@ -26,6 +27,9 @@ function App() {
         </Route>
         <Route path='/contact'>
           <Contact />
+        </Route>
+        <Route path='/thankyou'>
+          <Thankyou />
         </Route>
       </Switch>
     </Router>

@@ -284,11 +284,17 @@ main section:last-of-type {
   margin-bottom: clamp(4.5rem, 10vmin, 15rem);
 }
 
-.about {
+.hero-text {
   margin-top: 1.5rem;
   margin-bottom: 2.5rem;
   margin-top: clamp(1.5rem, 8vmin, 10rem);
   margin-bottom: clamp(2.5rem, 12vmin, 13rem);
+  text-align: center;
+}
+
+.thankyou .hero-text {
+  margin-bottom: 1.5rem;
+  margin-bottom: clamp(1.5rem, 7vmin, 9rem);
 }
 
 .home .cta-container {
@@ -310,10 +316,6 @@ main .btn.btn-secondary {
   color: black;
   background-color: white;
   border: 1px solid black;
-}
-
-.about {
-  text-align: center;
 }
 
 .showcase-list {

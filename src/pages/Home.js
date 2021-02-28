@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header />
       <main className='home'>
-        <section className='about container-thin flow'>
+        <section className='container-thin hero-text flow'>
           <p>
             <strong>Hi! I'm matt and I write art.</strong>
           </p>
