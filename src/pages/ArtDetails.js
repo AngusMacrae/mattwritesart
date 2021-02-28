@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import usePageTitle from '../hooks/usePageTitle';
@@ -35,8 +35,16 @@ export default function ArtDetails() {
             </ul>
             <p>{artwork.description}</p>
             <h3 className='art-details__buy'>{artwork.original || artwork.prints ? 'AVAILABLE TO BUY' : 'NOT AVAILABLE TO BUY'}</h3>
-            {artwork.prints && <button className={artwork.original && 'btn-secondary'}>Buy Print £{artwork.prints}</button>}
-            {artwork.original && <button>Buy Original £{artwork.original}</button>}
+            {artwork.prints && (
+              <Link to={{ pathname: `/buy/${artwork.slug}`, state: { buyOption: 'print' } }} className={`btn ${artwork.original && 'btn-secondary'}`}>
+                Order Print £{artwork.prints}
+              </Link>
+            )}
+            {artwork.original && (
+              <Link to={{ pathname: `/buy/${artwork.slug}`, state: { buyOption: 'original' } }} className='btn'>
+                Buy Original £{artwork.original}
+              </Link>
+            )}
           </div>
         </section>
       </main>

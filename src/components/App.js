@@ -5,6 +5,7 @@ import ArtGallery from '../pages/ArtGallery';
 import ArtDetails from '../pages/ArtDetails';
 import Commissions from '../pages/Commissions';
 import Contact from '../pages/Contact';
+import Buy from '../pages/Buy';
 import Thankyou from '../pages/Thankyou';
 import './App.css';
 
@@ -27,6 +28,9 @@ function App() {
         </Route>
         <Route path='/contact'>
           <Contact />
+        </Route>
+        <Route path='/buy/:slug'>
+          <Buy />
         </Route>
         <Route path='/thankyou'>
           <Thankyou />
