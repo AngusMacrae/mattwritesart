@@ -1,9 +1,13 @@
+import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Error from './Error';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import ArtDetailsLightbox from '../components/ArtDetails/ArtDetailsLightbox';
 import usePageTitle from '../hooks/usePageTitle';
+import loadImage from '../utils/loadImage';
 import art from '../data/art.js';
+import magnifyingGlass from '../assets/icons/magnifying-glass.svg';
 
 export default function ArtDetails() {
   const urlParams = useParams();
@@ -12,11 +16,29 @@ export default function ArtDetails() {
 
   usePageTitle(`mattwritesart - ${pathValid && artwork.name}`);
 
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  function closeLightbox() {
+    setLightboxOpen(false);
+  }
+
+  function openLightbox() {
+    setLightboxOpen(true);
+  }
+
+  const [lightboxImgLoaded, setLightboxImgLoaded] = useState(false);
+
+  useEffect(() => {
+    loadImage(`/art-images/close-ups/${artwork.slug}_1.webp`)
+      .then(() => setLightboxImgLoaded(true))
+      .catch(err => console.log('Failed to load lightbox image', err));
+  }, [artwork]);
+
   if (!pathValid) {
     return <Error />;
   }
 
-  const { name, slug, date, original, prints, height, width, medium, description } = artwork;
+  const { name, slug, date, original, prints, closeups, height, width, medium, description } = artwork;
 
   return (
     <>
@@ -25,6 +47,11 @@ export default function ArtDetails() {
         <section className='art-details__content container-med'>
           <div className='art-details__img-container'>
             <img src={`/art-images/${slug}.webp`} alt={description} className='shadow' />
+            {closeups && (
+              <button onClick={openLightbox}>
+                <img src={magnifyingGlass} alt='' /> View Closer
+              </button>
+            )}
           </div>
           <div className='art-details__info-container flow'>
             <h2>{name}</h2>
@@ -55,6 +82,7 @@ export default function ArtDetails() {
             )}
           </div>
         </section>
+        {lightboxOpen && lightboxImgLoaded && <ArtDetailsLightbox imageSrc={`/art-images/close-ups/${slug}_1.webp`} closeLightbox={closeLightbox} />}
       </main>
       <Footer />
     </>

@@ -7,6 +7,7 @@ import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
 import LoadingBar from '../components/misc/LoadingBar';
 import usePageTitle from '../hooks/usePageTitle';
 import useFilter from '../hooks/useFilter';
+import loadImage from '../utils/loadImage';
 import art, { CATEGORIES } from '../data/art.js';
 import filterIcon from '../assets/icons/filter.svg';
 
@@ -34,15 +35,6 @@ export default function ArtGallery() {
   const [imgsLoaded, setImgsLoaded] = useState(false);
 
   useEffect(() => {
-    function loadImage(url) {
-      return new Promise((resolve, reject) => {
-        const loadImg = new Image();
-        loadImg.src = url;
-        loadImg.onload = () => resolve(url);
-        loadImg.onerror = err => reject(err);
-      });
-    }
-
     Promise.all(filteredArt.map(artwork => loadImage(`/art-images/${artwork.slug}.webp`)))
       .then(() => setImgsLoaded(true))
       .catch(err => console.log('Failed to load images', err));
