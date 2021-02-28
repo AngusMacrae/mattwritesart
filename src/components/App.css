@@ -572,6 +572,12 @@ main .btn.btn-secondary {
   justify-content: center;
 }
 
+.art-details__img-gallery-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .art-details__img-gallery-container img {
   margin: 0 auto;
   max-width: 750px;
