@@ -1,6 +1,6 @@
 export default function BuyOption({ name, caption, selected, handleChange, artworkSlug, artworkDesc = '', dimensions = null, medium = null, price }) {
   return (
-    <div className={`buy__option ${selected && 'selected'}`}>
+    <div className={`buy__option ${selected ? 'selected' : ''}`}>
       <input type='radio' id={`buy-option-${name}`} value={name} checked={selected} onChange={handleChange} />
       <label htmlFor={`buy-option-${name}`}></label>
       <span className='buy__option--selected'>Selected</span>

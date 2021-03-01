@@ -36,7 +36,7 @@ export default function ArtDetails() {
             <p>{artwork.description}</p>
             <h3 className='art-details__buy'>{artwork.original || artwork.prints ? 'AVAILABLE TO BUY' : 'NOT AVAILABLE TO BUY'}</h3>
             {artwork.prints && (
-              <Link to={{ pathname: `/buy/${artwork.slug}`, state: { buyOption: 'print' } }} className={`btn ${artwork.original && 'btn-secondary'}`}>
+              <Link to={{ pathname: `/buy/${artwork.slug}`, state: { buyOption: 'print' } }} className={`btn ${artwork.original ? 'btn-secondary' : ''}`}>
                 Order Print £{artwork.prints}
               </Link>
             )}
