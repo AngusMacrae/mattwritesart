@@ -1,13 +1,27 @@
 import { Link } from 'react-router-dom';
 
 export default function ArtGalleryItem({ artwork }) {
+  const { name, slug, description, original, prints } = artwork;
+
+  let availability;
+
+  if (original && !prints) {
+    availability = 'Original';
+  } else if (!original && prints) {
+    availability = 'Prints';
+  } else if (original && prints) {
+    availability = 'Original & prints';
+  } else {
+    availability = 'Unavailable';
+  }
+
   return (
     <li className='art-gallery__item'>
-      <Link to={`/art/${artwork.slug}`}>
-        <img className='art-gallery__item--img shadow' src={`/art-images/${artwork.slug}.webp`} alt={artwork.description} />
+      <Link to={`/art/${slug}`}>
+        <img className='art-gallery__item--img shadow' src={`/art-images/${slug}.webp`} alt={description} />
         <div className='art-gallery__item--content'>
-          <h3>{artwork.name}</h3>
-          <p className='art-gallery__item__availability'>{!artwork.original && !artwork.prints ? 'Unavailable' : !artwork.original && artwork.prints ? 'Prints' : artwork.original && artwork.prints ? 'Original & prints' : 'Original'}</p>
+          <h3>{name}</h3>
+          <p className='art-gallery__item__availability'>{availability}</p>
         </div>
       </Link>
     </li>
