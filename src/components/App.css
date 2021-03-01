@@ -414,6 +414,12 @@ main section:last-of-type {
   opacity: 1;
 }
 
+@media (max-width: 589px) {
+  .showcase-item:not(.spotlight) {
+    display: none;
+  }
+}
+
 @media (min-width: 590px) {
   .showcase-item.landscape.spotlight {
     grid-row-end: span 2;
