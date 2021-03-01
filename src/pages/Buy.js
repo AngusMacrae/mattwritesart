@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useParams, useLocation } from 'react-router-dom';
+import Error from './Error';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import BuyOption from '../components/Buy/BuyOption';
@@ -7,14 +8,13 @@ import usePageTitle from '../hooks/usePageTitle';
 import art from '../data/art.js';
 
 export default function Buy() {
-  const { slug } = useParams();
-  const artwork = art.find(item => item.slug === slug);
+  const urlParams = useParams();
+  const artwork = art.find(item => item.slug === urlParams.slug);
+  const pathValid = typeof artwork !== 'undefined';
 
-  usePageTitle(`mattwritesart - Buy ${artwork.name}`);
+  usePageTitle(`mattwritesart - Buy ${pathValid && artwork.name}`);
 
-  const printDimensions = artwork.width > artwork.height ? '11.7"x8.3"' : '8.3"x11.7"';
-
-  const defaultBuyOption = artwork.original ? 'original' : 'print';
+  const defaultBuyOption = pathValid && artwork.original ? 'original' : 'print';
   const locationObj = useLocation();
   const selectedBuyOption = typeof locationObj.state !== 'undefined' ? locationObj.state.buyOption : defaultBuyOption;
   const [buyOption, setBuyOption] = useState(selectedBuyOption);
@@ -23,16 +23,23 @@ export default function Buy() {
     setBuyOption(event.target.value);
   }
 
+  if (!pathValid) {
+    return <Error />;
+  }
+
+  const { name, slug, original, prints, height, width, medium, description } = artwork;
+  const printDimensions = width > height ? '11.7"x8.3"' : '8.3"x11.7"';
+
   return (
     <>
       <Header />
       <main className='buy'>
         <section className='container-thin flow'>
-          <h2>{artwork.name}</h2>
+          <h2>{name}</h2>
           <form>
             <fieldset className='buy__options'>
-              {artwork.prints && <BuyOption name='print' caption='Order Print' selected={buyOption === 'print'} handleChange={handleBuyOptionChange} artworkSlug={artwork.slug} artworkDesc={artwork.description} dimensions={printDimensions} price={artwork.prints} />}
-              {artwork.original && <BuyOption name='original' caption='Buy Original' selected={buyOption === 'original'} handleChange={handleBuyOptionChange} artworkSlug={artwork.slug} artworkDesc={artwork.description} dimensions={`${artwork.width}"x${artwork.height}"`} medium={artwork.medium} price={artwork.original} />}
+              {prints && <BuyOption name='print' caption='Order Print' selected={buyOption === 'print'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={printDimensions} price={prints} />}
+              {original && <BuyOption name='original' caption='Buy Original' selected={buyOption === 'original'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={`${width}"x${height}"`} medium={medium} price={original} />}
             </fieldset>
             <p>To purchase, please fill in your details below. I'll get back to you ASAP with payment details and to arrange shipping.</p>
             <p>Thanks so much!</p>

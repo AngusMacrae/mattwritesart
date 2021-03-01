@@ -365,7 +365,8 @@ main section:last-of-type {
   text-align: center;
 }
 
-.thankyou .hero-text {
+.thankyou .hero-text,
+.error .hero-text {
   margin-bottom: 1.5rem;
   margin-bottom: clamp(1.5rem, 7vmin, 9rem);
 }

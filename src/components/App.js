@@ -7,6 +7,7 @@ import Commissions from '../pages/Commissions';
 import Contact from '../pages/Contact';
 import Buy from '../pages/Buy';
 import Thankyou from '../pages/Thankyou';
+import Error from '../pages/Error';
 import './App.css';
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path='/thankyou'>
           <Thankyou />
+        </Route>
+        <Route path='*'>
+          <Error />
         </Route>
       </Switch>
     </Router>
