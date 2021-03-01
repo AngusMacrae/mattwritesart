@@ -654,18 +654,15 @@ main section:last-of-type {
   flex-wrap: wrap;
 }
 
-.art-details__key-info li:first-of-type {
-  margin-right: 3rem;
-}
-
-.art-details__medium {
-  width: 100%;
+.art-details__key-info li:not(:last-of-type) {
+  margin-right: 2rem;
 }
 
 .art-details__buy {
   margin-top: 3rem;
   text-transform: uppercase;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
 }
 
 .art-details .btn {
