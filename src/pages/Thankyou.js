@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
 import usePageTitle from '../hooks/usePageTitle';
 
 export default function Thankyou() {
@@ -8,7 +6,6 @@ export default function Thankyou() {
 
   return (
     <>
-      <Header />
       <main className='thankyou'>
         <section className='container-thin hero-text flow'>
           <p>
@@ -23,7 +20,6 @@ export default function Thankyou() {
           </Link>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

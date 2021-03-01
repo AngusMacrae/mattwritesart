@@ -1,6 +1,4 @@
 import { Link } from 'react-router-dom';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
 import usePageTitle from '../hooks/usePageTitle';
 
 export default function Error() {
@@ -8,7 +6,6 @@ export default function Error() {
 
   return (
     <>
-      <Header />
       <main className='error'>
         <section className='container-thin hero-text flow'>
           <p>
@@ -25,7 +22,6 @@ export default function Error() {
           </Link>
         </section>
       </main>
-      <Footer />
     </>
   );
 }

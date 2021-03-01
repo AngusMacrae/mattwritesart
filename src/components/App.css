@@ -365,12 +365,6 @@ main section:last-of-type {
   text-align: center;
 }
 
-.thankyou .hero-text,
-.error .hero-text {
-  margin-bottom: 1.5rem;
-  margin-bottom: clamp(1.5rem, 7vmin, 9rem);
-}
-
 .home .cta-container {
   margin-top: 4rem;
   margin-top: clamp(4rem, 12vmin, 13rem);
@@ -858,6 +852,19 @@ td {
   .commissions .cta-container {
     margin-bottom: 4rem;
   }
+}
+
+.thankyou,
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thankyou .hero-text,
+.error .hero-text {
+  margin-bottom: 0;
+  /* margin-bottom: clamp(1.5rem, 7vmin, 9rem); */
 }
 
 .footer {
