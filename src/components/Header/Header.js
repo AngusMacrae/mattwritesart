@@ -22,7 +22,7 @@ export default function Header() {
     <header className='header'>
       <div className='header__content-container container-wide'>
         <div className='header__top-bar'>
-          <NavLink to='/' onClick={menuOpen ? toggleMenu : null} title='Home' className='header-home'>
+          <NavLink to='/' onClick={closeMenu} title='Home' className='header-home'>
             <h1>
               matt<span className='deemphasised'>writes</span>art<small className='deemphasised'>.co.uk</small>
             </h1>
