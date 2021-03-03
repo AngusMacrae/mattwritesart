@@ -1,11 +1,13 @@
 import { NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { FilterContext } from '../../context/FilterContext';
 import useOnResize from '../../hooks/useOnResize.js';
 import instagram from '../../assets/icons/instagram.svg';
 import menu from '../../assets/icons/menu.svg';
 import close from '../../assets/icons/close.svg';
 
 export default function Header() {
+  const { setFilters } = useContext(FilterContext);
   const [menuOpen, setMenuOpen] = useState(false);
 
   function closeMenu() {
@@ -39,7 +41,13 @@ export default function Header() {
               </NavLink>
             </li>
             <li>
-              <NavLink to='/art' onClick={closeMenu}>
+              <NavLink
+                to='/art'
+                onClick={() => {
+                  closeMenu();
+                  setFilters({});
+                }}
+              >
                 Browse & Buy
               </NavLink>
             </li>

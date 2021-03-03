@@ -24,9 +24,8 @@ CATEGORIES.forEach(category => {
 
 export default function ArtGallery() {
   usePageTitle('mattwritesart - Browse & Buy');
-
-  const [availabilityFilter, handleAvailabilityFilterChange] = useFilter();
-  const [categoryFilter, handleCategoryFilterChange] = useFilter();
+  const [availabilityFilter, handleAvailabilityFilterChange] = useFilter('availability');
+  const [categoryFilter, handleCategoryFilterChange] = useFilter('category');
 
   const filteredArt = art.filter(AVAILABILITY_FILTERS[availabilityFilter]).filter(CATEGORY_FILTERS[categoryFilter]);
 

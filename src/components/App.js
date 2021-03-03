@@ -8,38 +8,41 @@ import Contact from '../pages/Contact';
 import Buy from '../pages/Buy';
 import Thankyou from '../pages/Thankyou';
 import Error from '../pages/Error';
+import FilterProvider from '../context/FilterContext';
 import './App.css';
 
 function App() {
   return (
     <Router>
       <ScrollMemory />
-      <Switch>
-        <Route exact path='/'>
-          <Home />
-        </Route>
-        <Route path='/art/:slug'>
-          <ArtDetails />
-        </Route>
-        <Route path='/art'>
-          <ArtGallery />
-        </Route>
-        <Route path='/commissions'>
-          <Commissions />
-        </Route>
-        <Route path='/contact'>
-          <Contact />
-        </Route>
-        <Route path='/buy/:slug'>
-          <Buy />
-        </Route>
-        <Route path='/thankyou'>
-          <Thankyou />
-        </Route>
-        <Route path='*'>
-          <Error />
-        </Route>
-      </Switch>
+      <FilterProvider>
+        <Switch>
+          <Route exact path='/'>
+            <Home />
+          </Route>
+          <Route path='/art/:slug'>
+            <ArtDetails />
+          </Route>
+          <Route path='/art'>
+            <ArtGallery />
+          </Route>
+          <Route path='/commissions'>
+            <Commissions />
+          </Route>
+          <Route path='/contact'>
+            <Contact />
+          </Route>
+          <Route path='/buy/:slug'>
+            <Buy />
+          </Route>
+          <Route path='/thankyou'>
+            <Thankyou />
+          </Route>
+          <Route path='*'>
+            <Error />
+          </Route>
+        </Switch>
+      </FilterProvider>
     </Router>
   );
 }
