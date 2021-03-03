@@ -237,6 +237,10 @@ fieldset {
   touch-action: none;
 }
 
+.header-nav__home {
+  display: none !important;
+}
+
 .header-nav__page-links,
 .header-nav__social-links {
   display: flex;
@@ -287,7 +291,7 @@ fieldset {
   transform: scale(1.07);
 }
 
-@media (max-width: 1020px) {
+@media (max-width: 960px) {
   .header__content-container {
     flex-direction: column;
     justify-content: flex-start;
@@ -314,6 +318,9 @@ fieldset {
   }
   .header-nav.active {
     display: flex;
+  }
+  .header-nav__home {
+    display: flex !important;
   }
   .header-nav,
   .header-nav__page-links {

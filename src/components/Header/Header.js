@@ -33,7 +33,7 @@ export default function Header() {
         </div>
         <nav className={`header-nav ${menuOpen ? 'active' : ''}`}>
           <ul className='header-nav__page-links'>
-            <li>
+            <li className='header-nav__home'>
               <NavLink to='/' exact onClick={closeMenu}>
                 Home
               </NavLink>
