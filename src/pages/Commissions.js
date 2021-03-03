@@ -26,7 +26,7 @@ export default function Commissions() {
             View More Art
           </Link>
           <Link to='/contact' className='btn'>
-            Commission a Piece
+            Commission Original Art
           </Link>
         </section>
       </main>
