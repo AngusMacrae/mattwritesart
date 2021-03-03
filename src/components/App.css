@@ -873,6 +873,13 @@ td {
   /* margin-bottom: clamp(1.5rem, 7vmin, 9rem); */
 }
 
+.thankyou img,
+.error img {
+  padding: 1rem;
+  margin: 0 auto;
+  width: 150px;
+}
+
 .footer {
   text-align: right;
   padding-top: 1rem;

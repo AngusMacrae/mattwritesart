@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import usePageTitle from '../hooks/usePageTitle';
+import logo from '../assets/logo/mwa-logo.svg';
 
 export default function Thankyou() {
   usePageTitle('mattwritesart - Thanks!');
@@ -8,6 +9,7 @@ export default function Thankyou() {
     <>
       <main className='thankyou'>
         <section className='container-thin hero-text flow'>
+          <img src={logo} alt='' />
           <p>
             <strong>Thanks for your enquiry!</strong>
           </p>
