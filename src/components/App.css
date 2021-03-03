@@ -642,13 +642,13 @@ main section:last-of-type {
 .art-details__img-gallery-container img {
   margin: 0 auto;
   max-width: 750px;
-  max-width: min(50vw, 750px);
+  max-width: min(52vw, 900px);
   max-height: 650px;
-  max-height: clamp(650px, 60vh, 1000px);
+  max-height: clamp(600px, 50vh, 900px);
 }
 
 .art-details__text-container {
-  max-width: 400px;
+  max-width: min(35vw, 380px);
   margin-left: calc(2rem + 1vw);
   display: flex;
   flex-direction: column;
@@ -677,17 +677,18 @@ main section:last-of-type {
   width: 16rem;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 960px) {
   .art-details__content {
     flex-direction: column;
   }
   .art-details__img-gallery-container img {
-    max-width: 100%;
+    max-width: min(100%, 675px);
+    max-height: 650px;
   }
   .art-details__text-container {
     max-width: unset;
     margin-left: 0;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
   }
   .art-details .btn {
     width: 100%;
