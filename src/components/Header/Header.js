@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import useOnResize from '../../hooks/useOnResize.js';
 import instagram from '../../assets/icons/instagram.svg';
 import menu from '../../assets/icons/menu.svg';
 import close from '../../assets/icons/close.svg';
@@ -15,12 +16,7 @@ export default function Header() {
     setMenuOpen(prevState => !prevState);
   }
 
-  useEffect(() => {
-    window.addEventListener('resize', closeMenu);
-    return () => {
-      window.removeEventListener('resize', closeMenu);
-    };
-  }, []);
+  useOnResize(closeMenu);
 
   return (
     <header className='header'>
