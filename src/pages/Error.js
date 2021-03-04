@@ -8,7 +8,7 @@ export default function Error() {
   return (
     <>
       <main className='error'>
-        <section className='container-thin hero-text flow'>
+        <section className='container-thin standout flow'>
           <img src={logoSad} alt='' />
           <p>
             <strong>Oh no! Nothing to see here.</strong>

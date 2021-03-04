@@ -35,11 +35,11 @@ export default function ArtGallery() {
       <main className='art-gallery'>
         <section className='art-gallery__content'>
           <aside>
-            <div className='art-filters-large'>
+            <div className='art-filters-lg'>
               <ArtGalleryFilterRadioGroup FILTERS={AVAILABILITY_FILTERS} filterGroupName='availability' filter={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} />
               <ArtGalleryFilterRadioGroup FILTERS={CATEGORY_FILTERS} filterGroupName='category' filter={categoryFilter} handleFilterChange={handleCategoryFilterChange} />
             </div>
-            <div className='art-filters-small'>
+            <div className='art-filters-sm'>
               <h2>
                 <img src={filterIcon} alt=''></img>Filter Art
               </h2>
@@ -49,13 +49,13 @@ export default function ArtGallery() {
           </aside>
 
           {filteredArt.length ? (
-            <ul className='art-gallery__gallery'>
+            <ul className='art-gallery__grid'>
               {filteredArt.map(artwork => (
                 <ArtGalleryItem key={artwork.slug} artwork={artwork} />
               ))}
             </ul>
           ) : (
-            <p className='art-gallery__gallery--no-results'>Sorry - no results</p>
+            <p className='art-gallery__no-results'>Sorry - no results</p>
           )}
         </section>
       </main>

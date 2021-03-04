@@ -11,7 +11,7 @@ export default function Home() {
     <>
       <Header />
       <main className='home'>
-        <section className='container-thin hero-text flow'>
+        <section className='container-thin standout flow'>
           <p>
             <strong>Hi! I'm matt and I write art.</strong>
           </p>

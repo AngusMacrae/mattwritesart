@@ -8,7 +8,7 @@ export default function Thankyou() {
   return (
     <>
       <main className='thankyou'>
-        <section className='container-thin hero-text flow'>
+        <section className='container-thin standout flow'>
           <img src={logo} alt='' />
           <p>
             <strong>Thanks for your enquiry!</strong>

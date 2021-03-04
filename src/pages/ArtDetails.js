@@ -23,12 +23,12 @@ export default function ArtDetails() {
       <Header />
       <main className='art-details'>
         <section className='art-details__content container-med'>
-          <div className='art-details__img-gallery-container'>
+          <div className='art-details__img-container'>
             <img src={`/art-images/${slug}.webp`} alt={description} className='shadow' />
           </div>
-          <div className='art-details__text-container flow'>
+          <div className='art-details__info-container flow'>
             <h2>{name}</h2>
-            <ul className='art-details__key-info'>
+            <ul>
               <li>
                 <small>{date}</small>
               </li>
@@ -37,12 +37,12 @@ export default function ArtDetails() {
                   Original size {width}"x{height}"
                 </small>
               </li>
-              <li className='art-details__medium'>
+              <li>
                 <small>{medium}</small>
               </li>
             </ul>
             <p>{description}</p>
-            <h3 className='art-details__buy'>{original || prints ? 'AVAILABLE TO BUY' : 'NOT AVAILABLE TO BUY'}</h3>
+            <h3 className='art-details__availability'>{original || prints ? 'AVAILABLE TO BUY' : 'NOT AVAILABLE TO BUY'}</h3>
             {prints && (
               <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'print' } }} className={`btn ${original ? 'btn-secondary' : ''}`}>
                 Order Print £{prints}

@@ -22,7 +22,7 @@ export default function Header() {
 
   return (
     <header className='header'>
-      <div className='header__content-container container-wide'>
+      <div className='header__content container-wide'>
         <div className='header__top-bar'>
           <NavLink to='/' onClick={closeMenu} title='Home' className='header-home'>
             <h1>
@@ -33,9 +33,9 @@ export default function Header() {
             <img src={menuOpen ? close : menu} alt='Menu' />
           </button>
         </div>
-        <nav className={`header-nav ${menuOpen ? 'active' : ''}`}>
-          <ul className='header-nav__page-links'>
-            <li className='header-nav__home'>
+        <nav className={menuOpen ? 'active' : ''}>
+          <ul className='nav__page-links'>
+            <li className='nav__home'>
               <NavLink to='/' exact onClick={closeMenu}>
                 Home
               </NavLink>
@@ -62,7 +62,7 @@ export default function Header() {
               </NavLink>
             </li>
           </ul>
-          <ul className='header-nav__social-links'>
+          <ul className='nav__social-links'>
             <li>
               <a href='https://www.instagram.com/mattwritesart/' target='_blank' rel='noopener noreferrer' title='Instagram'>
                 <img src={instagram} alt='mattwritesart Instagram' />

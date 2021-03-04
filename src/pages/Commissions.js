@@ -10,7 +10,7 @@ export default function Commissions() {
     <>
       <Header />
       <main className='commissions'>
-        <section className='commissions__img-carousel container-med'>
+        <section className='commissions__images container-med'>
           <img src={`/art-images/pete-doherty.webp`} alt='Pete Doherty' className='shadow' />
           <img src={`/art-images/bjoern-gelotte.webp`} alt='Bjoern Gelotte' className='shadow' />
           <img src={`/art-images/frank-turner-3.webp`} alt='Frank Turner' className='shadow' />

@@ -4,7 +4,7 @@ import art from '../../data/art.js';
 export default function Showcase() {
   return (
     <section className='showcase'>
-      <ul className='showcase-list'>
+      <ul className='showcase__grid'>
         {art
           .filter(artwork => artwork.showcase)
           .map(artwork => (
