@@ -196,7 +196,7 @@ fieldset {
 
 .header h1 {
   font-size: calc(1.8rem + 1vmin);
-  font-size: clamp(1.9rem, 8vmin, 3rem);
+  font-size: clamp(1.5rem, 9vmin, 3rem);
 }
 
 .header .deemphasised {
@@ -217,7 +217,7 @@ fieldset {
 .header-home {
   display: flex;
   position: relative;
-  bottom: clamp(0.2rem, 1vmin, 0.5rem);
+  bottom: clamp(0.1rem, 1vmin, 0.5rem);
 }
 
 .header__menu-toggle-btn {
