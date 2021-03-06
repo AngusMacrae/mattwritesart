@@ -549,10 +549,12 @@ main section:last-of-type {
   background-color: white;
 }
 
-.art-gallery__no-results {
+.art-gallery__alert {
   justify-self: center;
   align-self: center;
   text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .art-gallery__grid {
@@ -590,6 +592,16 @@ main section:last-of-type {
   align-self: center;
   text-align: center;
   position: relative;
+  animation: fade-in 0.2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 .art-gallery__item a {
@@ -906,5 +918,32 @@ td {
   .footer {
     text-align: center;
     font-size: 1.05rem;
+  }
+}
+
+.loading-bar {
+  margin: 0.5rem auto;
+  position: relative;
+  width: 100px;
+  height: 3px;
+  overflow: hidden;
+}
+
+.loading-bar::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: black;
+  animation: loading 1s ease-in-out infinite alternate;
+}
+
+@keyframes loading {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
   }
 }

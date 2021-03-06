@@ -1,8 +1,10 @@
+import { useState, useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ArtGalleryFilterRadioGroup from '../components/ArtGallery/ArtGalleryFilterRadioGroup';
 import ArtGalleryFilterSelect from '../components/ArtGallery/ArtGalleryFilterSelect';
 import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
+import LoadingBar from '../components/misc/LoadingBar';
 import usePageTitle from '../hooks/usePageTitle';
 import useFilter from '../hooks/useFilter';
 import art, { CATEGORIES } from '../data/art.js';
@@ -29,6 +31,23 @@ export default function ArtGallery() {
 
   const filteredArt = art.filter(AVAILABILITY_FILTERS[availabilityFilter]).filter(CATEGORY_FILTERS[categoryFilter]);
 
+  const [imgsLoaded, setImgsLoaded] = useState(false);
+
+  useEffect(() => {
+    function loadImage(url) {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = url;
+        loadImg.onload = () => resolve(url);
+        loadImg.onerror = err => reject(err);
+      });
+    }
+
+    Promise.all(filteredArt.map(artwork => loadImage(`/art-images/${artwork.slug}.webp`)))
+      .then(() => setImgsLoaded(true))
+      .catch(err => console.log('Failed to load images', err));
+  }, []);
+
   return (
     <>
       <Header />
@@ -48,14 +67,19 @@ export default function ArtGallery() {
             </div>
           </aside>
 
-          {filteredArt.length ? (
+          {!filteredArt.length ? (
+            <div className='art-gallery__alert'>Sorry - no results</div>
+          ) : imgsLoaded ? (
             <ul className='art-gallery__grid'>
               {filteredArt.map(artwork => (
                 <ArtGalleryItem key={artwork.slug} artwork={artwork} />
               ))}
             </ul>
           ) : (
-            <p className='art-gallery__no-results'>Sorry - no results</p>
+            <div className='art-gallery__alert'>
+              <p>Loading...</p>
+              <LoadingBar />
+            </div>
           )}
         </section>
       </main>
