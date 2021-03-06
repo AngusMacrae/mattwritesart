@@ -126,7 +126,7 @@ main .btn.btn-secondary {
   border: 1px solid black;
 }
 
-form {
+#root form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;

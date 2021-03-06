@@ -1,8 +1,8 @@
-export default function BuyOption({ name, caption, selected, handleChange, artworkSlug, artworkDesc = '', dimensions = null, medium = null, price }) {
+export default function BuyOption({ value, caption, selected, handleChange, artworkSlug, artworkDesc = '', dimensions = null, medium = null, price }) {
   return (
     <div className={`buy__option ${selected ? 'selected' : ''}`}>
-      <input type='radio' id={`buy-option-${name}`} value={name} checked={selected} onChange={handleChange} />
-      <label htmlFor={`buy-option-${name}`}></label>
+      <input type='radio' name='order' id={`buy-option-${value}`} value={value} checked={selected} onChange={handleChange} />
+      <label htmlFor={`buy-option-${value}`}></label>
       <span className='buy__option--selected'>Selected</span>
       <div className='buy__option--img-container'>
         <img src={`/art-images/${artworkSlug}.webp`} alt={artworkDesc} className='shadow' />

@@ -18,5 +18,18 @@
   <body>
     <noscript>Sorry! You need to enable JavaScript for this page to work.</noscript>
     <div id="root"></div>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="subject" value="Contact" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
+    <form name="buy" netlify netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="subject" value="Order" />
+      <input type="text" name="order" />
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>
