@@ -5,6 +5,7 @@ import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ArtDetailsLightbox from '../components/ArtDetails/ArtDetailsLightbox';
 import usePageTitle from '../hooks/usePageTitle';
+import useLightbox from '../hooks/useLightbox';
 import loadImage from '../utils/loadImage';
 import art from '../data/art.js';
 import magnifyingGlass from '../assets/icons/magnifying-glass.svg';
@@ -16,15 +17,7 @@ export default function ArtDetails() {
 
   usePageTitle(`mattwritesart - ${pathValid && artwork.name}`);
 
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-
-  function closeLightbox() {
-    setLightboxOpen(false);
-  }
-
-  function openLightbox() {
-    setLightboxOpen(true);
-  }
+  const [lightboxOpen, openLightbox, closeLightbox] = useLightbox();
 
   const [lightboxImgLoaded, setLightboxImgLoaded] = useState(false);
 
