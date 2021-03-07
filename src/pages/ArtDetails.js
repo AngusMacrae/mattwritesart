@@ -1,21 +1,19 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Error from './Error';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ArtDetailsLightbox from '../components/ArtDetails/ArtDetailsLightbox';
 import usePageTitle from '../hooks/usePageTitle';
+import useArtworkSlug from '../hooks/useArtworkSlug';
 import useLightbox from '../hooks/useLightbox';
 import loadImage from '../utils/loadImage';
-import art from '../data/art.js';
 import magnifyingGlass from '../assets/icons/magnifying-glass.svg';
 
 export default function ArtDetails() {
-  const urlParams = useParams();
-  const artwork = art.find(item => item.slug === urlParams.slug);
-  const pathValid = typeof artwork !== 'undefined';
+  const artwork = useArtworkSlug();
 
-  usePageTitle(`mattwritesart - ${pathValid && artwork.name}`);
+  usePageTitle(`mattwritesart - ${artwork && artwork.name}`);
 
   const [lightboxOpen, openLightbox, closeLightbox] = useLightbox();
 
@@ -27,7 +25,7 @@ export default function ArtDetails() {
       .catch(err => console.log('Failed to load lightbox image', err));
   }, [artwork]);
 
-  if (!pathValid) {
+  if (!artwork) {
     return <Error />;
   }
 

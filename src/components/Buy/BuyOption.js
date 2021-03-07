@@ -1,4 +1,4 @@
-export default function BuyOption({ value, caption, selected, handleChange, artworkSlug, artworkDesc = '', dimensions = null, medium = null, price }) {
+export default function BuyOption({ value, caption, selected, handleChange, artworkSlug, artworkDesc, dimensions, medium, price }) {
   return (
     <div className={`buy__option ${selected ? 'selected' : ''}`}>
       <input type='radio' name='order' id={`buy-option-${value}`} value={value} checked={selected} onChange={handleChange} />

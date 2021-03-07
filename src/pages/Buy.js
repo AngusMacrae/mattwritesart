@@ -1,23 +1,21 @@
 import { useState } from 'react';
-import { useParams, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import Error from './Error';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import BuyOption from '../components/Buy/BuyOption';
 import usePageTitle from '../hooks/usePageTitle';
+import useArtworkSlug from '../hooks/useArtworkSlug';
 import useForm from '../hooks/useForm';
-import art from '../data/art.js';
 
 export default function Buy() {
-  const urlParams = useParams();
-  const artwork = art.find(item => item.slug === urlParams.slug);
-  const pathValid = typeof artwork !== 'undefined';
+  const artwork = useArtworkSlug();
 
-  usePageTitle(`mattwritesart - Buy ${pathValid && artwork.name}`);
+  usePageTitle(`mattwritesart - Buy ${artwork && artwork.name}`);
 
-  const defaultBuyOption = pathValid && artwork.original ? 'Original' : 'Print';
-  const locationObj = useLocation();
-  const selectedBuyOption = typeof locationObj.state !== 'undefined' ? locationObj.state.buyOption : defaultBuyOption;
+  const defaultBuyOption = artwork && artwork.original ? 'Original' : 'Print';
+  const locationState = useLocation().state;
+  const selectedBuyOption = typeof locationState !== 'undefined' ? locationState.buyOption : defaultBuyOption;
   const [buyOption, setBuyOption] = useState(selectedBuyOption);
 
   function handleBuyOptionChange(event) {
@@ -26,7 +24,7 @@ export default function Buy() {
 
   const [buyForm, handleSubmit] = useForm();
 
-  if (!pathValid) {
+  if (!artwork) {
     return <Error />;
   }
 
@@ -47,7 +45,7 @@ export default function Buy() {
             <p>To purchase, please fill in your details below. I'll get back to you ASAP with payment details and to arrange shipping.</p>
             <p>Thanks so much!</p>
             <input type='hidden' name='form-name' value='buy' />
-            <input type='hidden' name='subject' value={'Order - ' + artwork.slug} />
+            <input type='hidden' name='subject' value={'Order - ' + slug} />
             <input type='text' name='name' placeholder='Your name' required />
             <input type='email' name='email' placeholder='Your email' required />
             <textarea name='message' placeholder='Your message (optional)' rows='5'></textarea>
