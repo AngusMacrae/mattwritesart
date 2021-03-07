@@ -11,6 +11,7 @@ export default function useFilter(name) {
       ...filters,
       [name]: event.target.value,
     });
+    window.scrollTo(0, 0);
   }
 
   return [filter, handleFilterChange];
