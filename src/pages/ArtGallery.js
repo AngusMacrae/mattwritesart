@@ -8,22 +8,8 @@ import LoadingBar from '../components/misc/LoadingBar';
 import usePageTitle from '../hooks/usePageTitle';
 import useFilter from '../hooks/useFilter';
 import loadImage from '../utils/loadImage';
-import art, { CATEGORIES } from '../data/art.js';
+import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from '../data/art.js';
 import filterIcon from '../assets/icons/filter.svg';
-
-const AVAILABILITY_FILTERS = {
-  'show all': () => true,
-  original: artwork => artwork.original,
-  prints: artwork => artwork.prints,
-};
-
-const CATEGORY_FILTERS = {
-  'show all': () => true,
-};
-
-CATEGORIES.forEach(category => {
-  CATEGORY_FILTERS[category] = artwork => artwork.tags.includes(category);
-});
 
 export default function ArtGallery() {
   usePageTitle('mattwritesart - Browse & Buy');
