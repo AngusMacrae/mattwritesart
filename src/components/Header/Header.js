@@ -1,24 +1,14 @@
 import { NavLink } from 'react-router-dom';
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { FilterContext } from '../../context/FilterContext';
-import useOnResize from '../../hooks/useOnResize.js';
+import useNavMenu from '../../hooks/useNavMenu';
 import instagram from '../../assets/icons/instagram.svg';
 import menu from '../../assets/icons/menu.svg';
 import close from '../../assets/icons/close.svg';
 
 export default function Header() {
   const { setFilters } = useContext(FilterContext);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  function closeMenu() {
-    setMenuOpen(false);
-  }
-
-  function toggleMenu() {
-    setMenuOpen(prevState => !prevState);
-  }
-
-  useOnResize(closeMenu);
+  const { menuOpen, closeMenu, toggleMenu } = useNavMenu();
 
   return (
     <header className='header'>
