@@ -51,7 +51,9 @@ export default function Buy() {
             <input type='text' name='name' placeholder='Your name' required />
             <input type='email' name='email' placeholder='Your email' required />
             <textarea name='message' placeholder='Your message (optional)' rows='5'></textarea>
-            <button type='submit'>Send!</button>
+            <button type='submit' className='btn'>
+              Send!
+            </button>
           </form>
         </section>
       </main>

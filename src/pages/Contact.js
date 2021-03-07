@@ -22,7 +22,9 @@ export default function Contact() {
             <input type='text' name='name' placeholder='Your name' required />
             <input type='email' name='email' placeholder='Your email' required />
             <textarea name='message' placeholder='Your message' rows='5' required></textarea>
-            <button type='submit'>Send!</button>
+            <button type='submit' className='btn'>
+              Send!
+            </button>
           </form>
           <p>
             <small>*unless, of course, I'm writing</small>

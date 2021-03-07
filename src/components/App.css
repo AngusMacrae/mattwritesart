@@ -38,8 +38,7 @@ textarea {
 }
 
 form input,
-form textarea,
-form button {
+form textarea {
   padding: 0.4rem 0.7rem;
 }
 
@@ -113,10 +112,13 @@ main section,
 main .btn,
 main button {
   padding: 0.5rem 1.5rem;
-  color: white;
-  background-color: black;
   display: block;
   text-align: center;
+  position: relative;
+  min-width: 7rem;
+  color: white;
+  background-color: black;
+  border: 1px solid transparent;
 }
 
 main button.btn-secondary,
@@ -124,6 +126,40 @@ main .btn.btn-secondary {
   color: black;
   background-color: white;
   border: 1px solid black;
+}
+
+main .btn::before,
+main .btn::after {
+  content: '';
+  position: absolute;
+  background-color: white;
+  z-index: -1;
+  height: 50%;
+  width: 4rem;
+  transition: transform 0.2s;
+}
+
+main .btn::before {
+  top: -4px;
+  left: -4px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  transform: translate(5px, 5px);
+}
+
+main .btn::after {
+  bottom: -4px;
+  right: -4px;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  transform: translate(-5px, -5px);
+}
+
+main .btn:hover::before,
+main .btn:focus::before,
+main .btn:hover::after,
+main .btn:focus::after {
+  transform: translate(0, 0);
 }
 
 #root form {
@@ -139,9 +175,6 @@ form button {
 }
 
 form button {
-  width: max-content;
-  padding-left: 3rem;
-  padding-right: 3rem;
   justify-self: end;
 }
 
