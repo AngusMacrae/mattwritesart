@@ -16,7 +16,9 @@ export default function ArtGallery() {
   const [availabilityFilter, handleAvailabilityFilterChange] = useFilter('availability');
   const [categoryFilter, handleCategoryFilterChange] = useFilter('category');
 
-  const filteredArt = art.filter(AVAILABILITY_FILTERS[availabilityFilter]).filter(CATEGORY_FILTERS[categoryFilter]);
+  const availabilityFilterFunc = AVAILABILITY_FILTERS[availabilityFilter];
+  const categoryFilterFunc = CATEGORY_FILTERS[categoryFilter];
+  const filteredArt = art.filter(availabilityFilterFunc).filter(categoryFilterFunc);
 
   const [imgsLoaded, setImgsLoaded] = useState(false);
 
@@ -33,15 +35,15 @@ export default function ArtGallery() {
         <section className='art-gallery__content'>
           <aside>
             <div className='art-filters-lg'>
-              <ArtGalleryFilterRadioGroup FILTERS={AVAILABILITY_FILTERS} filterGroupName='availability' filter={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} />
-              <ArtGalleryFilterRadioGroup FILTERS={CATEGORY_FILTERS} filterGroupName='category' filter={categoryFilter} handleFilterChange={handleCategoryFilterChange} />
+              <ArtGalleryFilterRadioGroup filterGroup='availability' FILTERS={AVAILABILITY_FILTERS} currentFilter={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} />
+              <ArtGalleryFilterRadioGroup filterGroup='category' FILTERS={CATEGORY_FILTERS} currentFilter={categoryFilter} handleFilterChange={handleCategoryFilterChange} />
             </div>
             <div className='art-filters-sm'>
               <h2>
                 <img src={filterIcon} alt=''></img>Filter Art
               </h2>
-              <ArtGalleryFilterSelect value={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} filterGroupName='availability' options={Object.keys(AVAILABILITY_FILTERS)} />
-              <ArtGalleryFilterSelect value={categoryFilter} handleFilterChange={handleCategoryFilterChange} filterGroupName='category' options={Object.keys(CATEGORY_FILTERS)} />
+              <ArtGalleryFilterSelect filterGroup='availability' FILTERS={AVAILABILITY_FILTERS} currentFilter={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} />
+              <ArtGalleryFilterSelect filterGroup='category' FILTERS={CATEGORY_FILTERS} currentFilter={categoryFilter} handleFilterChange={handleCategoryFilterChange} />
             </div>
           </aside>
 

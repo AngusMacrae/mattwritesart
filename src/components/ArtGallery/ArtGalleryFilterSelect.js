@@ -1,12 +1,12 @@
-export default function ArtGalleryFilterSelect({ value, handleFilterChange, filterGroupName, options }) {
+export default function ArtGalleryFilterSelect({ filterGroup, FILTERS, currentFilter, handleFilterChange }) {
   return (
     <div className='art-filters__select'>
-      <label htmlFor={`${filterGroupName}-select`}>{filterGroupName}</label>
-      <select value={value} onChange={handleFilterChange} name={filterGroupName} id={`${filterGroupName}-select`}>
-        {options.map(option => {
+      <label htmlFor={`${filterGroup}-select`}>{filterGroup}</label>
+      <select value={currentFilter} onChange={handleFilterChange} name={filterGroup} id={`${filterGroup}-select`}>
+        {Object.keys(FILTERS).map(filter => {
           return (
-            <option value={option} key={option}>
-              {option}
+            <option value={filter} key={filter}>
+              {filter}
             </option>
           );
         })}

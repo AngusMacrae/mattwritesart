@@ -1,12 +1,12 @@
 import ArtGalleryFilterRadio from './ArtGalleryFilterRadio';
 
-export default function ArtGalleryFilterRadioGroup({ FILTERS, filterGroupName, filter, handleFilterChange }) {
+export default function ArtGalleryFilterRadioGroup({ filterGroup, FILTERS, currentFilter, handleFilterChange }) {
   return (
     <fieldset className='art-filters__radio-group'>
-      <legend>{filterGroupName}</legend>
+      <legend>{filterGroup}</legend>
       <div>
-        {Object.keys(FILTERS).map((filterName, i) => (
-          <ArtGalleryFilterRadio key={i} filterGroupName={filterGroupName} filterName={filterName} checked={filter === filterName} handleFilterChange={handleFilterChange} />
+        {Object.keys(FILTERS).map(filter => (
+          <ArtGalleryFilterRadio filterGroup={filterGroup} filter={filter} checked={currentFilter === filter} handleFilterChange={handleFilterChange} key={filter} />
         ))}
       </div>
     </fieldset>

@@ -1,8 +1,8 @@
-export default function ArtGalleryFilterRadio({ filterGroupName, filterName, checked, handleFilterChange }) {
+export default function ArtGalleryFilterRadio({ filterGroup, filter, checked, handleFilterChange }) {
   return (
     <>
-      <input type='radio' id={`${filterGroupName}-${filterName}`} value={filterName} checked={checked} onChange={handleFilterChange} />
-      <label htmlFor={`${filterGroupName}-${filterName}`}>{filterName}</label>
+      <input type='radio' id={`${filterGroup}-${filter}`} value={filter} checked={checked} onChange={handleFilterChange} />
+      <label htmlFor={`${filterGroup}-${filter}`}>{filter}</label>
     </>
   );
 }
