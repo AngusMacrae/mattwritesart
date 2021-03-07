@@ -3,7 +3,7 @@ import usePageTitle from '../hooks/usePageTitle';
 import logo from '../assets/logo/mwa-logo.svg';
 
 export default function Thankyou() {
-  usePageTitle('mattwritesart - Thanks!');
+  usePageTitle('Thanks! - mattwritesart');
 
   return (
     <>

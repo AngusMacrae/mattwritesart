@@ -4,7 +4,7 @@ import usePageTitle from '../hooks/usePageTitle';
 import useForm from '../hooks/useForm';
 
 export default function Contact() {
-  usePageTitle('mattwritesart - Contact');
+  usePageTitle('Contact - mattwritesart');
 
   const [contactForm, handleSubmit] = useForm();
 

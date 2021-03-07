@@ -13,7 +13,7 @@ import magnifyingGlass from '../assets/icons/magnifying-glass.svg';
 export default function ArtDetails() {
   const artwork = useArtworkSlug();
 
-  usePageTitle(`mattwritesart - ${artwork && artwork.name}`);
+  usePageTitle(`${artwork && artwork.name} - mattwritesart`);
 
   const [lightboxOpen, openLightbox, closeLightbox] = useLightbox();
 

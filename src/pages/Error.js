@@ -3,7 +3,7 @@ import usePageTitle from '../hooks/usePageTitle';
 import logoSad from '../assets/logo/mwa-logo-sad.svg';
 
 export default function Error() {
-  usePageTitle('mattwritesart - Page Not Found');
+  usePageTitle('Page Not Found - mattwritesart');
 
   return (
     <>

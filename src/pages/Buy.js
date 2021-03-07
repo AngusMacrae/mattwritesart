@@ -11,7 +11,7 @@ import useForm from '../hooks/useForm';
 export default function Buy() {
   const artwork = useArtworkSlug();
 
-  usePageTitle(`mattwritesart - Buy ${artwork && artwork.name}`);
+  usePageTitle(`${artwork && artwork.name} - mattwritesart`);
 
   const defaultBuyOption = artwork && artwork.original ? 'Original' : 'Print';
   const locationState = useLocation().state;

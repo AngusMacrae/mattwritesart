@@ -12,7 +12,7 @@ import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from '../data/art.js';
 import filterIcon from '../assets/icons/filter.svg';
 
 export default function ArtGallery() {
-  usePageTitle('mattwritesart - Browse & Buy');
+  usePageTitle('Browse - mattwritesart');
   const [availabilityFilter, handleAvailabilityFilterChange] = useFilter('availability');
   const [categoryFilter, handleCategoryFilterChange] = useFilter('category');
 
