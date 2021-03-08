@@ -5,6 +5,7 @@ import useNavMenu from '../../hooks/useNavMenu';
 import instagram from '../../assets/icons/instagram.svg';
 import menu from '../../assets/icons/menu.svg';
 import close from '../../assets/icons/close.svg';
+import logo from '../../assets/logo/mwa-logo.svg';
 
 export default function Header() {
   const { setFilters } = useContext(FilterContext);
@@ -15,6 +16,7 @@ export default function Header() {
       <div className='header__content container-wide'>
         <div className='header__top-bar'>
           <NavLink to='/' onClick={closeMenu} title='Home' className='header-home'>
+            <img src={logo} alt='' />
             <h1>
               matt<span className='deemphasised'>writes</span>art<small className='deemphasised'>.co.uk</small>
             </h1>

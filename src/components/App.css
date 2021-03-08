@@ -229,7 +229,9 @@ fieldset {
 
 .header h1 {
   font-size: calc(1.8rem + 1vmin);
-  font-size: clamp(1.5rem, 9vmin, 3rem);
+  font-size: clamp(1.5rem, 7.5vmin, 2.6rem);
+  position: relative;
+  bottom: clamp(0.1rem, 0.5vmin, 0.5rem);
 }
 
 .header .deemphasised {
@@ -249,8 +251,14 @@ fieldset {
 
 .header-home {
   display: flex;
-  position: relative;
-  bottom: clamp(0.1rem, 1vmin, 0.5rem);
+  align-items: center;
+}
+
+.header-home img {
+  width: 30px;
+  width: clamp(25px, 7vmin, 46px);
+  height: 30px;
+  height: clamp(25px, 7vmin, 46px);
 }
 
 .header__menu-toggle-btn {
@@ -378,6 +386,12 @@ nav {
   }
   .nav__social-links img {
     height: 50px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-home img {
+    display: none;
   }
 }
 
