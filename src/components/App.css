@@ -452,9 +452,13 @@ main section:last-of-type {
 
 .showcase__item h2 {
   position: absolute;
-  left: 0;
+  left: -0.2rem;
   bottom: 0;
   width: max-content;
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 1rem;
   text-shadow: 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, 0 0 7px white, 0 0 8px white, 0 0 9px white;
   padding: 0.2rem 0.8rem;
