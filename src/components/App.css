@@ -190,7 +190,7 @@ fieldset {
 }
 
 @media (max-width: 730px) {
-  form {
+  #root form {
     grid-template-columns: 1fr;
   }
 
