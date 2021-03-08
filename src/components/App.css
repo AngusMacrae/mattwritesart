@@ -834,7 +834,7 @@ main section:last-of-type {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
   z-index: 999;
   touch-action: none;
 }
