@@ -470,6 +470,12 @@ main section:last-of-type {
   opacity: 1;
 }
 
+@media (max-width: 950px) {
+  .showcase__item h2 {
+    display: none;
+  }
+}
+
 @media (max-width: 589px) {
   .showcase__item:not(.spotlight) {
     display: none;
