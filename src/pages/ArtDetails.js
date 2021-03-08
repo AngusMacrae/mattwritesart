@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Error from './Error';
 import Header from '../components/Header/Header';
@@ -7,7 +6,6 @@ import ArtDetailsLightbox from '../components/ArtDetails/ArtDetailsLightbox';
 import usePageTitle from '../hooks/usePageTitle';
 import useArtworkSlug from '../hooks/useArtworkSlug';
 import useLightbox from '../hooks/useLightbox';
-import loadImage from '../utils/loadImage';
 import magnifyingGlass from '../assets/icons/magnifying-glass.svg';
 
 export default function ArtDetails() {
@@ -16,14 +14,6 @@ export default function ArtDetails() {
   usePageTitle(`${artwork && artwork.name} - mattwritesart`);
 
   const [lightboxOpen, openLightbox, closeLightbox] = useLightbox();
-
-  const [lightboxImgLoaded, setLightboxImgLoaded] = useState(false);
-
-  useEffect(() => {
-    loadImage(`/art-images/close-ups/${artwork.slug}_1.webp`)
-      .then(() => setLightboxImgLoaded(true))
-      .catch(err => console.log('Failed to load lightbox image', err));
-  }, [artwork]);
 
   if (!artwork) {
     return <Error />;
@@ -73,7 +63,7 @@ export default function ArtDetails() {
             )}
           </div>
         </section>
-        {lightboxOpen && lightboxImgLoaded && <ArtDetailsLightbox imageSrc={`/art-images/close-ups/${slug}_1.webp`} closeLightbox={closeLightbox} />}
+        {lightboxOpen && <ArtDetailsLightbox imageSrc={`/art-images/close-ups/${slug}_1.webp`} closeLightbox={closeLightbox} />}
       </main>
       <Footer />
     </>

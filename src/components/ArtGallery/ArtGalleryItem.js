@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
+import useImg from '../../hooks/useImg';
 
 export default function ArtGalleryItem({ artwork }) {
-  const { name, slug, description, original, prints } = artwork;
+  const { name, slug, height, width, description, original, prints } = artwork;
+  const [imgStatus, onLoad, onError] = useImg();
 
   let availability;
 
@@ -16,9 +18,9 @@ export default function ArtGalleryItem({ artwork }) {
   }
 
   return (
-    <li className='art-gallery__item'>
+    <li className={`art-gallery__item ${imgStatus}`}>
       <Link to={`/art/${slug}`}>
-        <img className='shadow' src={`/art-images/${slug}.webp`} alt={description} />
+        <img className='shadow' src={`/art-images/${slug}.webp`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} />
         <div>
           <h3>{name}</h3>
           <p className='art-gallery__item--availability'>{availability}</p>

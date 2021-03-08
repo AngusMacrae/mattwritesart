@@ -1,13 +1,10 @@
-import { useState, useEffect } from 'react';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ArtGalleryFilterRadioGroup from '../components/ArtGallery/ArtGalleryFilterRadioGroup';
 import ArtGalleryFilterSelect from '../components/ArtGallery/ArtGalleryFilterSelect';
 import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
-import LoadingBar from '../components/misc/LoadingBar';
 import usePageTitle from '../hooks/usePageTitle';
 import useFilter from '../hooks/useFilter';
-import loadImage from '../utils/loadImage';
 import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from '../data/art.js';
 import filterIcon from '../assets/icons/filter.svg';
 
@@ -19,14 +16,6 @@ export default function ArtGallery() {
   const availabilityFilterFunc = AVAILABILITY_FILTERS[availabilityFilter];
   const categoryFilterFunc = CATEGORY_FILTERS[categoryFilter];
   const filteredArt = art.filter(availabilityFilterFunc).filter(categoryFilterFunc);
-
-  const [imgsLoaded, setImgsLoaded] = useState(false);
-
-  useEffect(() => {
-    Promise.all(filteredArt.map(artwork => loadImage(`/art-images/${artwork.slug}.webp`)))
-      .then(() => setImgsLoaded(true))
-      .catch(err => console.log('Failed to load images', err));
-  }, []);
 
   return (
     <>
@@ -47,19 +36,14 @@ export default function ArtGallery() {
             </div>
           </aside>
 
-          {!filteredArt.length ? (
-            <div className='art-gallery__alert'>Sorry - no results</div>
-          ) : imgsLoaded ? (
+          {filteredArt.length ? (
             <ul className='art-gallery__grid'>
               {filteredArt.map(artwork => (
                 <ArtGalleryItem key={artwork.slug} artwork={artwork} />
               ))}
             </ul>
           ) : (
-            <div className='art-gallery__alert'>
-              <p>Loading...</p>
-              <LoadingBar />
-            </div>
+            <div className='art-gallery__alert'>Sorry - no results</div>
           )}
         </section>
       </main>
