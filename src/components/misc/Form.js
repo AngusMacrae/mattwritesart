@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default function useForm() {
+export default function Form({ name, subject, children, className = '' }) {
   const formRef = useRef();
   const history = useHistory();
 
@@ -21,5 +21,11 @@ export default function useForm() {
     }
   }
 
-  return [formRef, handleSubmit];
+  return (
+    <form method='POST' name={name} className={className} data-netlify='true' onSubmit={handleSubmit} ref={formRef}>
+      <input type='hidden' name='form-name' value={name} />
+      <input type='hidden' name='subject' value={subject} />
+      {children}
+    </form>
+  );
 }
