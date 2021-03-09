@@ -20,7 +20,7 @@ export default function ArtGalleryItem({ artwork }) {
   return (
     <li className={`art-gallery__item ${imgStatus}`}>
       <Link to={`/art/${slug}`}>
-        <img className='shadow' src={`/art-images/${slug}.webp`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} />
+        <img className='shadow' src={`/art-images/${slug}.jpg`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} />
         <div>
           <h3>{name}</h3>
           <p className='art-gallery__item--availability'>{availability}</p>

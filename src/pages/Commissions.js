@@ -11,9 +11,9 @@ export default function Commissions() {
       <Header />
       <main className='commissions'>
         <section className='commissions__images container-med'>
-          <img src={`/art-images/pete-doherty.webp`} alt='Pete Doherty' className='shadow' />
-          <img src={`/art-images/bjoern-gelotte.webp`} alt='Bjoern Gelotte' className='shadow' />
-          <img src={`/art-images/frank-turner-3.webp`} alt='Frank Turner' className='shadow' />
+          <img src={`/art-images/pete-doherty.jpg`} alt='Pete Doherty' className='shadow' />
+          <img src={`/art-images/bjoern-gelotte.jpg`} alt='Bjoern Gelotte' className='shadow' />
+          <img src={`/art-images/frank-turner-3.jpg`} alt='Frank Turner' className='shadow' />
         </section>
         <section className='commissions__text-container container-thin flow'>
           <h2>Commissions</h2>

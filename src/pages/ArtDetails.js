@@ -27,7 +27,7 @@ export default function ArtDetails() {
       <main className='art-details'>
         <section className='art-details__content container-med'>
           <div className='art-details__img-container'>
-            <img src={`/art-images/${slug}.webp`} alt={description} className='shadow' />
+            <img src={`/art-images/${slug}.jpg`} alt={description} className='shadow' />
             {closeups && (
               <button onClick={openLightbox}>
                 <img src={magnifyingGlass} alt='' /> View Closer
@@ -63,7 +63,7 @@ export default function ArtDetails() {
             )}
           </div>
         </section>
-        {lightboxOpen && <ArtDetailsLightbox imageSrc={`/art-images/close-ups/${slug}_1.webp`} closeLightbox={closeLightbox} />}
+        {lightboxOpen && <ArtDetailsLightbox imageSrc={`/art-images/close-ups/${slug}_1.jpg`} closeLightbox={closeLightbox} />}
       </main>
       <Footer />
     </>
