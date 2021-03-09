@@ -3,7 +3,7 @@ import { createContext, useState } from 'react';
 export const FilterContext = createContext();
 
 export default function FilterProvider({ children }) {
-  const [filters, setFilters] = useState({});
+  const [savedFilters, setSavedFilters] = useState({});
 
-  return <FilterContext.Provider value={{ filters, setFilters }}>{children}</FilterContext.Provider>;
+  return <FilterContext.Provider value={{ savedFilters, setSavedFilters }}>{children}</FilterContext.Provider>;
 }
