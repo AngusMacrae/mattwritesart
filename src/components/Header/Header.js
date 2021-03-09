@@ -8,7 +8,7 @@ import close from '../../assets/icons/close.svg';
 import logo from '../../assets/logo/mwa-logo.svg';
 
 export default function Header() {
-  const { setFilters } = useContext(FilterContext);
+  const { setSavedFilters } = useContext(FilterContext);
   const { menuOpen, closeMenu, toggleMenu } = useNavMenu();
 
   return (
@@ -37,7 +37,7 @@ export default function Header() {
                 to='/art'
                 onClick={() => {
                   closeMenu();
-                  setFilters({});
+                  setSavedFilters({});
                 }}
               >
                 Browse & Buy

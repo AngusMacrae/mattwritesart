@@ -2,13 +2,13 @@ import { useState, useContext } from 'react';
 import { FilterContext } from '../context/FilterContext';
 
 export default function useFilter(name) {
-  const { filters, setFilters } = useContext(FilterContext);
-  const [filter, setFilter] = useState(filters[name] || 'show all');
+  const { savedFilters, setSavedFilters } = useContext(FilterContext);
+  const [filter, setFilter] = useState(savedFilters[name] || 'show all');
 
   function handleFilterChange(event) {
     setFilter(event.target.value);
-    setFilters({
-      ...filters,
+    setSavedFilters({
+      ...savedFilters,
       [name]: event.target.value,
     });
     window.scrollTo(0, 0);
