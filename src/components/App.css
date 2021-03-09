@@ -11,12 +11,8 @@ body {
   flex-direction: column;
 }
 
-.flow {
-  --flow-space: 1em;
-}
-
 .flow > * + * {
-  margin-top: var(--flow-space);
+  margin-top: 1em;
 }
 
 a {
@@ -40,6 +36,7 @@ textarea {
 form input,
 form textarea {
   padding: 0.4rem 0.7rem;
+  width: 100%;
 }
 
 textarea {
@@ -222,7 +219,6 @@ fieldset {
   top: 0;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  display: flex;
   z-index: 99;
   background-color: white;
 }
@@ -306,6 +302,7 @@ nav {
 
 .nav__social-links img {
   height: 30px;
+  width: 30px;
 }
 
 .nav__page-links a {
@@ -396,7 +393,7 @@ nav {
 }
 
 main {
-  flex: 1;
+  flex-grow: 1;
 }
 
 main section {
@@ -593,7 +590,7 @@ main section:last-of-type {
 }
 
 .art-filters__select {
-  flex: 1;
+  flex: 1 1 34%;
   display: flex;
   flex-direction: column;
   margin-top: 1rem;
