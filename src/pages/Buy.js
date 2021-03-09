@@ -3,10 +3,10 @@ import { useLocation } from 'react-router-dom';
 import Error from './Error';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import Form from '../components/misc/Form';
 import BuyOption from '../components/Buy/BuyOption';
 import usePageTitle from '../hooks/usePageTitle';
 import useArtworkSlug from '../hooks/useArtworkSlug';
-import useForm from '../hooks/useForm';
 
 export default function Buy() {
   const artwork = useArtworkSlug();
@@ -22,8 +22,6 @@ export default function Buy() {
     setBuyOption(event.target.value);
   }
 
-  const [buyForm, handleSubmit] = useForm();
-
   if (!artwork) {
     return <Error />;
   }
@@ -37,22 +35,20 @@ export default function Buy() {
       <main className='buy'>
         <section className='container-thin flow'>
           <h2>{name}</h2>
-          <form method='POST' name='buy' data-netlify='true' onSubmit={handleSubmit} ref={buyForm}>
+          <Form name='buy' subject={'Order - ' + slug}>
             <fieldset className='buy__options'>
               {prints && <BuyOption value='Print' caption='Order Print' selected={buyOption === 'Print'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={printDimensions} price={prints} />}
               {original && <BuyOption value='Original' caption='Buy Original' selected={buyOption === 'Original'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={`${width}"x${height}"`} medium={medium} price={original} />}
             </fieldset>
             <p>To purchase, please fill in your details below. I'll get back to you ASAP with payment details and to arrange shipping.</p>
             <p>Thanks so much!</p>
-            <input type='hidden' name='form-name' value='buy' />
-            <input type='hidden' name='subject' value={'Order - ' + slug} />
             <input type='text' name='name' placeholder='Your name' required />
             <input type='email' name='email' placeholder='Your email' required />
             <textarea name='message' placeholder='Your message (optional)' rows='5'></textarea>
             <button type='submit' className='btn'>
               Send!
             </button>
-          </form>
+          </Form>
         </section>
       </main>
       <Footer />
