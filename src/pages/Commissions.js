@@ -1,10 +1,13 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { FilterContext } from '../context/FilterContext';
 import usePageTitle from '../hooks/usePageTitle';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
 export default function Commissions() {
   usePageTitle('Commissions - mattwritesart');
+  const { setSavedFilters } = useContext(FilterContext);
 
   return (
     <>
@@ -22,7 +25,7 @@ export default function Commissions() {
           <p>Please note that unless discussed I reserve the right to make a copy and prints of any commissioned piece.</p>
         </section>
         <section className='cta-container'>
-          <Link to='/art' className='btn btn-secondary'>
+          <Link to='/art' className='btn btn-secondary' onClick={() => setSavedFilters({})}>
             View More Art
           </Link>
           <Link to='/contact' className='btn'>

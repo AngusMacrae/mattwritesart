@@ -1,11 +1,14 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Showcase from '../components/Showcase/Showcase';
+import { FilterContext } from '../context/FilterContext';
 import usePageTitle from '../hooks/usePageTitle';
 
 export default function Home() {
   usePageTitle('mattwritesart');
+  const { setSavedFilters } = useContext(FilterContext);
 
   return (
     <>
@@ -22,7 +25,7 @@ export default function Home() {
           <Link to='/commissions' className='btn btn-secondary'>
             Commissions
           </Link>
-          <Link to='/art' className='btn'>
+          <Link to='/art' className='btn' onClick={() => setSavedFilters({})}>
             Browse & Buy
           </Link>
         </section>

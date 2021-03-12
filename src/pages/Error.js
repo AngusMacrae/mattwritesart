@@ -1,9 +1,12 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { FilterContext } from '../context/FilterContext';
 import usePageTitle from '../hooks/usePageTitle';
 import logoSad from '../assets/logo/mwa-logo-sad.svg';
 
 export default function Error() {
   usePageTitle('Page Not Found - mattwritesart');
+  const { setSavedFilters } = useContext(FilterContext);
 
   return (
     <>
@@ -19,7 +22,7 @@ export default function Error() {
           <Link to='/' className='btn btn-secondary'>
             Home
           </Link>
-          <Link to='/art' className='btn'>
+          <Link to='/art' className='btn' onClick={() => setSavedFilters({})}>
             Browse Art
           </Link>
         </section>

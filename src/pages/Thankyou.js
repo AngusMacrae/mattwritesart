@@ -1,9 +1,12 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { FilterContext } from '../context/FilterContext';
 import usePageTitle from '../hooks/usePageTitle';
 import logo from '../assets/logo/mwa-logo.svg';
 
 export default function Thankyou() {
   usePageTitle('Thanks! - mattwritesart');
+  const { setSavedFilters } = useContext(FilterContext);
 
   return (
     <>
@@ -17,7 +20,7 @@ export default function Thankyou() {
           <p>&#128394;</p>
         </section>
         <section className='cta-container'>
-          <Link to='/art' className='btn btn-secondary'>
+          <Link to='/art' className='btn btn-secondary' onClick={() => setSavedFilters({})}>
             Browse More Art
           </Link>
         </section>
