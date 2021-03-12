@@ -393,6 +393,7 @@ nav {
   }
   .nav__social-links img {
     height: 50px;
+    width: 50px;
   }
 }
 
