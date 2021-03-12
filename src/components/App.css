@@ -163,7 +163,7 @@ main .btn:focus::after {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  margin-top: 1.75rem !important;
+  margin-top: 1.75rem;
 }
 
 form textarea[name='message'],
@@ -274,10 +274,6 @@ nav {
   touch-action: none;
 }
 
-.nav__home {
-  display: none !important;
-}
-
 .nav__page-links,
 .nav__social-links {
   display: flex;
@@ -329,6 +325,10 @@ nav {
   transform: scale(1.07);
 }
 
+.nav__page-links .nav__home {
+  display: none;
+}
+
 @media (max-width: 960px) {
   .header__content {
     flex-direction: column;
@@ -357,8 +357,8 @@ nav {
   nav.active {
     display: flex;
   }
-  .nav__home {
-    display: flex !important;
+  .nav__page-links .nav__home {
+    display: flex;
   }
   nav,
   .nav__page-links {
