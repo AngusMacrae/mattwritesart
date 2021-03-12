@@ -521,7 +521,7 @@ main section:last-of-type {
   display: grid;
   grid-template-columns: 150px 1fr;
   gap: 1.5rem;
-  gap: clamp(1.5rem, 6vmin, 4rem);
+  gap: clamp(1.5rem, 4vmin, 4rem);
   min-height: 75vh;
   align-items: start;
 }
