@@ -11,6 +11,16 @@ body {
   flex-direction: column;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: black;
+  border: 1px solid white;
+  padding: 2px;
+}
+
 .flow > * + * {
   margin-top: 1em;
 }
