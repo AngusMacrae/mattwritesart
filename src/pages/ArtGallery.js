@@ -1,7 +1,6 @@
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-import ArtGalleryFilterRadioGroup from '../components/ArtGallery/ArtGalleryFilterRadioGroup';
-import ArtGalleryFilterSelect from '../components/ArtGallery/ArtGalleryFilterSelect';
+import ArtFilter from '../components/ArtGallery/ArtFilter';
 import ArtGalleryItem from '../components/ArtGallery/ArtGalleryItem';
 import usePageTitle from '../hooks/usePageTitle';
 import useFilter from '../hooks/useFilter';
@@ -10,6 +9,7 @@ import filterIcon from '../assets/icons/filter.svg';
 
 export default function ArtGallery() {
   usePageTitle('Browse - mattwritesart');
+
   const [availabilityFilter, handleAvailabilityFilterChange] = useFilter('availability');
   const [categoryFilter, handleCategoryFilterChange] = useFilter('category');
 
@@ -23,16 +23,12 @@ export default function ArtGallery() {
       <main className='art-gallery'>
         <section className='art-gallery__content'>
           <aside>
-            <div className='art-filters-lg'>
-              <ArtGalleryFilterRadioGroup filterGroup='availability' FILTERS={AVAILABILITY_FILTERS} currentFilter={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} />
-              <ArtGalleryFilterRadioGroup filterGroup='category' FILTERS={CATEGORY_FILTERS} currentFilter={categoryFilter} handleFilterChange={handleCategoryFilterChange} />
-            </div>
-            <div className='art-filters-sm'>
-              <h2>
-                <img src={filterIcon} alt=''></img>Filter Art
-              </h2>
-              <ArtGalleryFilterSelect filterGroup='availability' FILTERS={AVAILABILITY_FILTERS} currentFilter={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} />
-              <ArtGalleryFilterSelect filterGroup='category' FILTERS={CATEGORY_FILTERS} currentFilter={categoryFilter} handleFilterChange={handleCategoryFilterChange} />
+            <h2 className='art-filters__title'>
+              <img src={filterIcon} alt=''></img>Filter Art
+            </h2>
+            <div className='art-filters__container'>
+              <ArtFilter filterGroup='availability' FILTERS={AVAILABILITY_FILTERS} currentFilter={availabilityFilter} handleFilterChange={handleAvailabilityFilterChange} />
+              <ArtFilter filterGroup='category' FILTERS={CATEGORY_FILTERS} currentFilter={categoryFilter} handleFilterChange={handleCategoryFilterChange} />
             </div>
           </aside>
 
