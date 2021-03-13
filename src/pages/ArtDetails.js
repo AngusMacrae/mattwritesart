@@ -27,7 +27,10 @@ export default function ArtDetails() {
       <main className='art-details'>
         <section className='art-details__content container-med'>
           <div className='art-details__img-container'>
-            <img src={`/art-images/${slug}.jpg`} alt={description} className='shadow' />
+            <picture>
+              <source srcSet={`/art-images/${slug}.webp`} type='image/webp' />
+              <img className='shadow' src={`/art-images/${slug}.jpg`} alt={description} />
+            </picture>
             {closeups && (
               <button onClick={openLightbox}>
                 <img src={magnifyingGlass} alt='' /> View Closer

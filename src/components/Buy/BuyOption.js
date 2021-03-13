@@ -5,7 +5,10 @@ export default function BuyOption({ value, caption, selected, handleChange, artw
       <label htmlFor={`buy-option-${value}`}></label>
       <span className='buy__option--selected'>Selected</span>
       <div className='buy__option--img-container'>
-        <img src={`/art-images/${artworkSlug}.jpg`} alt={artworkDesc} className='shadow' />
+        <picture>
+          <source srcSet={`/art-images/${artworkSlug}.webp`} type='image/webp' />
+          <img className='shadow' src={`/art-images/${artworkSlug}.jpg`} alt={artworkDesc} />
+        </picture>
       </div>
       <div className='buy__option--info-container'>
         <h3>{caption}</h3>

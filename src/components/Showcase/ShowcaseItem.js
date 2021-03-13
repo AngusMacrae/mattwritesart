@@ -9,7 +9,10 @@ export default function ShowcaseItem({ artwork }) {
     <li className={`showcase__item shadow ${height > width ? 'portrait' : 'landscape'} ${imgStatus} ${spotlight ? 'spotlight' : ''}`}>
       <Link to={`/art/${slug}`} className='showcase__item-content'>
         <h2>{name}</h2>
-        <img src={`/art-images/${slug}.jpg`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} />
+        <picture>
+          <source srcSet={`/art-images/${slug}.webp`} type='image/webp' />
+          <img src={`/art-images/${slug}.jpg`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} />
+        </picture>
       </Link>
     </li>
   );
