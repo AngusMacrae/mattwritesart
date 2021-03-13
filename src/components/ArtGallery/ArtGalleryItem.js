@@ -22,7 +22,7 @@ export default function ArtGalleryItem({ artwork }) {
       <Link to={`/art/${slug}`}>
         <picture>
           <source srcSet={`/art-images/${slug}.webp`} type='image/webp' />
-          <img className='shadow' src={`/art-images/${slug}.jpg`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} />
+          <img className='shadow' src={`/art-images/${slug}.jpg`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} loading='lazy' />
         </picture>
         <div>
           <h3>{name}</h3>

@@ -11,7 +11,7 @@ export default function ShowcaseItem({ artwork }) {
         <h2>{name}</h2>
         <picture>
           <source srcSet={`/art-images/${slug}.webp`} type='image/webp' />
-          <img src={`/art-images/${slug}.jpg`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} />
+          <img src={`/art-images/${slug}.jpg`} alt={description} height={height * 1000} width={width * 1000} onLoad={onLoad} onError={onError} loading='lazy' />
         </picture>
       </Link>
     </li>
