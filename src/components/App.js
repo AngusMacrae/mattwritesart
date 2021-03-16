@@ -9,7 +9,7 @@ import Buy from '../pages/Buy';
 import Thankyou from '../pages/Thankyou';
 import Error from '../pages/Error';
 import FilterProvider from '../context/FilterContext';
-import './App.css';
+import '../css/styles.css';
 
 function App() {
   return (
