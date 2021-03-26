@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { FilterContext } from '../../context/FilterContext';
 import useNavMenu from '../../hooks/useNavMenu';
 import instagram from '../../assets/icons/instagram.svg';
+import facebook from '../../assets/icons/facebook.svg';
 import menu from '../../assets/icons/menu.svg';
 import close from '../../assets/icons/close.svg';
 import logo from '../../assets/logo/mwa-logo.svg';
@@ -57,7 +58,12 @@ export default function Header() {
           <ul className='nav__social-links'>
             <li>
               <a href='https://www.instagram.com/mattwritesart/' target='_blank' rel='noopener noreferrer' title='Instagram'>
-                <img src={instagram} alt='mattwritesart Instagram' />
+                <img src={instagram} alt='mattwritesart on Instagram' />
+              </a>
+            </li>
+            <li>
+              <a href='https://www.facebook.com/mattwritesart' target='_blank' rel='noopener noreferrer' title='Facebook'>
+                <img src={facebook} alt='mattwritesart on Facebook' />
               </a>
             </li>
           </ul>
