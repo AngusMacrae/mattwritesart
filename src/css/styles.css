@@ -121,6 +121,7 @@ textarea {
 h2 {
   font-size: 1.7rem;
   font-size: clamp(1.5rem, 5vmin, 1.9rem);
+  line-height: 1.25;
 }
 
 h3 {
@@ -837,7 +838,7 @@ ul.art-gallery__grid {
 .art-details__info-container ul {
   list-style: none;
   padding: 0;
-  margin: 1rem 0 0;
+  margin: 1.2rem 0 0;
   color: #999;
   display: flex;
   flex-wrap: wrap;
