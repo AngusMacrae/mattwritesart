@@ -27,7 +27,10 @@ export default function Buy() {
   }
 
   const { name, slug, original, prints, height, width, medium, description } = artwork;
-  const printDimensions = width > height ? '11.7"x8.3"' : '8.3"x11.7"';
+  let printDimensions = width > height ? '11.7"x8.3"' : '8.3"x11.7"';
+  if (slug === 'four-brood') {
+    printDimensions = '16.5"x11.7"';
+  }
 
   return (
     <>
