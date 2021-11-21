@@ -848,6 +848,11 @@ ul.art-gallery__grid {
   margin-right: 2rem;
 }
 
+.art-details__order-smallprint {
+  margin-top: 0.5em;
+  color: #999;
+}
+
 .art-details__availability {
   margin-top: 2.25em;
   text-transform: uppercase;
