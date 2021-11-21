@@ -19,7 +19,7 @@ export default function ArtDetails() {
     return <Error />;
   }
 
-  const { name, slug, date, original, prints, closeups, height, width, medium, description } = artwork;
+  const { name, slug, date, original, prints, closeups, height, width, medium, description, buyOgCaption, buyOgSmallprint, buyPrtCaption, buyPrtSmallprint } = artwork;
 
   return (
     <>
@@ -55,14 +55,20 @@ export default function ArtDetails() {
             <p>{description}</p>
             <h3 className='art-details__availability'>{original || prints ? 'AVAILABLE TO BUY' : 'NOT AVAILABLE TO BUY'}</h3>
             {prints && (
-              <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'Print' } }} className={`btn ${original ? 'btn-secondary' : ''}`}>
-                Order Print £{prints}
-              </Link>
+              <>
+                <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'Print' } }} className={`btn ${original ? 'btn-secondary' : ''}`}>
+                  {buyPrtCaption || 'Order Print'} £{prints}
+                </Link>
+                {buyPrtSmallprint && <small className='art-details__order-smallprint'>{buyPrtSmallprint}</small>}
+              </>
             )}
             {original && (
-              <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'Original' } }} className='btn'>
-                Buy Original £{original}
-              </Link>
+              <>
+                <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'Original' } }} className='btn'>
+                  {buyOgCaption || 'Buy Original'} £{original}
+                </Link>
+                {buyOgSmallprint && <small className='art-details__order-smallprint'>{buyOgSmallprint}</small>}
+              </>
             )}
           </div>
         </section>

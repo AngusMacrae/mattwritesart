@@ -26,7 +26,7 @@ export default function Buy() {
     return <Error />;
   }
 
-  const { name, slug, original, prints, height, width, medium, description } = artwork;
+  const { name, slug, original, prints, height, width, medium, description, buyOgCaption, buyOgSmallprint, buyPrtCaption, buyPrtSmallprint } = artwork;
   let printDimensions = width > height ? '11.7"x8.3"' : '8.3"x11.7"';
   if (slug === 'four-brood') {
     printDimensions = '16.5"x11.7"';
@@ -40,8 +40,8 @@ export default function Buy() {
           <h2>{name}</h2>
           <Form name='buy' subject={'Order - ' + slug}>
             <fieldset className='buy__options'>
-              {prints && <BuyOption value='Print' caption='Order Print' selected={buyOption === 'Print'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={printDimensions} price={prints} />}
-              {original && <BuyOption value='Original' caption='Buy Original' selected={buyOption === 'Original'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={`${width}"x${height}"`} medium={medium} price={original} />}
+              {prints && <BuyOption value='Print' caption={buyPrtCaption || 'Order Print'} selected={buyOption === 'Print'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={printDimensions} price={prints} />}
+              {original && <BuyOption value='Original' caption={buyOgCaption || 'Buy Original'} selected={buyOption === 'Original'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={`${width}"x${height}"`} medium={medium} price={original} />}
             </fieldset>
             <p>To purchase, please fill in your details below. I'll get back to you ASAP with payment details and to arrange shipping.</p>
             <p>Thanks so much!</p>
