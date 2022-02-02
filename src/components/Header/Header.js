@@ -1,7 +1,8 @@
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
 import { FilterContext } from '../../context/FilterContext';
-import useNavMenu from '../../hooks/useNavMenu';
+import useToggle from '../../hooks/useToggle';
+import useOnResize from '../../hooks/useOnResize';
 import instagram from '../../assets/icons/instagram.svg';
 import facebook from '../../assets/icons/facebook.svg';
 import menu from '../../assets/icons/menu.svg';
@@ -10,7 +11,8 @@ import logo from '../../assets/logo/mwa-logo.svg';
 
 export default function Header() {
   const { setSavedFilters } = useContext(FilterContext);
-  const { menuOpen, closeMenu, toggleMenu } = useNavMenu();
+  const [menuOpen, , closeMenu, toggleMenu] = useToggle(false);
+  useOnResize(closeMenu);
 
   return (
     <header className='header'>

@@ -5,7 +5,7 @@ import Footer from '../components/Footer/Footer';
 import ArtDetailsLightbox from '../components/ArtDetails/ArtDetailsLightbox';
 import usePageTitle from '../hooks/usePageTitle';
 import useArtworkSlug from '../hooks/useArtworkSlug';
-import useLightbox from '../hooks/useLightbox';
+import useToggle from '../hooks/useToggle';
 import magnifyingGlass from '../assets/icons/magnifying-glass.svg';
 
 export default function ArtDetails() {
@@ -13,7 +13,7 @@ export default function ArtDetails() {
 
   usePageTitle(`${artwork && artwork.name} - mattwritesart`);
 
-  const [lightboxOpen, openLightbox, closeLightbox] = useLightbox();
+  const [lightboxOpen, openLightbox, closeLightbox] = useToggle(false);
 
   if (!artwork) {
     return <Error />;
