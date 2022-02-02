@@ -1,21 +1,12 @@
 import { Link } from 'react-router-dom';
 import useImg from '../../hooks/useImg';
+import getAvailabilityText from '../../utils/getAvailabilityText.js';
 
 export default function ArtGalleryItem({ artwork }) {
   const { name, slug, height, width, description, original, prints } = artwork;
   const [imgStatus, onLoad, onError] = useImg();
 
-  let availability;
-
-  if (original && !prints) {
-    availability = 'Original';
-  } else if (!original && prints) {
-    availability = 'Prints';
-  } else if (original && prints) {
-    availability = 'Original & prints';
-  } else {
-    availability = 'Unavailable';
-  }
+  const availabilityText = getAvailabilityText(original, prints);
 
   return (
     <li className={`art-gallery__item ${imgStatus}`}>
@@ -26,7 +17,7 @@ export default function ArtGalleryItem({ artwork }) {
         </picture>
         <div>
           <h3>{name}</h3>
-          <p className='art-gallery__item--availability'>{availability}</p>
+          <p className='art-gallery__item--availability'>{availabilityText}</p>
         </div>
       </Link>
     </li>
