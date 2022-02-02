@@ -1,8 +1,10 @@
 export default function ArtFilterRadio({ filterGroup, filter, checked, handleFilterChange }) {
+  const inputId = `${filterGroup}-${filter}`;
+  
   return (
     <>
-      <input type='radio' id={`${filterGroup}-${filter}`} value={filter} checked={checked} onChange={handleFilterChange} />
-      <label htmlFor={`${filterGroup}-${filter}`}>{filter}</label>
+      <input type='radio' id={inputId} value={filter} checked={checked} onChange={handleFilterChange} />
+      <label htmlFor={inputId}>{filter}</label>
     </>
   );
 }
