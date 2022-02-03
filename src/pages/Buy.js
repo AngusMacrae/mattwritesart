@@ -7,6 +7,7 @@ import Form from '../components/misc/Form';
 import BuyOption from '../components/Buy/BuyOption';
 import usePageTitle from '../hooks/usePageTitle';
 import useArtworkSlug from '../hooks/useArtworkSlug';
+import getPrintDimensions from '../utils/getPrintDimensions';
 
 export default function Buy() {
   const { name, slug, original, prints, height, width, medium, description, buyOgCaption, buyPrtCaption } = useArtworkSlug();
@@ -22,8 +23,8 @@ export default function Buy() {
     setBuyOption(event.target.value);
   }
 
-  let printDimensions = width > height ? '11.7"x8.3"' : '8.3"x11.7"';
-  if (slug === 'four-brood') printDimensions = '16.5"x11.7"';
+  const printDimensions = getPrintDimensions(slug, width, height);
+  const originalDimensions = `${width}"x${height}"`;
 
   if (!slug) return <Error />;
 
@@ -36,7 +37,7 @@ export default function Buy() {
           <Form name='buy' subject={'Order - ' + slug}>
             <fieldset className='buy__options'>
               {prints && <BuyOption value='Print' caption={buyPrtCaption || 'Order Print'} selected={buyOption === 'Print'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={printDimensions} price={prints} />}
-              {original && <BuyOption value='Original' caption={buyOgCaption || 'Buy Original'} selected={buyOption === 'Original'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={`${width}"x${height}"`} medium={medium} price={original} />}
+              {original && <BuyOption value='Original' caption={buyOgCaption || 'Buy Original'} selected={buyOption === 'Original'} handleChange={handleBuyOptionChange} artworkSlug={slug} artworkDesc={description} dimensions={originalDimensions} medium={medium} price={original} />}
             </fieldset>
             <p>To purchase, please fill in your details below. I'll get back to you ASAP with payment details and to arrange shipping.</p>
             <p>Thanks so much!</p>
