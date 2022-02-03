@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useContext } from 'react';
+import clsx from 'clsx';
 import { FilterContext } from '../../context/FilterContext';
 import useToggle from '../../hooks/useToggle';
 import useOnResize from '../../hooks/useOnResize';
@@ -28,7 +29,7 @@ export default function Header() {
             <img src={menuOpen ? close : menu} alt='Menu' />
           </button>
         </div>
-        <nav className={menuOpen ? 'active' : ''}>
+        <nav className={clsx(menuOpen && 'active')}>
           <ul className='nav__page-links'>
             <li className='nav__home'>
               <NavLink to='/' exact onClick={closeMenu}>

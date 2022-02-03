@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import clsx from 'clsx';
 import useImg from '../../hooks/useImg';
 import getAvailabilityText from '../../utils/getAvailabilityText.js';
 
@@ -9,7 +10,7 @@ export default function ArtGalleryItem({ artwork }) {
   const availabilityText = getAvailabilityText(original, prints);
 
   return (
-    <li className={`art-gallery__item ${imgStatus}`}>
+    <li className={clsx('art-gallery__item', imgStatus)}>
       <Link to={`/art/${slug}`}>
         <picture>
           <source srcSet={`/art-images/${slug}.webp`} type='image/webp' />

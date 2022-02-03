@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import clsx from 'clsx';
 import Error from './Error';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -52,7 +53,7 @@ export default function ArtDetails() {
             <h3 className='art-details__availability'>{original || prints ? 'AVAILABLE TO BUY' : 'NOT AVAILABLE TO BUY'}</h3>
             {prints && (
               <>
-                <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'Print' } }} className={`btn ${original ? 'btn-secondary' : ''}`}>
+                <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'Print' } }} className={clsx('btn', original && 'btn-secondary')}>
                   {buyPrtCaption || 'Order Print'} £{prints}
                 </Link>
                 {buyPrtSmallprint && <small className='art-details__order-smallprint'>{buyPrtSmallprint}</small>}
