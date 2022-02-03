@@ -9,11 +9,11 @@ import usePageTitle from '../hooks/usePageTitle';
 import useArtworkSlug from '../hooks/useArtworkSlug';
 
 export default function Buy() {
-  const artwork = useArtworkSlug();
+  const { name, slug, original, prints, height, width, medium, description, buyOgCaption, buyPrtCaption } = useArtworkSlug();
 
-  usePageTitle(`${artwork && artwork.name} - mattwritesart`);
+  usePageTitle(`${name} - mattwritesart`);
 
-  const defaultBuyOption = artwork && artwork.original ? 'Original' : 'Print';
+  const defaultBuyOption = original ? 'Original' : 'Print';
   const locationState = useLocation().state;
   const selectedBuyOption = typeof locationState !== 'undefined' ? locationState.buyOption : defaultBuyOption;
   const [buyOption, setBuyOption] = useState(selectedBuyOption);
@@ -22,15 +22,10 @@ export default function Buy() {
     setBuyOption(event.target.value);
   }
 
-  if (!artwork) {
-    return <Error />;
-  }
-
-  const { name, slug, original, prints, height, width, medium, description, buyOgCaption, buyOgSmallprint, buyPrtCaption, buyPrtSmallprint } = artwork;
   let printDimensions = width > height ? '11.7"x8.3"' : '8.3"x11.7"';
-  if (slug === 'four-brood') {
-    printDimensions = '16.5"x11.7"';
-  }
+  if (slug === 'four-brood') printDimensions = '16.5"x11.7"';
+
+  if (!slug) return <Error />;
 
   return (
     <>

@@ -9,17 +9,13 @@ import useToggle from '../hooks/useToggle';
 import magnifyingGlass from '../assets/icons/magnifying-glass.svg';
 
 export default function ArtDetails() {
-  const artwork = useArtworkSlug();
+  const { name, slug, date, original, prints, closeups, height, width, medium, description, buyOgCaption, buyOgSmallprint, buyPrtCaption, buyPrtSmallprint } = useArtworkSlug();
 
-  usePageTitle(`${artwork && artwork.name} - mattwritesart`);
+  usePageTitle(`${name} - mattwritesart`);
 
   const [lightboxOpen, openLightbox, closeLightbox] = useToggle(false);
 
-  if (!artwork) {
-    return <Error />;
-  }
-
-  const { name, slug, date, original, prints, closeups, height, width, medium, description, buyOgCaption, buyOgSmallprint, buyPrtCaption, buyPrtSmallprint } = artwork;
+  if (!slug) return <Error />;
 
   return (
     <>
