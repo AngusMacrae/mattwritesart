@@ -1,5 +1,3 @@
-import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
 import Error from './Error';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
@@ -7,6 +5,7 @@ import Form from '../components/misc/Form';
 import BuyOption from '../components/Buy/BuyOption';
 import usePageTitle from '../hooks/usePageTitle';
 import useArtworkSlug from '../hooks/useArtworkSlug';
+import useBuyOptions from '../hooks/useBuyOptions';
 import getPrintDimensions from '../utils/getPrintDimensions';
 
 export default function Buy() {
@@ -15,13 +14,7 @@ export default function Buy() {
   usePageTitle(`${name} - mattwritesart`);
 
   const defaultBuyOption = original ? 'Original' : 'Print';
-  const locationState = useLocation().state;
-  const selectedBuyOption = typeof locationState !== 'undefined' ? locationState.buyOption : defaultBuyOption;
-  const [buyOption, setBuyOption] = useState(selectedBuyOption);
-
-  function handleBuyOptionChange(event) {
-    setBuyOption(event.target.value);
-  }
+  const [buyOption, handleBuyOptionChange] = useBuyOptions(defaultBuyOption);
 
   const printDimensions = getPrintDimensions(slug, width, height);
   const originalDimensions = `${width}"x${height}"`;
