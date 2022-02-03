@@ -1,10 +1,12 @@
 import clsx from 'clsx';
 
 export default function BuyOption({ value, caption, selected, handleChange, artworkSlug, artworkDesc, dimensions, medium, price }) {
+  const inputId = `buy-option-${value}`;
+
   return (
     <div className={clsx('buy__option', selected && 'selected')}>
-      <input type='radio' name='order' id={`buy-option-${value}`} value={value} checked={selected} onChange={handleChange} />
-      <label htmlFor={`buy-option-${value}`}></label>
+      <input type='radio' name='order' id={inputId} value={value} checked={selected} onChange={handleChange} />
+      <label htmlFor={inputId}></label>
       <span className='buy__option--selected'>Selected</span>
       <div className='buy__option--img-container'>
         <picture>
