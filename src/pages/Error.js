@@ -1,29 +1,27 @@
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
-import { FilterContext } from '../context/FilterContext';
-import usePageTitle from '../hooks/usePageTitle';
-import logoSad from '../assets/logo/mwa-logo-sad.svg';
+import Head from 'next/head'
+import Link from 'next/link';
 
 export default function Error() {
-  usePageTitle('Page Not Found - mattwritesart');
-  const { setSavedFilters } = useContext(FilterContext);
-
   return (
     <>
+      <Head>
+        <title>Page Not Found - mattwritesart</title>
+        <meta name="description" content="UK-based artist - forming words into images, exploring the power of negative space and the illusion of distance." />
+      </Head>
       <main className='error'>
         <section className='container-thin standout flow'>
-          <img src={logoSad} alt='' />
+          <img src='/logo/mwa-logo-sad.svg' alt='' />
           <p>
             <strong>Oh no! Nothing to see here.</strong>
           </p>
           <p>Would you like to browse some art?</p>
         </section>
         <section className='cta-container'>
-          <Link to='/' className='btn btn-secondary'>
-            Home
+          <Link href='/'>
+            <a className='btn btn-secondary'>Home</a>
           </Link>
-          <Link to='/art' className='btn' onClick={() => setSavedFilters({})}>
-            Browse Art
+          <Link href='/art?clearFilters=true' as='/art'>
+            <a className='btn'>Browse Art</a>
           </Link>
         </section>
       </main>

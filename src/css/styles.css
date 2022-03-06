@@ -231,7 +231,7 @@ main .btn:focus::after {
   transform: translate(0, 0);
 }
 
-#root form {
+#__next form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -362,12 +362,19 @@ nav {
   width: 30px;
 }
 
-.nav__page-links a {
+.nav__page-links a,
+.nav__page-links p {
   padding: 0.5rem 1rem;
   position: relative;
 }
 
-.nav__page-links a::before {
+.nav__page-links p {
+  display: inline;
+  cursor: pointer;
+}
+
+.nav__page-links a::before,
+.nav__page-links p::before {
   content: '';
   position: absolute;
   background-color: black;
@@ -378,7 +385,7 @@ nav {
 }
 
 .nav__page-links a:hover::before,
-.nav__page-links a.active::before {
+.nav__page-links p.active::before {
   width: calc(100% - 2rem);
 }
 

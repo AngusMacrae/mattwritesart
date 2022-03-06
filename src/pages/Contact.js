@@ -1,18 +1,20 @@
+import Head from 'next/head'
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Form from '../components/misc/Form';
-import usePageTitle from '../hooks/usePageTitle';
 
 export default function Contact() {
-  usePageTitle('Contact - mattwritesart');
-
   return (
     <>
+      <Head>
+        <title>Contact - mattwritesart</title>
+        <meta name="description" content="UK-based artist - forming words into images, exploring the power of negative space and the illusion of distance." />
+      </Head>
       <Header />
       <main className='contact'>
         <section className='container-thin flow'>
           <h2>Get in touch</h2>
-          <p>If you're interested in commissioning an original piece, have a question, suggestion or something you want to share with me, or anything else you'd like to reach out about, you can use the form below.</p>
+          <p>If you&apos;re interested in commissioning an original piece, have a question, suggestion or something you want to share with me, or anything else you&apos;d like to reach out about, you can use the form below.</p>
           <p>My inbox is always open!*</p>
           <Form name='contact' subject='Contact'>
             <input type='text' name='name' placeholder='Your name' required />
@@ -23,7 +25,7 @@ export default function Contact() {
             </button>
           </Form>
           <p>
-            <small>*unless, of course, I'm writing</small>
+            <small>*unless, of course, I&apos;m writing</small>
           </p>
         </section>
       </main>

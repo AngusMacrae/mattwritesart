@@ -1,32 +1,31 @@
-import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import Head from 'next/head'
+import Link from 'next/link';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import Showcase from '../components/Showcase/Showcase';
-import { FilterContext } from '../context/FilterContext';
-import usePageTitle from '../hooks/usePageTitle';
 
 export default function Home() {
-  usePageTitle('mattwritesart');
-  const { setSavedFilters } = useContext(FilterContext);
-
   return (
     <>
+      <Head>
+        <title>mattwritesart</title>
+        <meta name="description" content="UK-based artist - forming words into images, exploring the power of negative space and the illusion of distance." />
+      </Head>
       <Header />
       <main className='home'>
         <section className='container-thin standout flow'>
           <p>
-            <strong>Hi! I'm matt and I write art.</strong>
+            <strong>Hi! I&apos;m matt and I write art.</strong>
           </p>
           <p>I form words into images, exploring the power of negative space and the illusion of distance.</p>
         </section>
         <Showcase />
         <section className='cta-container'>
-          <Link to='/commissions' className='btn btn-secondary'>
-            Commissions
+          <Link href='/commissions'>
+            <a className='btn btn-secondary'>Commissions</a>
           </Link>
-          <Link to='/art' className='btn' onClick={() => setSavedFilters({})}>
-            Browse & Buy
+          <Link href='/art?clearFilters=true' as='/art'>
+            <a className='btn'>Browse & Buy</a>
           </Link>
         </section>
       </main>

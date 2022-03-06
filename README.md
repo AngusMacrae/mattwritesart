@@ -2,25 +2,22 @@
 
 Personal gallery/shop website for London artist Matt.
 
-This project was made with [Create React App](https://github.com/facebook/create-react-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+First, run the development server:
 
-### `npm start`
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-Runs in development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view in a browser.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-### `npm run build`
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-Builds for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-
-See the [docs](https://facebook.github.io/create-react-app/docs) for more information.
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.

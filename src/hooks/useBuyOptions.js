@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 export default function useBuyOptions (defaultBuyOption) {
-  const locationState = useLocation().state;
-  const selectedBuyOption = typeof locationState !== 'undefined' ? locationState.buyOption : defaultBuyOption;
+  const { query } = useRouter();
+
+  const selectedBuyOption = query.buyOption || defaultBuyOption;
   const [buyOption, setBuyOption] = useState(selectedBuyOption);
 
   function handleBuyOptionChange(event) {

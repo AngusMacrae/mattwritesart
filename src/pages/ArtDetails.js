@@ -1,25 +1,23 @@
-import { Link } from 'react-router-dom';
+import Head from 'next/head'
+import Link from 'next/link';
 import clsx from 'clsx';
-import Error from './Error';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import ArtDetailsLightbox from '../components/ArtDetails/ArtDetailsLightbox';
-import usePageTitle from '../hooks/usePageTitle';
-import useArtworkSlug from '../hooks/useArtworkSlug';
 import useToggle from '../hooks/useToggle';
-import magnifyingGlass from '../assets/icons/magnifying-glass.svg';
+import art from "../data/art.js";
 
-export default function ArtDetails() {
-  const { name, slug, date, original, prints, closeups, height, width, medium, description, buyOgCaption, buyOgSmallprint, buyPrtCaption, buyPrtSmallprint } = useArtworkSlug();
-
-  usePageTitle(`${name} - mattwritesart`);
+export default function ArtDetails({ artwork }) {
+  const { name, slug, date, original, prints, closeups, height, width, medium, description, buyOgCaption, buyOgSmallprint, buyPrtCaption, buyPrtSmallprint } = artwork;
 
   const [lightboxOpen, openLightbox, closeLightbox] = useToggle(false);
 
-  if (!slug) return <Error />;
-
   return (
     <>
+      <Head>
+        <title>{name} - mattwritesart</title>
+        <meta name="description" content={description} />
+      </Head>
       <Header />
       <main className='art-details'>
         <section className='art-details__content container-med'>
@@ -30,7 +28,7 @@ export default function ArtDetails() {
             </picture>
             {closeups && (
               <button onClick={openLightbox}>
-                <img src={magnifyingGlass} alt='' /> View Closer
+                <img src='/icons/magnifying-glass.svg' alt='' /> View Closer
               </button>
             )}
           </div>
@@ -42,7 +40,7 @@ export default function ArtDetails() {
               </li>
               <li>
                 <small>
-                  Original size {width}"x{height}"
+                  Original size {width}&quot;x{height}&quot;
                 </small>
               </li>
               <li>
@@ -53,25 +51,46 @@ export default function ArtDetails() {
             <h3 className='art-details__availability'>{original || prints ? 'AVAILABLE TO BUY' : 'NOT AVAILABLE TO BUY'}</h3>
             {prints && (
               <>
-                <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'Print' } }} className={clsx('btn', original && 'btn-secondary')}>
-                  {buyPrtCaption || 'Order Print'} £{prints}
+                <Link href={`/buy/${slug}?buyOption=print`} as={`/buy/${slug}`}>
+                  <a className={clsx('btn', original && 'btn-secondary')}>{buyPrtCaption || 'Order Print'} £{prints}</a>
                 </Link>
                 {buyPrtSmallprint && <small className='art-details__order-smallprint'>{buyPrtSmallprint}</small>}
               </>
             )}
             {original && (
               <>
-                <Link to={{ pathname: `/buy/${slug}`, state: { buyOption: 'Original' } }} className='btn'>
-                  {buyOgCaption || 'Buy Original'} £{original}
+                <Link href={`/buy/${slug}?buyOption=original`} as={`/buy/${slug}`}>
+                  <a className='btn'>{buyOgCaption || 'Buy Original'} £{original}</a>
                 </Link>
                 {buyOgSmallprint && <small className='art-details__order-smallprint'>{buyOgSmallprint}</small>}
               </>
             )}
           </div>
         </section>
-        {lightboxOpen && <ArtDetailsLightbox imageSrc={`/art-images/close-ups/${slug}_1.jpg`} closeLightbox={closeLightbox} />}
+        {lightboxOpen ? <ArtDetailsLightbox imageSrc={`/art-images/close-ups/${slug}_1.jpg`} closeLightbox={closeLightbox} /> : null}
       </main>
       <Footer />
     </>
   );
+}
+
+export async function getStaticPaths() {
+  const paths = art.map(artwork => {
+    return { params: { slug: artwork.slug }}
+  });
+
+  return {
+    paths,
+    fallback: false
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const artwork = art.find((item) => item.slug === params.slug);
+
+  return {
+    props: {
+      artwork
+    },
+  }
 }
