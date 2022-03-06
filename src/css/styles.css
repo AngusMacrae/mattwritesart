@@ -231,7 +231,7 @@ main .btn:focus::after {
   transform: translate(0, 0);
 }
 
-#root form {
+#__next form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;

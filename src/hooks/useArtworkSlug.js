@@ -1,9 +1,9 @@
-import { useParams } from "react-router-dom";
+import { useRouter } from 'next/router'
 import art from "../data/art.js";
 
 export default function useArtworkSlug() {
-  const urlParams = useParams();
-  const artwork = art.find((item) => item.slug === urlParams.slug);
+  const router = useRouter();
+  const artwork = art.find((item) => item.slug === router.query.slug);
   const fallback = {
     name: null,
     slug: null,

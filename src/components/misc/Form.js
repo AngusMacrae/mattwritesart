@@ -1,9 +1,9 @@
 import { useRef } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useRouter } from 'next/router';
 
 export default function Form({ name, subject, children, className = '' }) {
   const formRef = useRef();
-  const history = useHistory();
+  const router = useRouter();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -15,7 +15,7 @@ export default function Form({ name, subject, children, className = '' }) {
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams(formData).toString(),
       });
-      history.push('/thankyou');
+      router.push('/thankyou');
     } catch (error) {
       console.log(error);
     }
