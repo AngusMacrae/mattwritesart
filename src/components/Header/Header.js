@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useEffect } from "react";
 import clsx from "clsx";
+import NavLink from "./NavLink";
 import useToggle from "../../hooks/useToggle";
 import useOnResize from "../../hooks/useOnResize";
 
@@ -41,48 +42,36 @@ export default function Header() {
         <nav className={clsx(menuOpen && "active")}>
           <ul className="nav__page-links">
             <li className="nav__home">
-              {router.pathname === "/" ? (
-                <p className="active" onClick={closeMenu}>
-                  Home
-                </p>
-              ) : (
-                <Link href="/">
-                  <a>Home</a>
-                </Link>
-              )}
+              <NavLink
+                path="/"
+                caption="Home"
+                currentPath={router.pathname}
+                callback={closeMenu}
+              />
             </li>
             <li>
-              {router.pathname === "/art" ? (
-                <p className="active" onClick={closeMenu}>
-                  Browse & Buy
-                </p>
-              ) : (
-                <Link href="/art">
-                  <a>Browse & Buy</a>
-                </Link>
-              )}
+              <NavLink
+                path="/art"
+                caption="Browse & Buy"
+                currentPath={router.pathname}
+                callback={closeMenu}
+              />
             </li>
             <li>
-              {router.pathname === "/commissions" ? (
-                <p className="active" onClick={closeMenu}>
-                  Commissions
-                </p>
-              ) : (
-                <Link href="/commissions">
-                  <a>Commissions</a>
-                </Link>
-              )}
+              <NavLink
+                path="/commissions"
+                caption="Commissions"
+                currentPath={router.pathname}
+                callback={closeMenu}
+              />
             </li>
             <li>
-              {router.pathname === "/contact" ? (
-                <p className="active" onClick={closeMenu}>
-                  Contact
-                </p>
-              ) : (
-                <Link href="/contact">
-                  <a>Contact</a>
-                </Link>
-              )}
+              <NavLink
+                path="/contact"
+                caption="Contact"
+                currentPath={router.pathname}
+                callback={closeMenu}
+              />
             </li>
           </ul>
           <ul className="nav__social-links">
