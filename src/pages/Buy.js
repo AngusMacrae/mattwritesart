@@ -39,7 +39,7 @@ export default function Buy({ artwork }) {
           <h2>{name}</h2>
           <Form name="buy" subject={"Order - " + slug}>
             <fieldset className="buy__options">
-              {prints && (
+              {prints ? (
                 <BuyOption
                   value="print"
                   caption={buyPrtCaption || "Order Print"}
@@ -50,8 +50,8 @@ export default function Buy({ artwork }) {
                   dimensions={printDimensions}
                   price={prints}
                 />
-              )}
-              {original && (
+              ) : null}
+              {original ? (
                 <BuyOption
                   value="original"
                   caption={buyOgCaption || "Buy Original"}
@@ -63,7 +63,7 @@ export default function Buy({ artwork }) {
                   medium={medium}
                   price={original}
                 />
-              )}
+              ) : null}
             </fieldset>
             <p>
               To purchase, please fill in your details below. I&apos;ll get back

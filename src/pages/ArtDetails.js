@@ -45,11 +45,11 @@ export default function ArtDetails({ artwork }) {
                 alt={description}
               />
             </picture>
-            {closeups && (
+            {closeups ? (
               <button onClick={openLightbox}>
                 <img src="/icons/magnifying-glass.svg" alt="" /> View Closer
               </button>
-            )}
+            ) : null}
           </div>
           <div className="art-details__info-container flow">
             <h2>{name}</h2>
@@ -70,21 +70,21 @@ export default function ArtDetails({ artwork }) {
             <h3 className="art-details__availability">
               {original || prints ? "AVAILABLE TO BUY" : "NOT AVAILABLE TO BUY"}
             </h3>
-            {prints && (
+            {prints ? (
               <>
                 <Link href={`/buy/${slug}?buyOption=print`} as={`/buy/${slug}`}>
                   <a className={clsx("btn", original && "btn-secondary")}>
                     {buyPrtCaption || "Order Print"} £{prints}
                   </a>
                 </Link>
-                {buyPrtSmallprint && (
+                {buyPrtSmallprint ? (
                   <small className="art-details__order-smallprint">
                     {buyPrtSmallprint}
                   </small>
-                )}
+                ) : null}
               </>
-            )}
-            {original && (
+            ) : null}
+            {original ? (
               <>
                 <Link
                   href={`/buy/${slug}?buyOption=original`}
@@ -94,13 +94,13 @@ export default function ArtDetails({ artwork }) {
                     {buyOgCaption || "Buy Original"} £{original}
                   </a>
                 </Link>
-                {buyOgSmallprint && (
+                {buyOgSmallprint ? (
                   <small className="art-details__order-smallprint">
                     {buyOgSmallprint}
                   </small>
-                )}
+                ) : null}
               </>
-            )}
+            ) : null}
           </div>
         </section>
         {lightboxOpen ? (

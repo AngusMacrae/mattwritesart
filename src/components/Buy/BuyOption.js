@@ -42,18 +42,18 @@ export default function BuyOption({
         <h3>{caption}</h3>
         <table>
           <tbody>
-            {dimensions && (
+            {dimensions ? (
               <tr>
                 <th>Dimensions</th>
                 <td>{dimensions}</td>
               </tr>
-            )}
-            {medium && (
+            ) : null}
+            {medium ? (
               <tr>
                 <th>Medium</th>
                 <td>{medium}</td>
               </tr>
-            )}
+            ) : null}
           </tbody>
         </table>
       </div>
