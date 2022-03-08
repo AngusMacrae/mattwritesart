@@ -58,7 +58,7 @@ button {
 /* APP STYLES */
 
 body {
-  font-family: 'EB Garamond', serif;
+  font-family: "EB Garamond", serif;
   font-size: 1.25rem;
   text-rendering: optimizeLegibility;
   color: #181818;
@@ -199,7 +199,7 @@ main .btn.btn-secondary {
 
 main .btn::before,
 main .btn::after {
-  content: '';
+  content: "";
   position: absolute;
   background-color: white;
   z-index: -1;
@@ -238,7 +238,7 @@ main .btn:focus::after {
   margin-top: 1.75rem;
 }
 
-form textarea[name='message'],
+form textarea[name="message"],
 form button {
   grid-column: span 2;
 }
@@ -263,7 +263,7 @@ fieldset {
     grid-template-columns: 1fr;
   }
 
-  form textarea[name='message'],
+  form textarea[name="message"],
   form button,
   .buy form .buy__options {
     grid-column: span 1;
@@ -375,7 +375,7 @@ nav {
 
 .nav__page-links a::before,
 .nav__page-links p::before {
-  content: '';
+  content: "";
   position: absolute;
   background-color: black;
   height: 2px;
@@ -534,7 +534,11 @@ main section:last-of-type {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 1rem;
-  text-shadow: 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, 0 0 7px white, 0 0 8px white, 0 0 9px white;
+  text-shadow: 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white,
+    0 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white,
+    1px 0 6px white, 1px 0 6px white, -2px 0 6px white, -2px 0 6px white,
+    -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, 0 0 7px white,
+    0 0 8px white, 0 0 9px white;
   padding: 0.2rem 0.8rem;
   opacity: 0;
   transition: opacity 0.2s;
@@ -626,7 +630,13 @@ main section:last-of-type {
   text-transform: capitalize;
   padding: 0.15rem 1rem;
   cursor: pointer;
-  clip-path: polygon(0 0, calc(100% - 0.7rem) 0, 100% 50%, calc(100% - 0.7rem) 100%, 0 100%);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 0.7rem) 0,
+    100% 50%,
+    calc(100% - 0.7rem) 100%,
+    0 100%
+  );
 }
 
 .art-filter__radio-group label:hover {

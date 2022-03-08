@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
@@ -10,15 +10,25 @@ export default function Document() {
         <meta name="theme-color" content="#000000" />
         <meta name="author" content="Angus Macrae" />
         <meta name="theme-color" content="#ffffff" />
-        <meta name="facebook-domain-verification" content="5r3fypjmkapt6xv9ny66qoz39msdn2" />
+        <meta
+          name="facebook-domain-verification"
+          content="5r3fypjmkapt6xv9ny66qoz39msdn2"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap" rel="stylesheet" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
-      <body>  
+      <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

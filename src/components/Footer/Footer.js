@@ -3,11 +3,17 @@ export default function Footer() {
   const currentYear = currentDate.getFullYear();
 
   return (
-    <footer className='footer'>
-      <p className='container-wide'>
+    <footer className="footer">
+      <p className="container-wide">
         <small>
-          &#169; mattwritesart {currentYear} | website by{' '}
-          <a href='https://angusmacrae.dev' target='_blank' rel='noopener noreferrer' title='Angus Macrae' className='link'>
+          &#169; mattwritesart {currentYear} | website by{" "}
+          <a
+            href="https://angusmacrae.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Angus Macrae"
+            className="link"
+          >
             Angus Macrae
           </a>
         </small>

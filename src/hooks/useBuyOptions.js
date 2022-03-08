@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import { useState } from "react";
+import { useRouter } from "next/router";
 
-export default function useBuyOptions (defaultBuyOption) {
+export default function useBuyOptions(defaultBuyOption) {
   const { query } = useRouter();
 
   const selectedBuyOption = query.buyOption || defaultBuyOption;

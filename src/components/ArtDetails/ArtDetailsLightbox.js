@@ -26,7 +26,7 @@ export default function ArtDetailsLightbox({ imageSrc, closeLightbox }) {
           alt="Lines of text and negative space forming an image"
         />
         <button autoFocus>
-          Close <img src='/icons/close.svg' alt="Close Lightbox" />
+          Close <img src="/icons/close.svg" alt="Close Lightbox" />
         </button>
       </div>
     </div>

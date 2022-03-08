@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export default function useToggle(initialValue = false) {
   const [isActive, setIsActive] = useState(initialValue);
@@ -12,7 +12,7 @@ export default function useToggle(initialValue = false) {
   }
 
   function toggle() {
-    setIsActive(prevState => !prevState);
+    setIsActive((prevState) => !prevState);
   }
 
   return [isActive, activate, deactivate, toggle];

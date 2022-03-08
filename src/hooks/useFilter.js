@@ -1,9 +1,11 @@
-import { useState, useContext } from 'react';
-import { FilterContext } from '../context/FilterContext';
+import { useState, useContext } from "react";
+import { FilterContext } from "../context/FilterContext";
 
 export default function useFilter(name, clearFilter) {
   const { savedFilters, setSavedFilters } = useContext(FilterContext);
-  const [filter, setFilter] = useState(!clearFilter && savedFilters[name] || 'show all');
+  const [filter, setFilter] = useState(
+    (!clearFilter && savedFilters[name]) || "show all"
+  );
 
   function handleFilterChange(event) {
     setFilter(event.target.value);

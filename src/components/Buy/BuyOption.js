@@ -1,20 +1,44 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
-export default function BuyOption({ value, caption, selected, handleChange, artworkSlug, artworkDesc, dimensions, medium, price }) {
+export default function BuyOption({
+  value,
+  caption,
+  selected,
+  handleChange,
+  artworkSlug,
+  artworkDesc,
+  dimensions,
+  medium,
+  price,
+}) {
   const inputId = `buy-option-${value}`;
 
   return (
-    <div className={clsx('buy__option', selected && 'selected')}>
-      <input type='radio' name='order' id={inputId} value={value} checked={selected} onChange={handleChange} />
+    <div className={clsx("buy__option", selected && "selected")}>
+      <input
+        type="radio"
+        name="order"
+        id={inputId}
+        value={value}
+        checked={selected}
+        onChange={handleChange}
+      />
       <label htmlFor={inputId}></label>
-      <span className='buy__option--selected'>Selected</span>
-      <div className='buy__option--img-container'>
+      <span className="buy__option--selected">Selected</span>
+      <div className="buy__option--img-container">
         <picture>
-          <source srcSet={`/art-images/${artworkSlug}.webp`} type='image/webp' />
-          <img className='shadow' src={`/art-images/${artworkSlug}.jpg`} alt={artworkDesc} />
+          <source
+            srcSet={`/art-images/${artworkSlug}.webp`}
+            type="image/webp"
+          />
+          <img
+            className="shadow"
+            src={`/art-images/${artworkSlug}.jpg`}
+            alt={artworkDesc}
+          />
         </picture>
       </div>
-      <div className='buy__option--info-container'>
+      <div className="buy__option--info-container">
         <h3>{caption}</h3>
         <table>
           <tbody>
@@ -33,7 +57,7 @@ export default function BuyOption({ value, caption, selected, handleChange, artw
           </tbody>
         </table>
       </div>
-      <div className='buy__option--price'>£{price}</div>
+      <div className="buy__option--price">£{price}</div>
     </div>
   );
 }

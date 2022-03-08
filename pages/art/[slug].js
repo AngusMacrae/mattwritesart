@@ -1,1 +1,5 @@
-export { default, getStaticPaths, getStaticProps } from "../../src/pages/ArtDetails";
+export {
+  default,
+  getStaticPaths,
+  getStaticProps,
+} from "../../src/pages/ArtDetails";
