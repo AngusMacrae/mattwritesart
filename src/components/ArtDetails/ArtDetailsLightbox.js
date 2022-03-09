@@ -20,7 +20,6 @@ export default function ArtDetailsLightbox({ imageSrc, closeLightbox }) {
   return (
     <div className="art-details__lightbox" onClick={closeLightbox}>
       <div className="art-details__lightbox-content">
-        {/* eslint-disable-next-line */}
         <img
           src={imageSrc}
           alt="Lines of text and negative space forming an image"

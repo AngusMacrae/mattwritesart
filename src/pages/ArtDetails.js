@@ -27,6 +27,11 @@ export default function ArtDetails({ artwork }) {
 
   const [lightboxOpen, openLightbox, closeLightbox] = useToggle(false);
 
+  const availabilityText =
+    original || prints ? "AVAILABLE TO BUY" : "NOT AVAILABLE TO BUY";
+
+  const originalDimensionsText = `Original size ${width}&quot;x${height}&quot;`;
+
   return (
     <>
       <Head>
@@ -58,18 +63,14 @@ export default function ArtDetails({ artwork }) {
                 <small>{date}</small>
               </li>
               <li>
-                <small>
-                  Original size {width}&quot;x{height}&quot;
-                </small>
+                <small>{originalDimensionsText}</small>
               </li>
               <li>
                 <small>{medium}</small>
               </li>
             </ul>
             <p>{description}</p>
-            <h3 className="art-details__availability">
-              {original || prints ? "AVAILABLE TO BUY" : "NOT AVAILABLE TO BUY"}
-            </h3>
+            <h3 className="art-details__availability">{availabilityText}</h3>
             {prints ? (
               <>
                 <Link href={`/buy/${slug}?buyOption=print`} as={`/buy/${slug}`}>

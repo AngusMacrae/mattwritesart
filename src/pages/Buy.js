@@ -24,8 +24,10 @@ export default function Buy({ artwork }) {
   const defaultBuyOption = original ? "Original" : "Print";
   const [buyOption, handleBuyOptionChange] = useBuyOptions(defaultBuyOption);
 
-  const printDimensions = getPrintDimensions(slug, width, height);
+  const printDimensions = getPrintDimensions(width, height, slug);
   const originalDimensions = `${width}"x${height}"`;
+
+  const formSubject = `Order - ${slug}`;
 
   return (
     <>
@@ -37,7 +39,7 @@ export default function Buy({ artwork }) {
       <main className="buy">
         <section className="container-thin flow">
           <h2>{name}</h2>
-          <Form name="buy" subject={"Order - " + slug}>
+          <Form name="buy" subject={formSubject}>
             <fieldset className="buy__options">
               {prints ? (
                 <BuyOption
@@ -45,8 +47,8 @@ export default function Buy({ artwork }) {
                   caption={buyPrtCaption || "Order Print"}
                   selected={buyOption === "print"}
                   handleChange={handleBuyOptionChange}
-                  artworkSlug={slug}
-                  artworkDesc={description}
+                  slug={slug}
+                  description={description}
                   dimensions={printDimensions}
                   price={prints}
                 />
@@ -57,8 +59,8 @@ export default function Buy({ artwork }) {
                   caption={buyOgCaption || "Buy Original"}
                   selected={buyOption === "original"}
                   handleChange={handleBuyOptionChange}
-                  artworkSlug={slug}
-                  artworkDesc={description}
+                  slug={slug}
+                  description={description}
                   dimensions={originalDimensions}
                   medium={medium}
                   price={original}

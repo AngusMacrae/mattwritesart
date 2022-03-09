@@ -5,8 +5,8 @@ export default function BuyOption({
   caption,
   selected,
   handleChange,
-  artworkSlug,
-  artworkDesc,
+  slug,
+  description,
   dimensions,
   medium,
   price,
@@ -28,13 +28,13 @@ export default function BuyOption({
       <div className="buy__option--img-container">
         <picture>
           <source
-            srcSet={`/art-images/${artworkSlug}.webp`}
+            srcSet={`/art-images/${slug}.webp`}
             type="image/webp"
           />
           <img
             className="shadow"
-            src={`/art-images/${artworkSlug}.jpg`}
-            alt={artworkDesc}
+            src={`/art-images/${slug}.jpg`}
+            alt={description}
           />
         </picture>
       </div>
