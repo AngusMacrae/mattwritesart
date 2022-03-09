@@ -1,21 +1,7 @@
-import { useEffect, useCallback } from "react";
+import useEffectOnKeyUp from "../../hooks/useEffectOnKeyUp";
 
 export default function ArtDetailsLightbox({ imageSrc, closeLightbox }) {
-  const handleKeyUp = useCallback(
-    (event) => {
-      if (event.key === "Escape") {
-        closeLightbox();
-      }
-    },
-    [closeLightbox]
-  );
-
-  useEffect(() => {
-    document.addEventListener("keyup", handleKeyUp);
-    return () => {
-      document.removeEventListener("keyup", handleKeyUp);
-    };
-  }, [handleKeyUp]);
+  useEffectOnKeyUp("Escape", closeLightbox);
 
   return (
     <div className="art-details__lightbox" onClick={closeLightbox}>
