@@ -27,7 +27,7 @@ export default function ArtGalleryItem({ artwork }) {
             />
           </picture>
           <div>
-            <h3>{name}</h3>
+            <h2>{name}</h2>
             <p className="art-gallery__item--availability">
               {availabilityText}
             </p>

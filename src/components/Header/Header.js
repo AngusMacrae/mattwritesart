@@ -26,10 +26,10 @@ export default function Header() {
           <Link href="/" onClick={closeMenu}>
             <a className="header-home" title="Home">
               <img src="/logo/mwa-logo.svg" alt="" />
-              <h1>
+              <span className="header-site-name">
                 matt<span className="deemphasised">writes</span>art
                 <small className="deemphasised">.co.uk</small>
-              </h1>
+              </span>
             </a>
           </Link>
           <button onClick={toggleMenu} className="header__menu-toggle-btn">

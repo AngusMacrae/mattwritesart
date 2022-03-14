@@ -48,7 +48,7 @@ export default function Commissions() {
           </picture>
         </section>
         <section className="commissions__text-container container-thin flow">
-          <h2>Commissions</h2>
+          <h1>Commissions</h1>
           <p>
             I love the challenge and joy of commissions. From discussing a new
             idea with a potential customer, through the process of creation, to

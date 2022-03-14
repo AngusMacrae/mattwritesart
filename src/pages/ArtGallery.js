@@ -39,9 +39,9 @@ export default function ArtGallery() {
       <main className="art-gallery">
         <section className="art-gallery__content">
           <aside>
-            <h2 className="art-filters__title">
-              <img src="/icons/filter.svg" alt=""></img>Filter Art
-            </h2>
+            <h1 className="art-filters__title">
+              <img src="/icons/filter.svg" alt=""></img>Browse & Filter Art
+            </h1>
             <div className="art-filters__container">
               <ArtFilter
                 filterGroup="availability"

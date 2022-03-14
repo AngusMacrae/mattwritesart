@@ -38,7 +38,7 @@ export default function Buy({ artwork }) {
       <Header />
       <main className="buy">
         <section className="container-thin flow">
-          <h2>{name}</h2>
+          <h1>{name}</h1>
           <Form name="buy" subject={formSubject}>
             <fieldset className="buy__options">
               {prints ? (

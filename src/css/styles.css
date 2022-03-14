@@ -118,13 +118,13 @@ textarea {
   opacity: 0.6;
 }
 
-h2 {
+h1 {
   font-size: 1.7rem;
   font-size: clamp(1.5rem, 5vmin, 1.9rem);
   line-height: 1.25;
 }
 
-h3 {
+h2 {
   font-size: 1.3rem;
   font-size: clamp(1.25rem, 3.75vmin, 1.4rem);
 }
@@ -294,9 +294,10 @@ fieldset {
   background-color: white;
 }
 
-.header h1 {
+.header-site-name {
   font-size: calc(1.8rem + 1vmin);
   font-size: clamp(1.6rem, 8vmin, 2.6rem);
+  font-weight: 600;
 }
 
 .header .deemphasised {
@@ -534,6 +535,7 @@ main section:last-of-type {
   white-space: nowrap;
   text-overflow: ellipsis;
   font-size: 1rem;
+  line-height: 1.25;
   text-shadow: 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white,
     0 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white,
     1px 0 6px white, 1px 0 6px white, -2px 0 6px white, -2px 0 6px white,
@@ -781,7 +783,7 @@ ul.art-gallery__grid {
   display: none;
 } */
 
-.art-gallery__item h3 {
+.art-gallery__item h2 {
   font-size: 1.25rem;
 }
 
@@ -875,6 +877,7 @@ ul.art-gallery__grid {
   text-transform: uppercase;
   font-size: 1.05rem;
   letter-spacing: 0.3px;
+  font-weight: bold;
 }
 
 .art-details__info-container button {
@@ -1083,7 +1086,7 @@ td {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
   }
-  .buy__option--info-container h3 {
+  .buy__option--info-container h2 {
     text-align: center;
   }
 }
@@ -1180,11 +1183,11 @@ td {
 
 /* Styles for IE only */
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-  h2 {
+  h1 {
     font-size: 1.7rem;
   }
 
-  h3 {
+  h2 {
     font-size: 1.3rem;
   }
 
@@ -1204,7 +1207,7 @@ td {
     max-width: 1200px;
   }
 
-  .header h1 {
+  .header-site-name {
     font-size: 2rem;
   }
 

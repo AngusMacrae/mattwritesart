@@ -57,7 +57,7 @@ export default function ArtDetails({ artwork }) {
             ) : null}
           </div>
           <div className="art-details__info-container flow">
-            <h2>{name}</h2>
+            <h1>{name}</h1>
             <ul>
               <li>
                 <small>{date}</small>
@@ -70,7 +70,7 @@ export default function ArtDetails({ artwork }) {
               </li>
             </ul>
             <p>{description}</p>
-            <h3 className="art-details__availability">{availabilityText}</h3>
+            <h2 className="art-details__availability">{availabilityText}</h2>
             {prints ? (
               <>
                 <Link href={`/buy/${slug}?buyOption=print`} as={`/buy/${slug}`}>

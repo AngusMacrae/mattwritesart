@@ -17,6 +17,7 @@ export default function Home() {
       <Header />
       <main className="home">
         <section className="container-thin standout flow">
+          <h1 style={{ display: "none" }}>mattwritesart - Home</h1>
           <p>
             <strong>Hi! I&apos;m matt and I write art.</strong>
           </p>

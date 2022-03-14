@@ -39,7 +39,7 @@ export default function BuyOption({
         </picture>
       </div>
       <div className="buy__option--info-container">
-        <h3>{caption}</h3>
+        <h2>{caption}</h2>
         <table>
           <tbody>
             {dimensions ? (
