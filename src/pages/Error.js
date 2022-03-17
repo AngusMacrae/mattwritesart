@@ -10,6 +10,7 @@ export default function Error() {
           name="description"
           content="UK-based artist - forming words into images, exploring the power of negative space and the illusion of distance."
         />
+        <meta name="robots" content="noindex" />
       </Head>
       <main className="error">
         <section className="container-thin standout flow">
