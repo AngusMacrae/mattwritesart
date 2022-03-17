@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import CommissionsImages from "../components/Commissions/CommissionsImages";
 
 export default function Commissions() {
   return (
@@ -15,38 +16,7 @@ export default function Commissions() {
       </Head>
       <Header />
       <main className="commissions">
-        <section className="commissions__images container-med">
-          <picture>
-            <source srcSet="/art-images/pete-doherty.webp" type="image/webp" />
-            <img
-              className="shadow"
-              src="/art-images/pete-doherty.jpg"
-              alt="Pete Doherty"
-            />
-          </picture>
-          <picture>
-            <source
-              srcSet="/art-images/bjoern-gelotte.webp"
-              type="image/webp"
-            />
-            <img
-              className="shadow"
-              src="/art-images/bjoern-gelotte.jpg"
-              alt="Bjoern Gelotte"
-            />
-          </picture>
-          <picture>
-            <source
-              srcSet="/art-images/frank-turner-3.webp"
-              type="image/webp"
-            />
-            <img
-              className="shadow"
-              src="/art-images/frank-turner-3.jpg"
-              alt="Frank Turner"
-            />
-          </picture>
-        </section>
+        <CommissionsImages />
         <section className="commissions__text-container container-thin flow">
           <h1>Commissions</h1>
           <p>
