@@ -44,7 +44,7 @@ export default function Buy({ artwork }) {
               {prints ? (
                 <BuyOption
                   value="print"
-                  caption={buyPrtCaption || "Order Print"}
+                  caption={buyPrtCaption}
                   selected={buyOption === "print"}
                   handleChange={handleBuyOptionChange}
                   slug={slug}
@@ -56,7 +56,7 @@ export default function Buy({ artwork }) {
               {original ? (
                 <BuyOption
                   value="original"
-                  caption={buyOgCaption || "Buy Original"}
+                  caption={buyOgCaption}
                   selected={buyOption === "original"}
                   handleChange={handleBuyOptionChange}
                   slug={slug}

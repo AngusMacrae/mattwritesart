@@ -75,7 +75,7 @@ export default function ArtDetails({ artwork }) {
               <>
                 <Link href={`/buy/${slug}?buyOption=print`} as={`/buy/${slug}`}>
                   <a className={clsx("btn", original && "btn-secondary")}>
-                    {buyPrtCaption || "Order Print"} £{prints}
+                    {buyPrtCaption} £{prints}
                   </a>
                 </Link>
                 {buyPrtSmallprint ? (
@@ -92,7 +92,7 @@ export default function ArtDetails({ artwork }) {
                   as={`/buy/${slug}`}
                 >
                   <a className="btn">
-                    {buyOgCaption || "Buy Original"} £{original}
+                    {buyOgCaption} £{original}
                   </a>
                 </Link>
                 {buyOgSmallprint ? (
