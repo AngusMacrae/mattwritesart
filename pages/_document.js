@@ -14,6 +14,7 @@ export default function Document() {
           name="facebook-domain-verification"
           content="5r3fypjmkapt6xv9ny66qoz39msdn2"
         />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
