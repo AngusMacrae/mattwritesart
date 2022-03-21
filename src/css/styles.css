@@ -474,15 +474,15 @@ main section:last-of-type {
 
 .standout {
   margin-top: 1.5rem;
-  margin-bottom: 2.5rem;
   margin-top: clamp(1.5rem, 9vmin, 10rem);
-  margin-bottom: clamp(2.5rem, 12vmin, 13rem);
   text-align: center;
 }
 
-.home .cta-container {
+.showcase {
   margin-top: 4rem;
   margin-top: clamp(4rem, 12vmin, 13rem);
+  margin-bottom: 4rem;
+  margin-bottom: clamp(4rem, 12vmin, 13rem);
 }
 
 .showcase__grid {
@@ -1152,12 +1152,6 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.thankyou .standout,
-.error .standout {
-  margin-bottom: 0;
-  /* margin-bottom: clamp(1.5rem, 7vmin, 9rem); */
 }
 
 .thankyou img,

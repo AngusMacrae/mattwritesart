@@ -26,6 +26,14 @@ export default function Home() {
             the illusion of distance.
           </p>
         </section>
+        <section className="cta-container">
+          <Link href="/commissions">
+            <a className="btn btn-secondary">Commissions</a>
+          </Link>
+          <Link href="/art?clearFilters=true" as="/art">
+            <a className="btn">Browse & Buy</a>
+          </Link>
+        </section>
         <Showcase />
         <section className="cta-container">
           <Link href="/commissions">
