@@ -30,7 +30,7 @@ export default function ArtDetails({ artwork }) {
   const availabilityText =
     original || prints ? "AVAILABLE TO BUY" : "NOT AVAILABLE TO BUY";
 
-  const originalDimensionsText = `Original size ${width}&quot;x${height}&quot;`;
+  const originalDimensionsText = `Original size ${width}"x${height}"`;
 
   return (
     <>
