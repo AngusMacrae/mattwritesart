@@ -1,7 +1,7 @@
-import ArtFilterRadioGroup from "./ArtFilterRadioGroup";
-import ArtFilterSelect from "./ArtFilterSelect";
+import GalleryFilterRadioGroup from "./GalleryFilterRadioGroup";
+import GalleryFilterSelect from "./GalleryFilterSelect";
 
-export default function ArtFilter({
+export default function GalleryFilter({
   filterGroup,
   FILTERS,
   currentFilter,
@@ -9,13 +9,13 @@ export default function ArtFilter({
 }) {
   return (
     <>
-      <ArtFilterRadioGroup
+      <GalleryFilterRadioGroup
         filterGroup={filterGroup}
         FILTERS={FILTERS}
         currentFilter={currentFilter}
         handleFilterChange={handleFilterChange}
       />
-      <ArtFilterSelect
+      <GalleryFilterSelect
         filterGroup={filterGroup}
         FILTERS={FILTERS}
         currentFilter={currentFilter}

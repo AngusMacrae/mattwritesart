@@ -3,14 +3,14 @@ import clsx from "clsx";
 import useImg from "../../hooks/useImg";
 import getAvailabilityText from "../../utils/getAvailabilityText.js";
 
-export default function ArtGalleryItem({ artwork }) {
+export default function GalleryItem({ artwork }) {
   const { name, slug, height, width, description, original, prints } = artwork;
   const [imgStatus, onLoad, onError] = useImg();
 
   const availabilityText = getAvailabilityText(original, prints);
 
   return (
-    <li className={clsx("art-gallery__item", imgStatus)}>
+    <li className={clsx("gallery__item", imgStatus)}>
       <Link href={`/art/${slug}`}>
         <a>
           <picture>
@@ -28,7 +28,7 @@ export default function ArtGalleryItem({ artwork }) {
           </picture>
           <div>
             <h2>{name}</h2>
-            <p className="art-gallery__item--availability">
+            <p className="gallery__item--availability">
               {availabilityText}
             </p>
           </div>

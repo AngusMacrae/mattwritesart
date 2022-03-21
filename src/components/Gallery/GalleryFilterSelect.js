@@ -1,4 +1,4 @@
-export default function ArtFilterSelect({
+export default function GalleryFilterSelect({
   filterGroup,
   FILTERS,
   currentFilter,
@@ -7,7 +7,7 @@ export default function ArtFilterSelect({
   const selectId = `${filterGroup}-select`;
 
   return (
-    <div className="art-filter__select">
+    <div className="gallery-filter__select">
       <label htmlFor={selectId}>{filterGroup}</label>
       <select
         value={currentFilter}

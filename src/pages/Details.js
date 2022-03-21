@@ -3,11 +3,11 @@ import Link from "next/link";
 import clsx from "clsx";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import ArtDetailsLightbox from "../components/ArtDetails/ArtDetailsLightbox";
+import DetailsLightbox from "../components/Details/DetailsLightbox";
 import useToggle from "../hooks/useToggle";
 import art from "../data/art.js";
 
-export default function ArtDetails({ artwork }) {
+export default function Details({ artwork }) {
   const {
     name,
     slug,
@@ -39,9 +39,9 @@ export default function ArtDetails({ artwork }) {
         <meta name="description" content={description} />
       </Head>
       <Header />
-      <main className="art-details">
-        <section className="art-details__content container-med">
-          <div className="art-details__img-container">
+      <main className="details">
+        <section className="details__content container-med">
+          <div className="details__img-container">
             <picture>
               <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
               <img
@@ -56,7 +56,7 @@ export default function ArtDetails({ artwork }) {
               </button>
             ) : null}
           </div>
-          <div className="art-details__info-container flow">
+          <div className="details__info-container flow">
             <h1>{name}</h1>
             <ul>
               <li>
@@ -70,7 +70,7 @@ export default function ArtDetails({ artwork }) {
               </li>
             </ul>
             <p>{description}</p>
-            <h2 className="art-details__availability">{availabilityText}</h2>
+            <h2 className="details__availability">{availabilityText}</h2>
             {prints ? (
               <>
                 <Link href={`/buy/${slug}?buyOption=print`} as={`/buy/${slug}`}>
@@ -79,7 +79,7 @@ export default function ArtDetails({ artwork }) {
                   </a>
                 </Link>
                 {buyPrtSmallprint ? (
-                  <small className="art-details__order-smallprint">
+                  <small className="details__order-smallprint">
                     {buyPrtSmallprint}
                   </small>
                 ) : null}
@@ -96,7 +96,7 @@ export default function ArtDetails({ artwork }) {
                   </a>
                 </Link>
                 {buyOgSmallprint ? (
-                  <small className="art-details__order-smallprint">
+                  <small className="details__order-smallprint">
                     {buyOgSmallprint}
                   </small>
                 ) : null}
@@ -105,7 +105,7 @@ export default function ArtDetails({ artwork }) {
           </div>
         </section>
         {lightboxOpen ? (
-          <ArtDetailsLightbox
+          <DetailsLightbox
             imageSrc={`/art-images/close-ups/${slug}_1.jpg`}
             closeLightbox={closeLightbox}
           />

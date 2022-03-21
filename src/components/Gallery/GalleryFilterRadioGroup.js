@@ -1,17 +1,17 @@
-import ArtFilterRadio from "./ArtFilterRadio";
+import GalleryFilterRadio from "./GalleryFilterRadio";
 
-export default function ArtFilterRadioGroup({
+export default function GalleryFilterRadioGroup({
   filterGroup,
   FILTERS,
   currentFilter,
   handleFilterChange,
 }) {
   return (
-    <fieldset className="art-filter__radio-group">
+    <fieldset className="gallery-filter__radio-group">
       <legend>{filterGroup}</legend>
       <div>
         {Object.keys(FILTERS).map((filter) => (
-          <ArtFilterRadio
+          <GalleryFilterRadio
             filterGroup={filterGroup}
             filter={filter}
             checked={currentFilter === filter}

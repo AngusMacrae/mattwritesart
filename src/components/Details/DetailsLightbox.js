@@ -1,11 +1,11 @@
 import useEffectOnKeyUp from "../../hooks/useEffectOnKeyUp";
 
-export default function ArtDetailsLightbox({ imageSrc, closeLightbox }) {
+export default function DetailsLightbox({ imageSrc, closeLightbox }) {
   useEffectOnKeyUp("Escape", closeLightbox);
 
   return (
-    <div className="art-details__lightbox" onClick={closeLightbox}>
-      <div className="art-details__lightbox-content">
+    <div className="details__lightbox" onClick={closeLightbox}>
+      <div className="details__lightbox-content">
         <img
           src={imageSrc}
           alt="Lines of text and negative space forming an image"

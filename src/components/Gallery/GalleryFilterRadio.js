@@ -1,4 +1,4 @@
-export default function ArtFilterRadio({
+export default function GalleryFilterRadio({
   filterGroup,
   filter,
   checked,
