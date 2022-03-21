@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import Showcase from "../components/Showcase/Showcase";
+import Showcase from "../components/Home/Showcase";
 
 export default function Home() {
   return (
