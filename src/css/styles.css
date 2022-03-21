@@ -231,7 +231,7 @@ main .btn:focus::after {
   transform: translate(0, 0);
 }
 
-#__next form {
+form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
@@ -259,7 +259,7 @@ fieldset {
 }
 
 @media (max-width: 730px) {
-  #__next form {
+  form {
     grid-template-columns: 1fr;
   }
 
