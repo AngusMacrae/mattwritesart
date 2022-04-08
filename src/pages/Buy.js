@@ -1,4 +1,5 @@
 import Head from "next/head";
+import * as ga from '../lib/ga'
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Form from "../components/misc/Form";
@@ -28,6 +29,17 @@ export default function Buy({ artwork }) {
   const originalDimensions = `${width}"x${height}"`;
 
   const formSubject = `Order - ${slug}`;
+
+  const recordPurchase = () => {
+    ga.event({
+      action: "purchase",
+      params : {
+        piece: name,
+        type: buyOption,
+        price: buyOption === "print" ? prints : original
+      }
+    })
+  }
 
   return (
     <>
@@ -84,7 +96,7 @@ export default function Buy({ artwork }) {
               placeholder="Your message (optional)"
               rows="5"
             ></textarea>
-            <button type="submit" className="btn">
+            <button type="submit" className="btn" onClick={recordPurchase}>
               Send!
             </button>
           </Form>
