@@ -18,7 +18,7 @@ export default function ShowcaseItem({ artwork }) {
     >
       <Link href={`/art/${slug}`} className="showcase__item-content">
         <a>
-          <h2>{name}</h2>
+          <h3>{name}</h3>
           <picture>
             <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
             <img

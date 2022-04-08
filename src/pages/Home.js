@@ -3,6 +3,8 @@ import Link from "next/link";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Showcase from "../components/Home/Showcase";
+import About from "../components/Home/About";
+import Faqs from "../components/Home/Faqs";
 
 export default function Home() {
   return (
@@ -35,6 +37,8 @@ export default function Home() {
           </Link>
         </section>
         <Showcase />
+        <About />
+        <Faqs />
         <section className="cta-container">
           <Link href="/commissions">
             <a className="btn btn-secondary">Commissions</a>

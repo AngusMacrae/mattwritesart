@@ -125,8 +125,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.3rem;
-  font-size: clamp(1.25rem, 3.75vmin, 1.4rem);
+  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 4vmin, 1.6rem);
+}
+
+h3 {
+  font-size: 1.15rem;
+  font-size: clamp(1.15rem, 3vmin, 1.25rem);
 }
 
 .header,
@@ -478,9 +483,16 @@ main section:last-of-type {
   text-align: center;
 }
 
+.home > section {
+  margin-bottom: 3rem;
+  margin-bottom: clamp(3.5rem, 9vmin, 10.5rem);
+}
+
+.home > .standout {
+  margin-bottom: 0;
+}
+
 .showcase {
-  margin-top: 4rem;
-  margin-top: clamp(4rem, 12vmin, 13rem);
   margin-bottom: 4rem;
   margin-bottom: clamp(4rem, 12vmin, 13rem);
 }
@@ -525,7 +537,7 @@ main section:last-of-type {
   grid-column-end: span 1;
 }
 
-.showcase__item h2 {
+.showcase__item h3 {
   position: absolute;
   left: -0.2rem;
   bottom: 0;
@@ -546,12 +558,12 @@ main section:last-of-type {
   transition: opacity 0.2s;
 }
 
-.showcase__item:hover h2 {
+.showcase__item:hover h3 {
   opacity: 1;
 }
 
 @media (max-width: 950px) {
-  .showcase__item h2 {
+  .showcase__item h3 {
     display: none;
   }
 }
@@ -580,11 +592,22 @@ main section:last-of-type {
 }
 
 /* @media (max-width: 500px) {
-  .showcase__item h2 {
+  .showcase__item h3 {
     font-size: 0.8rem;
     padding: 0.1rem 0.5rem;
   }
 } */
+
+.about h3,
+.faqs h3 {
+  margin-top: 2rem;
+  margin-top: clamp(1.5rem, 6vmin, 2.5rem);
+}
+
+.faqs-list {
+  list-style-type: decimal !important;
+  padding-left: 1rem !important;
+}
 
 .gallery__content {
   display: grid;
