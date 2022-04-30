@@ -10,7 +10,8 @@ export default function Contact() {
         <title>Contact - mattwritesart</title>
         <meta
           name="description"
-          content="UK-based artist - forming words into images, exploring the power of negative space and the illusion of distance."
+          content="If you'd like to reach out to me about a commission or anything else, you can use the
+          form here."
         />
       </Head>
       <Header />

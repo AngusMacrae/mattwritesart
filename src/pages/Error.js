@@ -8,7 +8,7 @@ export default function Error() {
         <title>Page Not Found - mattwritesart</title>
         <meta
           name="description"
-          content="UK-based artist - forming words into images, exploring the power of negative space and the illusion of distance."
+          content="Oh no! Something went wrong."
         />
         <meta name="robots" content="noindex" />
       </Head>

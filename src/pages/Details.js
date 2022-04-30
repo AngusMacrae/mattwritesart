@@ -3,6 +3,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import MetaData from "../components/misc/MetaData";
 import DetailsLightbox from "../components/Details/DetailsLightbox";
 import useToggle from "../hooks/useToggle";
 import art from "../data/art.js";
@@ -35,8 +36,12 @@ export default function Details({ artwork }) {
   return (
     <>
       <Head>
-        <title>{name} - mattwritesart</title>
-        <meta name="description" content={description} />
+        <MetaData
+          title={`${name} - mattwritesart`}
+          description={description}
+          url={`/art/${slug}`}
+          image={`/art-images/${slug}.jpg`}
+        />
       </Head>
       <Header />
       <main className="details">

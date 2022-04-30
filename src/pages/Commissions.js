@@ -11,7 +11,10 @@ export default function Commissions() {
         <title>Commissions - mattwritesart</title>
         <meta
           name="description"
-          content="UK-based artist - forming words into images, exploring the power of negative space and the illusion of distance."
+          content="If you're interested in an original commission, please
+          don't hesitate to get in touch! I'll be happy to discuss
+          ideas, cost, sizing, and anything else that makes the piece special
+          for you."
         />
       </Head>
       <Header />

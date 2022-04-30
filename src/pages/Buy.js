@@ -1,8 +1,9 @@
 import Head from "next/head";
-import * as ga from '../lib/ga'
+import * as ga from "../lib/ga";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Form from "../components/misc/Form";
+import MetaData from "../components/misc/MetaData";
 import BuyOption from "../components/Buy/BuyOption";
 import useBuyOptions from "../hooks/useBuyOptions";
 import getPrintDimensions from "../utils/getPrintDimensions";
@@ -33,19 +34,23 @@ export default function Buy({ artwork }) {
   const recordPurchase = () => {
     ga.event({
       action: "purchase",
-      params : {
+      params: {
         piece: name,
         type: buyOption,
-        price: buyOption === "print" ? prints : original
-      }
-    })
-  }
+        price: buyOption === "print" ? prints : original,
+      },
+    });
+  };
 
   return (
     <>
       <Head>
-        <title>{name} - mattwritesart</title>
-        <meta name="description" content={description} />
+        <MetaData
+          title={`${name} - mattwritesart`}
+          description={description}
+          url={`/art/${slug}`}
+          image={`/art-images/${slug}.jpg`}
+        />
       </Head>
       <Header />
       <main className="buy">
