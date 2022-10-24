@@ -7,7 +7,7 @@ import MetaData from "../components/misc/MetaData";
 import BuyOption from "../components/Buy/BuyOption";
 import useBuyOptions from "../hooks/useBuyOptions";
 import getPrintDimensions from "../utils/getPrintDimensions";
-import art from "../data/art.js";
+import art from "../data/art";
 
 export default function Buy({ artwork }) {
   const {

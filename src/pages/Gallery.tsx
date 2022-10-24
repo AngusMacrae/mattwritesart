@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 import GalleryFilter from "../components/Gallery/GalleryFilter";
 import GalleryItem from "../components/Gallery/GalleryItem";
 import useFilter from "../hooks/useFilter";
-import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from "../data/art.js";
+import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from "../data/art";
 
 export default function Gallery() {
   const { query } = useRouter();

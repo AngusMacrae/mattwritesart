@@ -1,5 +1,5 @@
 import ShowcaseItem from "./ShowcaseItem";
-import art from "../../data/art.js";
+import art from "../../data/art";
 
 export default function Showcase() {
   const filteredArt = art.filter((artwork) => artwork.showcase);

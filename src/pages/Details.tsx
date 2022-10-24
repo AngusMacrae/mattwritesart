@@ -6,7 +6,7 @@ import Footer from "../components/Footer/Footer";
 import MetaData from "../components/misc/MetaData";
 import DetailsLightbox from "../components/Details/DetailsLightbox";
 import useToggle from "../hooks/useToggle";
-import art from "../data/art.js";
+import art from "../data/art";
 
 export default function Details({ artwork }) {
   const {

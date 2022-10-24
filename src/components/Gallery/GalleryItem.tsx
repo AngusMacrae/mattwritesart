@@ -1,7 +1,7 @@
 import Link from "next/link";
 import clsx from "clsx";
 import useImg from "../../hooks/useImg";
-import getAvailabilityText from "../../utils/getAvailabilityText.js";
+import getAvailabilityText from "../../utils/getAvailabilityText";
 
 export default function GalleryItem({ artwork }) {
   const { name, slug, height, width, description, original, prints } = artwork;
