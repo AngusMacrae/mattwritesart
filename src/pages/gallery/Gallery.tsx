@@ -1,11 +1,11 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import GalleryFilter from "../components/Gallery/GalleryFilter";
-import GalleryItem from "../components/Gallery/GalleryItem";
-import useFilter from "../hooks/useFilter";
-import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from "../data/art";
+import Header from "../../common/components/Header/Header";
+import Footer from "../../common/components/Footer/Footer";
+import GalleryFilter from "./components/GalleryFilter";
+import GalleryItem from "./components/GalleryItem";
+import useFilter from "./hooks/useFilter";
+import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from "../../data/art";
 
 export default function Gallery() {
   const { query } = useRouter();

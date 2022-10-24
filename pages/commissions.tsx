@@ -1,1 +1,1 @@
-export { default } from "../src/pages/Commissions";
+export { default } from "../src/pages/commissions/Commissions";

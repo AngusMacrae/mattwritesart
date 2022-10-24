@@ -2,4 +2,4 @@ export {
   default,
   getStaticPaths,
   getStaticProps,
-} from "../../src/pages/Details";
+} from "../../src/pages/details/Details";

@@ -1,5 +1,5 @@
 import { useState, useContext } from "react";
-import { FilterContext } from "../context/FilterContext";
+import { FilterContext } from "../../../common/contexts/FilterContext";
 
 export default function useFilter(name, clearFilter) {
   const { savedFilters, setSavedFilters } = useContext(FilterContext);

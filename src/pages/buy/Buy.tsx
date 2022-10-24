@@ -1,13 +1,13 @@
 import Head from "next/head";
-import * as ga from "../lib/ga";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import Form from "../components/misc/Form";
-import MetaData from "../components/misc/MetaData";
-import BuyOption from "../components/Buy/BuyOption";
-import useBuyOptions from "../hooks/useBuyOptions";
-import getPrintDimensions from "../utils/getPrintDimensions";
-import art from "../data/art";
+import * as ga from "../../lib/ga";
+import Header from "../../common/components/Header/Header";
+import Footer from "../../common/components/Footer/Footer";
+import Form from "../../common/components/Form/Form";
+import MetaData from "../../common/components/MetaData/MetaData";
+import BuyOption from "./components/BuyOption";
+import useBuyOptions from "./hooks/useBuyOptions";
+import getPrintDimensions from "./utils/getPrintDimensions";
+import art from "../../data/art";
 
 export default function Buy({ artwork }) {
   const {

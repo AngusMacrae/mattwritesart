@@ -1,4 +1,4 @@
-import { siteRootUrl } from "../../config";
+const siteRootUrl = process.env.URL;
 
 export default function MetaData({ title, description, url, image }) {
   return (

@@ -1,1 +1,0 @@
-export const siteRootUrl = process.env.URL;

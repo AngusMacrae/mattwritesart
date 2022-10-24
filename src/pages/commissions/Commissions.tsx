@@ -1,8 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import CommissionsImages from "../components/Commissions/CommissionsImages";
+import Header from "../../common/components/Header/Header";
+import Footer from "../../common/components/Footer/Footer";
+import CommissionsImages from "./components/CommissionsImages";
 
 export default function Commissions() {
   return (

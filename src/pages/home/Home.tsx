@@ -1,10 +1,10 @@
 import Head from "next/head";
 import Link from "next/link";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import Showcase from "../components/Home/Showcase";
-import About from "../components/Home/About";
-import Faqs from "../components/Home/Faqs";
+import Header from "../../common/components/Header/Header";
+import Footer from "../../common/components/Footer/Footer";
+import Showcase from "./components/Showcase";
+import About from "./components/About";
+import Faqs from "./components/Faqs";
 
 export default function Home() {
   return (

@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Link from "next/link";
 import clsx from "clsx";
-import Header from "../components/Header/Header";
-import Footer from "../components/Footer/Footer";
-import MetaData from "../components/misc/MetaData";
-import DetailsLightbox from "../components/Details/DetailsLightbox";
-import useToggle from "../hooks/useToggle";
-import art from "../data/art";
+import Header from "../../common/components/Header/Header";
+import Footer from "../../common/components/Footer/Footer";
+import MetaData from "../../common/components/MetaData/MetaData";
+import DetailsLightbox from "./components/DetailsLightbox";
+import useToggle from "../../common/hooks/useToggle";
+import art from "../../data/art";
 
 export default function Details({ artwork }) {
   const {
