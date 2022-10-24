@@ -7,8 +7,8 @@ export default function BuyOption({
   handleChange,
   slug,
   description,
-  dimensions,
-  medium,
+  dimensions = null,
+  medium = null,
   price,
 }) {
   const inputId = `buy-option-${value}`;

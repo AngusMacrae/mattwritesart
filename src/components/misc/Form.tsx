@@ -13,7 +13,7 @@ export default function Form({ name, subject, children, className = "" }) {
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(formData as any).toString(),
       });
       router.push("/thankyou");
     } catch (error) {

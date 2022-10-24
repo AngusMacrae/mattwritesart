@@ -99,7 +99,7 @@ export default function Buy({ artwork }) {
             <textarea
               name="message"
               placeholder="Your message (optional)"
-              rows="5"
+              rows={5}
             ></textarea>
             <button type="submit" className="btn" onClick={recordPurchase}>
               Send!

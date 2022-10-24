@@ -16,7 +16,7 @@ export default function ShowcaseItem({ artwork }) {
         spotlight && "spotlight"
       )}
     >
-      <Link href={`/art/${slug}`} className="showcase__item-content">
+      <Link href={`/art/${slug}`}>
         <a>
           <h3>{name}</h3>
           <picture>

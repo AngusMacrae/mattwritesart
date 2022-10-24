@@ -1,6 +1,8 @@
-import { useState } from "react";
+import { ReactEventHandler, useState } from "react";
 
-export default function useImg() {
+type TReturn = [imgStatus: string, onLoad: ReactEventHandler<HTMLImageElement>, onError: ReactEventHandler<HTMLImageElement>];
+
+export default function useImg(): TReturn {
   const [imgStatus, setImgStatus] = useState("img-loading");
 
   function onLoad() {

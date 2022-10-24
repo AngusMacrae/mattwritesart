@@ -8,7 +8,7 @@ export default function ContactForm() {
       <textarea
         name="message"
         placeholder="Your message"
-        rows="5"
+        rows={5}
         required
       ></textarea>
       <button type="submit" className="btn">

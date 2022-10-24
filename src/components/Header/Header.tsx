@@ -23,7 +23,7 @@ export default function Header() {
     <header className="header">
       <div className="header__content container-wide">
         <div className="header__top-bar">
-          <Link href="/" onClick={closeMenu}>
+          <Link href="/">
             <a className="header-home" title="Home">
               <img src="/logo/mwa-logo.svg" alt="" />
               <span className="header-site-name">
