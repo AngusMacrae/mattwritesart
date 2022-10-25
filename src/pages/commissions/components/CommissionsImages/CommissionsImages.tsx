@@ -1,6 +1,10 @@
+import clsx from "clsx";
+
+import styles from "./styles.module.css";
+
 export default function CommissionsImages() {
   return (
-    <section className="commissions__images container-med">
+    <section className={clsx(styles.commissions__images, "container-med")}>
       <picture>
         <source srcSet="/art-images/pete-doherty.webp" type="image/webp" />
         <img

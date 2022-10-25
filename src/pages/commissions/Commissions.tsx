@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
-import CommissionsImages from "./components/CommissionsImages";
+import CommissionsImages from "./components/CommissionsImages/CommissionsImages";
 
 export default function Commissions() {
   return (
