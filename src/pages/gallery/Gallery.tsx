@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
 import GalleryFilter from "./components/GalleryFilter/GalleryFilter";
-import GalleryItem from "./components/GalleryItem";
+import GalleryItem from "./components/GalleryItem/GalleryItem";
 import useFilter from "./hooks/useFilter";
 import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from "../../data/art";
 

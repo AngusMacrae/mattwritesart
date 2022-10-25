@@ -1,7 +1,9 @@
 import Link from "next/link";
 import clsx from "clsx";
-import useImg from "../../../common/hooks/useImg";
-import getAvailabilityText from "../utils/getAvailabilityText";
+import useImg from "../../../../common/hooks/useImg";
+import getAvailabilityText from "../../utils/getAvailabilityText";
+
+import styles from './styles.module.css';
 
 export default function GalleryItem({ artwork }) {
   const { name, slug, height, width, description, original, prints } = artwork;
@@ -10,7 +12,7 @@ export default function GalleryItem({ artwork }) {
   const availabilityText = getAvailabilityText(original, prints);
 
   return (
-    <li className={clsx("gallery__item", imgStatus)}>
+    <li className={clsx(styles["gallery__item"], styles[imgStatus])}>
       <Link href={`/art/${slug}`}>
         <a>
           <picture>
@@ -28,7 +30,7 @@ export default function GalleryItem({ artwork }) {
           </picture>
           <div>
             <h2>{name}</h2>
-            <p className="gallery__item--availability">
+            <p className={styles["gallery__item--availability"]}>
               {availabilityText}
             </p>
           </div>
