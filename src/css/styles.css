@@ -47,6 +47,17 @@ main section,
   }
 }
 
+
+.nav__page-links .nav__home {
+  display: none;
+}
+
+@media (max-width: 960px) {
+  .nav__page-links .nav__home {
+    display: block;
+  }
+}
+
 main .btn,
 main button {
   padding: 0.5rem 1.5rem;

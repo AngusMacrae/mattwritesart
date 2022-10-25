@@ -4,7 +4,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import useToggle from "../../hooks/useToggle";
 import useOnResize from "../../hooks/useOnResize";
-import NavLink from "./components/NavLink";
+import NavLink from "./components/NavLink/NavLink";
 
 import styles from './styles.module.css';
 
@@ -41,7 +41,7 @@ export default function Header() {
             />
           </button>
         </div>
-        <nav className={clsx(styles.nav, menuOpen && "active")}>
+        <nav className={clsx(styles.nav, menuOpen && styles.active)}>
           <ul className={styles["nav__page-links"]}>
             <li className={styles["nav__home"]}>
               <NavLink
