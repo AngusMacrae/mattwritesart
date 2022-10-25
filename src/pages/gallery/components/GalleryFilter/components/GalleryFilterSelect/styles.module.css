@@ -1,0 +1,38 @@
+.gallery-filter__select {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .gallery-filter__select {
+    flex: 1 0 100px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .gallery-filter__select:nth-of-type(even) {
+    margin-left: 1rem;
+  }
+  .gallery-filter__select label {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.25rem;
+  }
+  .gallery-filter__select select {
+    padding: 0.25rem 0.5rem;
+    border-color: black;
+    text-transform: capitalize;
+    background-color: white;
+  }
+}
+
+@media (max-width: 370px) {
+  .gallery-filter__select {
+    flex: 1 1 100%;
+  }
+
+  .gallery-filter__select:nth-of-type(even) {
+    margin-left: 0;
+  }
+}

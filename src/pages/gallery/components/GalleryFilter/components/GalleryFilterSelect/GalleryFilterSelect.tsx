@@ -1,3 +1,5 @@
+import styles from './styles.module.css';
+
 export default function GalleryFilterSelect({
   filterGroup,
   FILTERS,
@@ -7,7 +9,7 @@ export default function GalleryFilterSelect({
   const selectId = `${filterGroup}-select`;
 
   return (
-    <div className="gallery-filter__select">
+    <div className={styles["gallery-filter__select"]}>
       <label htmlFor={selectId}>{filterGroup}</label>
       <select
         value={currentFilter}

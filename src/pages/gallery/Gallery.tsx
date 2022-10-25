@@ -7,6 +7,8 @@ import GalleryItem from "./components/GalleryItem";
 import useFilter from "./hooks/useFilter";
 import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from "../../data/art";
 
+import styles from './styles.module.css';
+
 export default function Gallery() {
   const { query } = useRouter();
   const clearFilters = query.clearFilters || false;
@@ -36,13 +38,13 @@ export default function Gallery() {
         />
       </Head>
       <Header />
-      <main className="gallery">
-        <section className="gallery__content">
+      <main>
+        <section className={styles["gallery__content"]}>
           <aside>
-            <h1 className="gallery-filters__title">
+            <h1 className={styles["gallery-filters__title"]}>
               <img src="/icons/filter.svg" alt=""></img>Browse & Filter Art
             </h1>
-            <div className="gallery-filters__container">
+            <div className={styles["gallery-filters__container"]}>
               <GalleryFilter
                 filterGroup="availability"
                 FILTERS={AVAILABILITY_FILTERS}
@@ -59,13 +61,13 @@ export default function Gallery() {
           </aside>
 
           {filteredArt.length ? (
-            <ul className="gallery__grid">
+            <ul className={styles["gallery__grid"]}>
               {filteredArt.map((artwork) => (
                 <GalleryItem key={artwork.slug} artwork={artwork} />
               ))}
             </ul>
           ) : (
-            <div className="gallery__alert">Sorry - no results</div>
+            <div className={styles["gallery__alert"]}>Sorry - no results</div>
           )}
         </section>
       </main>
