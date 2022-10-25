@@ -1,16 +1,22 @@
 import { ReactEventHandler, useState } from "react";
 
-type TReturn = [imgStatus: string, onLoad: ReactEventHandler<HTMLImageElement>, onError: ReactEventHandler<HTMLImageElement>];
+type TImgStatus = "loading" | "ready" | "hidden";
+
+type TReturn = [
+  imgStatus: TImgStatus,
+  onLoad: ReactEventHandler<HTMLImageElement>,
+  onError: ReactEventHandler<HTMLImageElement>
+];
 
 export default function useImg(): TReturn {
-  const [imgStatus, setImgStatus] = useState("img-loading");
+  const [imgStatus, setImgStatus] = useState<TImgStatus>("loading");
 
   function onLoad() {
-    setImgStatus("img-loaded");
+    setImgStatus("ready");
   }
 
   function onError(event) {
-    setImgStatus("img-hide");
+    setImgStatus("hidden");
     console.log(
       `%cImage error: %c${event.target.src.split("/").pop()}`,
       "color: red",

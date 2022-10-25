@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
-import Showcase from "./components/Showcase";
+import Showcase from "./components/Showcase/Showcase";
 import About from "./components/About";
 import Faqs from "./components/Faqs";
 

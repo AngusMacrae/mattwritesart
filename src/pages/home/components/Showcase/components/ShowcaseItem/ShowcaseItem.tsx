@@ -1,6 +1,8 @@
 import Link from "next/link";
 import clsx from "clsx";
-import useImg from "../../../common/hooks/useImg";
+import useImg from "../../../../../../common/hooks/useImg";
+
+import styles from "./styles.module.css";
 
 export default function ShowcaseItem({ artwork }) {
   const { name, slug, spotlight, height, width, description } = artwork;
@@ -9,10 +11,10 @@ export default function ShowcaseItem({ artwork }) {
   return (
     <li
       className={clsx(
-        "showcase__item",
+        styles["showcase__item"],
         "shadow",
-        height > width ? "portrait" : "landscape",
-        imgStatus,
+        styles[height > width ? "portrait" : "landscape"],
+        styles[imgStatus],
         spotlight && "spotlight"
       )}
     >
