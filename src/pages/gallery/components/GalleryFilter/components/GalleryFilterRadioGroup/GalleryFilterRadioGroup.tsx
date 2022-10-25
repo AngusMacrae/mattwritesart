@@ -1,4 +1,6 @@
-import GalleryFilterRadio from "./GalleryFilterRadio";
+import GalleryFilterRadio from "./components/GalleryFilterRadio/GalleryFilterRadio";
+
+import styles from './styles.module.css';
 
 export default function GalleryFilterRadioGroup({
   filterGroup,
@@ -7,7 +9,7 @@ export default function GalleryFilterRadioGroup({
   handleFilterChange,
 }) {
   return (
-    <fieldset className="gallery-filter__radio-group">
+    <fieldset className={styles["gallery-filter__radio-group"]}>
       <legend>{filterGroup}</legend>
       <div>
         {Object.keys(FILTERS).map((filter) => (

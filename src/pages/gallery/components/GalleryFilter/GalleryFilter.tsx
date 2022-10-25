@@ -1,5 +1,5 @@
-import GalleryFilterRadioGroup from "./GalleryFilterRadioGroup";
-import GalleryFilterSelect from "./GalleryFilterSelect";
+import GalleryFilterRadioGroup from "./components/GalleryFilterRadioGroup/GalleryFilterRadioGroup";
+import GalleryFilterSelect from "./components/GalleryFilterSelect/GalleryFilterSelect";
 
 export default function GalleryFilter({
   filterGroup,
