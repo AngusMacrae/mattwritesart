@@ -8,6 +8,8 @@ import DetailsLightbox from "./components/DetailsLightbox/DetailsLightbox";
 import useToggle from "../../common/hooks/useToggle";
 import art from "../../data/art";
 
+import styles from "./styles.module.css";
+
 export default function Details({ artwork }) {
   const {
     name,
@@ -44,9 +46,9 @@ export default function Details({ artwork }) {
         />
       </Head>
       <Header />
-      <main className="details">
-        <section className="details__content container-med">
-          <div className="details__img-container">
+      <main>
+        <section className={clsx(styles["details__content"], "container-med")}>
+          <div className={styles["details__img-container"]}>
             <picture>
               <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
               <img
@@ -61,7 +63,7 @@ export default function Details({ artwork }) {
               </button>
             ) : null}
           </div>
-          <div className="details__info-container flow">
+          <div className={clsx(styles["details__info-container"], "flow")}>
             <h1>{name}</h1>
             <ul>
               <li>
@@ -75,7 +77,7 @@ export default function Details({ artwork }) {
               </li>
             </ul>
             <p>{description}</p>
-            <h2 className="details__availability">{availabilityText}</h2>
+            <h2 className={styles["details__availability"]}>{availabilityText}</h2>
             {prints ? (
               <>
                 <Link href={`/buy/${slug}?buyOption=print`} as={`/buy/${slug}`}>
@@ -84,7 +86,7 @@ export default function Details({ artwork }) {
                   </a>
                 </Link>
                 {buyPrtSmallprint ? (
-                  <small className="details__order-smallprint">
+                  <small className={styles["details__order-smallprint"]}>
                     {buyPrtSmallprint}
                   </small>
                 ) : null}
@@ -101,7 +103,7 @@ export default function Details({ artwork }) {
                   </a>
                 </Link>
                 {buyOgSmallprint ? (
-                  <small className="details__order-smallprint">
+                  <small className={styles["details__order-smallprint"]}>
                     {buyOgSmallprint}
                   </small>
                 ) : null}
