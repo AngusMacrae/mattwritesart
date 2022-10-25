@@ -1,0 +1,13 @@
+.footer {
+  text-align: right;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  opacity: 0.5;
+}
+
+@media (max-width: 450px) {
+  .footer {
+    text-align: center;
+    font-size: 1.05rem;
+  }
+}

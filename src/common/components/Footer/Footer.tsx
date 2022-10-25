@@ -1,9 +1,11 @@
+import styles from './styles.module.css';
+
 export default function Footer() {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
 
   return (
-    <footer className="footer">
+    <footer className={styles.footer}>
       <p className="container-wide">
         <small>
           &#169; mattwritesart {currentYear} | website by{" "}

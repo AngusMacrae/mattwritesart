@@ -1,10 +1,12 @@
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useEffect } from "react";
 import clsx from "clsx";
-import NavLink from "./NavLink";
 import useToggle from "../../hooks/useToggle";
 import useOnResize from "../../hooks/useOnResize";
+import NavLink from "./components/NavLink";
+
+import styles from './styles.module.css';
 
 export default function Header() {
   const router = useRouter();
@@ -20,28 +22,28 @@ export default function Header() {
   }, [closeMenu, router.events]);
 
   return (
-    <header className="header">
-      <div className="header__content container-wide">
-        <div className="header__top-bar">
+    <header className={styles.header}>
+      <div className={clsx(styles.header__content, "container-wide")}>
+        <div className={styles["header__top-bar"]}>
           <Link href="/">
-            <a className="header-home" title="Home">
+            <a className={styles["header-home"]} title="Home">
               <img src="/logo/mwa-logo.svg" alt="" />
-              <span className="header-site-name">
+              <span className={styles["header-site-name"]}>
                 matt<span className="deemphasised">writes</span>art
                 <small className="deemphasised">.co.uk</small>
               </span>
             </a>
           </Link>
-          <button onClick={toggleMenu} className="header__menu-toggle-btn">
+          <button onClick={toggleMenu} className={styles["header__menu-toggle-btn"]}>
             <img
               src={menuOpen ? "/icons/close.svg" : "/icons/menu.svg"}
               alt="Menu"
             />
           </button>
         </div>
-        <nav className={clsx(menuOpen && "active")}>
-          <ul className="nav__page-links">
-            <li className="nav__home">
+        <nav className={clsx(styles.nav, menuOpen && "active")}>
+          <ul className={styles["nav__page-links"]}>
+            <li className={styles["nav__home"]}>
               <NavLink
                 path="/"
                 caption="Home"
@@ -74,7 +76,7 @@ export default function Header() {
               />
             </li>
           </ul>
-          <ul className="nav__social-links">
+          <ul className={styles["nav__social-links"]}>
             <li>
               <a
                 href="https://www.instagram.com/mattwritesart/"
