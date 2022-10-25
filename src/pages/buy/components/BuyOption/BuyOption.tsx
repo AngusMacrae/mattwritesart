@@ -1,5 +1,7 @@
 import clsx from "clsx";
 
+import styles from './styles.module.css';
+
 export default function BuyOption({
   value,
   caption,
@@ -14,7 +16,7 @@ export default function BuyOption({
   const inputId = `buy-option-${value}`;
 
   return (
-    <div className={clsx("buy__option", selected && "selected")}>
+    <div className={clsx(styles["buy__option"], selected && styles.selected)}>
       <input
         type="radio"
         name="order"
@@ -24,8 +26,8 @@ export default function BuyOption({
         onChange={handleChange}
       />
       <label htmlFor={inputId}></label>
-      <span className="buy__option--selected">Selected</span>
-      <div className="buy__option--img-container">
+      <span className={styles["buy__option--selected"]}>Selected</span>
+      <div className={styles["buy__option--img-container"]}>
         <picture>
           <source
             srcSet={`/art-images/${slug}.webp`}
@@ -38,7 +40,7 @@ export default function BuyOption({
           />
         </picture>
       </div>
-      <div className="buy__option--info-container">
+      <div className={styles["buy__option--info-container"]}>
         <h2>{caption}</h2>
         <table>
           <tbody>
@@ -57,7 +59,7 @@ export default function BuyOption({
           </tbody>
         </table>
       </div>
-      <div className="buy__option--price">£{price}</div>
+      <div className={styles["buy__option--price"]}>£{price}</div>
     </div>
   );
 }

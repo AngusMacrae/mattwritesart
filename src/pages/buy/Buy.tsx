@@ -4,10 +4,12 @@ import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
 import Form from "../../common/components/Form/Form";
 import MetaData from "../../common/components/MetaData/MetaData";
-import BuyOption from "./components/BuyOption";
+import BuyOption from "./components/BuyOption/BuyOption";
 import useBuyOptions from "./hooks/useBuyOptions";
 import getPrintDimensions from "./utils/getPrintDimensions";
 import art from "../../data/art";
+
+import styles from './styles.module.css';
 
 export default function Buy({ artwork }) {
   const {
@@ -57,7 +59,7 @@ export default function Buy({ artwork }) {
         <section className="container-thin flow">
           <h1>{name}</h1>
           <Form name="buy" subject={formSubject}>
-            <fieldset className="buy__options">
+            <fieldset className={styles["buy__options"]}>
               {prints ? (
                 <BuyOption
                   value="print"
