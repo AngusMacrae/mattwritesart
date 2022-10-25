@@ -4,7 +4,7 @@ import clsx from "clsx";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
 import MetaData from "../../common/components/MetaData/MetaData";
-import DetailsLightbox from "./components/DetailsLightbox";
+import DetailsLightbox from "./components/DetailsLightbox/DetailsLightbox";
 import useToggle from "../../common/hooks/useToggle";
 import art from "../../data/art";
 
