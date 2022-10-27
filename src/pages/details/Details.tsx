@@ -8,7 +8,7 @@ import DetailsLightbox from "./components/DetailsLightbox/DetailsLightbox";
 import useToggle from "../../common/hooks/useToggle";
 import art from "../../data/art";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 export default function Details({ artwork }) {
   const {

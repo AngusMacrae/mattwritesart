@@ -1,4 +1,4 @@
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function Footer() {
   const currentDate = new Date();

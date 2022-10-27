@@ -1,10 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import "../src/css/reset.css";
-import "../src/css/base.css";
-import "../src/css/utils.css";
-import "../src/css/styles.css";
+import "../src/common/styles/styles.scss";
 
 import * as ga from '../src/lib/ga'
 

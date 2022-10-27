@@ -2,7 +2,7 @@ import Link from "next/link";
 import clsx from "clsx";
 import useImg from "../../../../../../common/hooks/useImg";
 
-import styles from "./styles.module.css";
+import styles from "./styles.module.scss";
 
 export default function ShowcaseItem({ artwork }) {
   const { name, slug, spotlight, height, width, description } = artwork;

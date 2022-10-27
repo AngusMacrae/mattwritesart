@@ -6,7 +6,7 @@ import useToggle from "../../hooks/useToggle";
 import useOnResize from "../../hooks/useOnResize";
 import NavLink from "./components/NavLink/NavLink";
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function Header() {
   const router = useRouter();

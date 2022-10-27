@@ -7,7 +7,7 @@ import GalleryItem from "./components/GalleryItem/GalleryItem";
 import useFilter from "./hooks/useFilter";
 import art, { AVAILABILITY_FILTERS, CATEGORY_FILTERS } from "../../data/art";
 
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 export default function Gallery() {
   const { query } = useRouter();
