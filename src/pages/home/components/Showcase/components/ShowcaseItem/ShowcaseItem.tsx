@@ -19,21 +19,19 @@ export default function ShowcaseItem({ artwork }) {
       )}
     >
       <Link href={`/art/${slug}`}>
-        <a>
-          <h3>{name}</h3>
-          <picture>
-            <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
-            <img
-              src={`/art-images/${slug}.jpg`}
-              alt={description}
-              height={height * 1000}
-              width={width * 1000}
-              onLoad={onLoad}
-              onError={onError}
-              loading="lazy"
-            />
-          </picture>
-        </a>
+        <h3>{name}</h3>
+        <picture>
+          <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
+          <img
+            src={`/art-images/${slug}.jpg`}
+            alt={description}
+            height={height * 1000}
+            width={width * 1000}
+            onLoad={onLoad}
+            onError={onError}
+            loading="lazy"
+          />
+        </picture>
       </Link>
     </li>
   );

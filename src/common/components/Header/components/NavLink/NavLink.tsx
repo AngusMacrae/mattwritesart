@@ -13,7 +13,7 @@ function NavLink({ path, caption, currentPath, callback }) {
         </p>
       ) : (
         <Link href={path}>
-          <a>{caption}</a>
+          {caption}
         </Link>
       )}
     </div>

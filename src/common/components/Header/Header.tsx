@@ -25,14 +25,12 @@ export default function Header() {
     <header className={styles.header}>
       <div className={clsx(styles.header__content, "container-wide")}>
         <div className={styles["header__top-bar"]}>
-          <Link href="/">
-            <a className={styles["header-home"]} title="Home">
+          <Link href="/" className={styles["header-home"]} title="Home">
               <img src="/logo/mwa-logo.svg" alt="" />
               <span className={styles["header-site-name"]}>
                 matt<span className="deemphasised">writes</span>art
                 <small className="deemphasised">.co.uk</small>
               </span>
-            </a>
           </Link>
           <button onClick={toggleMenu} className={styles["header__menu-toggle-btn"]}>
             <img

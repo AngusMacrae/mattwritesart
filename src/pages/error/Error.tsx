@@ -21,11 +21,11 @@ export default function Error() {
           <p>Would you like to browse some art?</p>
         </section>
         <section className="cta-container">
-          <Link href="/">
-            <a className="btn btn-secondary">Home</a>
+          <Link href="/" className="btn btn-secondary">
+            Home
           </Link>
-          <Link href="/art?clearFilters=true" as="/art">
-            <a className="btn">Browse Art</a>
+          <Link href="/art?clearFilters=true" as="/art" className="btn">
+            Browse Art
           </Link>
         </section>
       </main>

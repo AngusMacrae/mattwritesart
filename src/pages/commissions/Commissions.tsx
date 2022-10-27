@@ -12,9 +12,9 @@ export default function Commissions() {
         <meta
           name="description"
           content="If you're interested in an original commission, please
-          don't hesitate to get in touch! I'll be happy to discuss
-          ideas, cost, sizing, and anything else that makes the piece special
-          for you."
+        don't hesitate to get in touch! I'll be happy to discuss
+        ideas, cost, sizing, and anything else that makes the piece special
+        for you."
         />
       </Head>
       <Header />
@@ -39,11 +39,15 @@ export default function Commissions() {
           </p>
         </section>
         <section className="cta-container">
-          <Link href="/art?clearFilters=true" as="/art">
-            <a className="btn btn-secondary">View More Art</a>
+          <Link
+            href="/art?clearFilters=true"
+            as="/art"
+            className="btn btn-secondary"
+          >
+            View More Art
           </Link>
-          <Link href="/contact">
-            <a className="btn">Commission Original Art</a>
+          <Link href="/contact" className="btn">
+            Commission Original Art
           </Link>
         </section>
       </main>

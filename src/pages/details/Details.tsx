@@ -80,10 +80,12 @@ export default function Details({ artwork }) {
             <h2 className={styles["details__availability"]}>{availabilityText}</h2>
             {prints ? (
               <>
-                <Link href={`/buy/${slug}?buyOption=print`} as={`/buy/${slug}`}>
-                  <a className={clsx("btn", original && "btn-secondary")}>
-                    {buyPrtCaption} £{prints}
-                  </a>
+                <Link
+                  href={`/buy/${slug}?buyOption=print`}
+                  as={`/buy/${slug}`}
+                  className={clsx("btn", original && "btn-secondary")}
+                >
+                  {buyPrtCaption}£{prints}
                 </Link>
                 {buyPrtSmallprint ? (
                   <small className={styles["details__order-smallprint"]}>
@@ -97,10 +99,9 @@ export default function Details({ artwork }) {
                 <Link
                   href={`/buy/${slug}?buyOption=original`}
                   as={`/buy/${slug}`}
+                  className="btn"
                 >
-                  <a className="btn">
-                    {buyOgCaption} £{original}
-                  </a>
+                  {buyOgCaption}£{original}
                 </Link>
                 {buyOgSmallprint ? (
                   <small className={styles["details__order-smallprint"]}>

@@ -29,22 +29,22 @@ export default function Home() {
           </p>
         </section>
         <section className="cta-container">
-          <Link href="/commissions">
-            <a className="btn btn-secondary">Commissions</a>
+          <Link href="/commissions" className="btn btn-secondary">
+            Commissions
           </Link>
-          <Link href="/art?clearFilters=true" as="/art">
-            <a className="btn">Browse & Buy</a>
+          <Link href="/art?clearFilters=true" as="/art" className="btn">
+            Browse & Buy
           </Link>
         </section>
         <Showcase />
         <About />
         <Faqs />
         <section className="cta-container">
-          <Link href="/commissions">
-            <a className="btn btn-secondary">Commissions</a>
+          <Link href="/commissions" className="btn btn-secondary">
+            Commissions
           </Link>
-          <Link href="/art?clearFilters=true" as="/art">
-            <a className="btn">Browse & Buy</a>
+          <Link href="/art?clearFilters=true" as="/art" className="btn">
+            Browse & Buy
           </Link>
         </section>
       </main>
