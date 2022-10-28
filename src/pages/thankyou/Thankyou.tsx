@@ -25,7 +25,11 @@ export default function Thankyou() {
           <p>&#128394;</p>
         </section>
         <section className="cta-container">
-          <Link href="/art?clearFilters=true" as="/art" className="btn btn-secondary">
+          <Link
+            href="/art?clearFilters=true"
+            as="/art"
+            className="btn btn-secondary"
+          >
             Browse More Art
           </Link>
         </section>

@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-type TReturn = [isActive: boolean, activate: () => void, deactivate: () => void, toggle: () => void];
+type TReturn = [
+  isActive: boolean,
+  activate: () => void,
+  deactivate: () => void,
+  toggle: () => void
+];
 
 export default function useToggle(initialState = false): TReturn {
   const [isActive, setIsActive] = useState(initialState);
@@ -10,7 +15,7 @@ export default function useToggle(initialState = false): TReturn {
   }
 
   function deactivate() {
-    console.log('clicked')
+    console.log("clicked");
     setIsActive(false);
   }
 

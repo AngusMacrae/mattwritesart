@@ -1,6 +1,6 @@
 import useEffectOnKeyUp from "../../../../common/hooks/useEffectOnKeyUp";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export default function DetailsLightbox({ imageSrc, closeLightbox }) {
   useEffectOnKeyUp("Escape", closeLightbox);

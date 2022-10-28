@@ -8,13 +8,9 @@ function NavLink({ path, caption, currentPath, callback }) {
   return (
     <div className={styles.navLink}>
       {isActive ? (
-        <p onClick={callback}>
-          {caption}
-        </p>
+        <p onClick={callback}>{caption}</p>
       ) : (
-        <Link href={path}>
-          {caption}
-        </Link>
+        <Link href={path}>{caption}</Link>
       )}
     </div>
   );

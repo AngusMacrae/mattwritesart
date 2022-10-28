@@ -6,7 +6,7 @@ import useToggle from "../../hooks/useToggle";
 import useOnResize from "../../hooks/useOnResize";
 import NavLink from "./components/NavLink/NavLink";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export default function Header() {
   const router = useRouter();
@@ -26,13 +26,16 @@ export default function Header() {
       <div className={clsx(styles.header__content, "container-wide")}>
         <div className={styles["header__top-bar"]}>
           <Link href="/" className={styles["header-home"]} title="Home">
-              <img src="/logo/mwa-logo.svg" alt="" />
-              <span className={styles["header-site-name"]}>
-                matt<span className="deemphasised">writes</span>art
-                <small className="deemphasised">.co.uk</small>
-              </span>
+            <img src="/logo/mwa-logo.svg" alt="" />
+            <span className={styles["header-site-name"]}>
+              matt<span className="deemphasised">writes</span>art
+              <small className="deemphasised">.co.uk</small>
+            </span>
           </Link>
-          <button onClick={toggleMenu} className={styles["header__menu-toggle-btn"]}>
+          <button
+            onClick={toggleMenu}
+            className={styles["header__menu-toggle-btn"]}
+          >
             <img
               src={menuOpen ? "/icons/close.svg" : "/icons/menu.svg"}
               alt="Menu"

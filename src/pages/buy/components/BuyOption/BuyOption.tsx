@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export default function BuyOption({
   value,
@@ -29,10 +29,7 @@ export default function BuyOption({
       <span className={styles["buy__option--selected"]}>Selected</span>
       <div className={styles["buy__option--img-container"]}>
         <picture>
-          <source
-            srcSet={`/art-images/${slug}.webp`}
-            type="image/webp"
-          />
+          <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
           <img
             className="shadow"
             src={`/art-images/${slug}.jpg`}

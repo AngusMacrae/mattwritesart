@@ -6,10 +6,7 @@ export default function Error() {
     <>
       <Head>
         <title>Page Not Found - mattwritesart</title>
-        <meta
-          name="description"
-          content="Oh no! Something went wrong."
-        />
+        <meta name="description" content="Oh no! Something went wrong." />
         <meta name="robots" content="noindex" />
       </Head>
       <main className="error">

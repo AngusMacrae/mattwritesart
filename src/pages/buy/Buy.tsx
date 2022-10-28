@@ -9,7 +9,7 @@ import useBuyOptions from "./hooks/useBuyOptions";
 import getPrintDimensions from "./utils/getPrintDimensions";
 import art from "../../data/art";
 
-import styles from './styles.module.scss';
+import styles from "./styles.module.scss";
 
 export default function Buy({ artwork }) {
   const {

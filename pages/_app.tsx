@@ -3,24 +3,24 @@ import { useRouter } from "next/router";
 
 import "../src/common/styles/styles.scss";
 
-import * as ga from '../src/lib/ga'
+import * as ga from "../src/lib/ga";
 
 import FilterProvider from "../src/common/contexts/FilterContext";
 
 function App({ Component, pageProps }) {
-  const router = useRouter()
+  const router = useRouter();
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      ga.pageview(url)
-    }
+      ga.pageview(url);
+    };
 
-    router.events.on('routeChangeComplete', handleRouteChange)
+    router.events.on("routeChangeComplete", handleRouteChange);
 
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange)
-    }
-  }, [router.events])
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <FilterProvider>

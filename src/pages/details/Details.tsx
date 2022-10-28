@@ -77,7 +77,9 @@ export default function Details({ artwork }) {
               </li>
             </ul>
             <p>{description}</p>
-            <h2 className={styles["details__availability"]}>{availabilityText}</h2>
+            <h2 className={styles["details__availability"]}>
+              {availabilityText}
+            </h2>
             {prints ? (
               <>
                 <Link
