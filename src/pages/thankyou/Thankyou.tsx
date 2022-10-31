@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
+import LinkButton from "../../common/components/LinkButton/LinkButton";
 
 export default function Thankyou() {
   return (
@@ -25,13 +25,9 @@ export default function Thankyou() {
           <p>&#128394;</p>
         </section>
         <section className="cta-container">
-          <Link
-            href="/art?clearFilters=true"
-            as="/art"
-            className="btn btn-secondary"
-          >
+          <LinkButton href="/art?clearFilters=true" as="/art" level="secondary">
             Browse More Art
-          </Link>
+          </LinkButton>
         </section>
       </main>
     </>

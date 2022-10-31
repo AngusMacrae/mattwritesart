@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Link from "next/link";
 import clsx from "clsx";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
@@ -9,6 +8,7 @@ import useToggle from "../../common/hooks/useToggle";
 import art from "../../data/art";
 
 import styles from "./styles.module.scss";
+import LinkButton from "../../common/components/LinkButton/LinkButton";
 
 export default function Details({ artwork }) {
   const {
@@ -82,13 +82,13 @@ export default function Details({ artwork }) {
             </h2>
             {prints ? (
               <>
-                <Link
+                <LinkButton
                   href={`/buy/${slug}?buyOption=print`}
                   as={`/buy/${slug}`}
-                  className={clsx("btn", original && "btn-secondary")}
+                  level={original ? "secondary" : "primary"}
                 >
-                  {buyPrtCaption}£{prints}
-                </Link>
+                  {buyPrtCaption} £{prints}
+                </LinkButton>
                 {buyPrtSmallprint ? (
                   <small className={styles["details__order-smallprint"]}>
                     {buyPrtSmallprint}
@@ -98,13 +98,12 @@ export default function Details({ artwork }) {
             ) : null}
             {original ? (
               <>
-                <Link
+                <LinkButton
                   href={`/buy/${slug}?buyOption=original`}
                   as={`/buy/${slug}`}
-                  className="btn"
                 >
-                  {buyOgCaption}£{original}
-                </Link>
+                  {buyOgCaption} £{original}
+                </LinkButton>
                 {buyOgSmallprint ? (
                   <small className={styles["details__order-smallprint"]}>
                     {buyOgSmallprint}

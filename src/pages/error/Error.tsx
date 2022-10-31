@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/link";
+import LinkButton from "../../common/components/LinkButton/LinkButton";
 
 export default function Error() {
   return (
@@ -18,12 +18,12 @@ export default function Error() {
           <p>Would you like to browse some art?</p>
         </section>
         <section className="cta-container">
-          <Link href="/" className="btn btn-secondary">
+          <LinkButton href="/" level="secondary">
             Home
-          </Link>
-          <Link href="/art?clearFilters=true" as="/art" className="btn">
+          </LinkButton>
+          <LinkButton href="/art?clearFilters=true" as="/art">
             Browse Art
-          </Link>
+          </LinkButton>
         </section>
       </main>
     </>

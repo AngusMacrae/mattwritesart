@@ -10,6 +10,7 @@ import getPrintDimensions from "./utils/getPrintDimensions";
 import art from "../../data/art";
 
 import styles from "./styles.module.scss";
+import Button from "../../common/components/Button/Button";
 
 export default function Buy({ artwork }) {
   const {
@@ -103,9 +104,9 @@ export default function Buy({ artwork }) {
               placeholder="Your message (optional)"
               rows={5}
             ></textarea>
-            <button type="submit" className="btn" onClick={recordPurchase}>
+            <Button type="submit" onClick={recordPurchase}>
               Send!
-            </button>
+            </Button>
           </Form>
         </section>
       </main>

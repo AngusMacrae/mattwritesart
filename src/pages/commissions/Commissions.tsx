@@ -1,8 +1,8 @@
 import Head from "next/head";
-import Link from "next/link";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
 import CommissionsImages from "./components/CommissionsImages/CommissionsImages";
+import LinkButton from "../../common/components/LinkButton/LinkButton";
 
 export default function Commissions() {
   return (
@@ -39,16 +39,10 @@ export default function Commissions() {
           </p>
         </section>
         <section className="cta-container">
-          <Link
-            href="/art?clearFilters=true"
-            as="/art"
-            className="btn btn-secondary"
-          >
+          <LinkButton href="/art?clearFilters=true" as="/art" level="secondary">
             View More Art
-          </Link>
-          <Link href="/contact" className="btn">
-            Commission Original Art
-          </Link>
+          </LinkButton>
+          <LinkButton href="/contact">Commission Original Art</LinkButton>
         </section>
       </main>
       <Footer />

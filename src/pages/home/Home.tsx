@@ -1,10 +1,10 @@
 import Head from "next/head";
-import Link from "next/link";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
 import Showcase from "./components/Showcase/Showcase";
 import About from "./components/About";
 import Faqs from "./components/Faqs";
+import LinkButton from "../../common/components/LinkButton/LinkButton";
 
 export default function Home() {
   return (
@@ -29,23 +29,23 @@ export default function Home() {
           </p>
         </section>
         <section className="cta-container">
-          <Link href="/commissions" className="btn btn-secondary">
+          <LinkButton href="/commissions" level="secondary">
             Commissions
-          </Link>
-          <Link href="/art?clearFilters=true" as="/art" className="btn">
+          </LinkButton>
+          <LinkButton href="/art?clearFilters=true" as="/art">
             Browse & Buy
-          </Link>
+          </LinkButton>
         </section>
         <Showcase />
         <About />
         <Faqs />
         <section className="cta-container">
-          <Link href="/commissions" className="btn btn-secondary">
+          <LinkButton href="/commissions" level="secondary">
             Commissions
-          </Link>
-          <Link href="/art?clearFilters=true" as="/art" className="btn">
+          </LinkButton>
+          <LinkButton href="/art?clearFilters=true" as="/art">
             Browse & Buy
-          </Link>
+          </LinkButton>
         </section>
       </main>
       <Footer />

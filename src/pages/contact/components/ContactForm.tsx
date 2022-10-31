@@ -1,4 +1,5 @@
 import Form from "../../../common/components/Form/Form";
+import Button from "../../../common/components/Button/Button";
 
 export default function ContactForm() {
   return (
@@ -11,9 +12,7 @@ export default function ContactForm() {
         rows={5}
         required
       ></textarea>
-      <button type="submit" className="btn">
-        Send!
-      </button>
+      <Button type="submit">Send!</Button>
     </Form>
   );
 }
