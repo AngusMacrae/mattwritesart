@@ -1,20 +1,31 @@
-import { useState, useContext } from "react";
-import { FilterContext } from "../../../common/contexts/FilterContext";
+import Router, { useRouter } from "next/router";
+import React from "react";
+import { SHOW_ALL_FILTER_VALUE } from "../../../common/constants";
 
-export default function useFilter(name, clearFilter) {
-  const { savedFilters, setSavedFilters } = useContext(FilterContext);
-  const [filter, setFilter] = useState(
-    (!clearFilter && savedFilters[name]) || "show all"
-  );
+type TFilterTuple = [
+  string,
+  (event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void
+];
 
-  function handleFilterChange(event) {
-    setFilter(event.target.value);
-    setSavedFilters({
-      ...savedFilters,
-      [name]: event.target.value,
+export default function useFilter(filterName: string): TFilterTuple {
+  const { query, pathname } = useRouter();
+  const currentValue = (query[filterName] || SHOW_ALL_FILTER_VALUE) as string;
+
+  const handleFilterChange = (event) => {
+    const newValue = event.target.value;
+    const newQuery = { ...query };
+
+    if (newValue === SHOW_ALL_FILTER_VALUE) {
+      delete newQuery[filterName];
+    } else {
+      newQuery[filterName] = newValue;
+    }
+
+    Router.replace({
+      pathname,
+      query: newQuery,
     });
-    window.scrollTo(0, 0);
-  }
+  };
 
-  return [filter, handleFilterChange];
+  return [currentValue, handleFilterChange];
 }

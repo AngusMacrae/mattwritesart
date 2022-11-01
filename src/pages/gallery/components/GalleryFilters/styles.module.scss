@@ -1,0 +1,27 @@
+.galleryFiltersContainer {
+  position: fixed;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (max-width: 850px) {
+  .galleryFiltersContainer {
+    position: static;
+    width: auto;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+
+  .galleryFilter {
+    flex: 1 0 100px;
+  }
+}
+
+@media (max-width: 370px) {
+  .galleryFiltersContainer {
+    display: block;
+  }
+}

@@ -5,8 +5,6 @@ import "../src/common/styles/styles.scss";
 
 import * as ga from "../src/lib/ga";
 
-import FilterProvider from "../src/common/contexts/FilterContext";
-
 function App({ Component, pageProps }) {
   const router = useRouter();
 
@@ -22,11 +20,7 @@ function App({ Component, pageProps }) {
     };
   }, [router.events]);
 
-  return (
-    <FilterProvider>
-      <Component {...pageProps} />
-    </FilterProvider>
-  );
+  return <Component {...pageProps} />;
 }
 
 export default App;

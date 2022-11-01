@@ -34,9 +34,7 @@ export default function Home() {
             <LinkButton href="/commissions" level="secondary">
               Commissions
             </LinkButton>
-            <LinkButton href="/art?clearFilters=true" as="/art">
-              Browse & Buy
-            </LinkButton>
+            <LinkButton href="/art">Browse & Buy</LinkButton>
           </CtaGroup>
         </section>
         <Showcase />
@@ -47,9 +45,7 @@ export default function Home() {
             <LinkButton href="/commissions" level="secondary">
               Commissions
             </LinkButton>
-            <LinkButton href="/art?clearFilters=true" as="/art">
-              Browse & Buy
-            </LinkButton>
+            <LinkButton href="/art">Browse & Buy</LinkButton>
           </CtaGroup>
         </section>
       </main>

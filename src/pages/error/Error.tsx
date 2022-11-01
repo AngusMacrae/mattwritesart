@@ -23,9 +23,7 @@ export default function Error() {
             <LinkButton href="/" level="secondary">
               Home
             </LinkButton>
-            <LinkButton href="/art?clearFilters=true" as="/art">
-              Browse Art
-            </LinkButton>
+            <LinkButton href="/art">Browse Art</LinkButton>
           </CtaGroup>
         </section>
       </main>

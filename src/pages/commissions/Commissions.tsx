@@ -43,11 +43,7 @@ export default function Commissions() {
         </section>
         <section className={styles.commissionsCtasContainer}>
           <CtaGroup>
-            <LinkButton
-              href="/art?clearFilters=true"
-              as="/art"
-              level="secondary"
-            >
+            <LinkButton href="/art" level="secondary">
               View More Art
             </LinkButton>
             <LinkButton href="/contact">Commission Original Art</LinkButton>

@@ -27,11 +27,7 @@ export default function Thankyou() {
         </section>
         <section>
           <CtaGroup>
-            <LinkButton
-              href="/art?clearFilters=true"
-              as="/art"
-              level="secondary"
-            >
+            <LinkButton href="/art" level="secondary">
               Browse More Art
             </LinkButton>
           </CtaGroup>

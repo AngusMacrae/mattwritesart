@@ -1,0 +1,21 @@
+.galleryFilterRadioGroup {
+  legend {
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 850px) {
+  .galleryFilterRadioGroup {
+    display: none;
+  }
+}

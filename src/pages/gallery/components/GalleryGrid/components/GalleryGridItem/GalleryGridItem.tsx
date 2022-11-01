@@ -1,18 +1,18 @@
 import Link from "next/link";
 import clsx from "clsx";
-import useImg from "../../../../common/hooks/useImg";
-import getAvailabilityText from "../../utils/getAvailabilityText";
+import useImg from "../../../../../../common/hooks/useImg";
+import getAvailabilityText from "../../../../utils/getAvailabilityText";
 
 import styles from "./styles.module.scss";
 
-export default function GalleryItem({ artwork }) {
+export default function GalleryGridItem({ artwork }) {
   const { name, slug, height, width, description, original, prints } = artwork;
   const [imgStatus, onLoad, onError] = useImg();
 
   const availabilityText = getAvailabilityText(original, prints);
 
   return (
-    <li className={clsx(styles.galleryItem, styles[imgStatus])}>
+    <li className={clsx(styles.galleryGridItem, styles[imgStatus])}>
       <Link href={`/art/${slug}`}>
         <picture>
           <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />

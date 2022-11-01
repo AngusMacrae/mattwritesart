@@ -1,0 +1,29 @@
+.galleryFilterRadio {
+  input {
+    display: none;
+
+    &:checked + label {
+      color: white;
+      background-color: black;
+    }
+  }
+
+  label {
+    display: block;
+    padding: 0.15rem 1rem;
+    font-size: 1.15rem;
+    text-transform: capitalize;
+    cursor: pointer;
+    clip-path: polygon(
+      0 0,
+      calc(100% - 0.7rem) 0,
+      100% 50%,
+      calc(100% - 0.7rem) 100%,
+      0 100%
+    );
+
+    &:hover {
+      background-color: #f4f4f4;
+    }
+  }
+}

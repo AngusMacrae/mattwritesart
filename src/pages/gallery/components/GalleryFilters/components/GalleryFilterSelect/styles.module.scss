@@ -1,0 +1,27 @@
+.galleryFilterSelectContainer {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .galleryFilterSelectContainer {
+    flex: 1 0 100px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+    label {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+
+    select {
+      padding: 0.25rem 0.5rem;
+      border-color: black;
+      text-transform: capitalize;
+      background-color: white;
+    }
+  }
+}
