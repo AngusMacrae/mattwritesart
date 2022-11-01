@@ -1,0 +1,38 @@
+@use "../../../../common/styles/mixins";
+
+.artworkInfo {
+  max-width: min(35vw, 380px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @include mixins.flow;
+}
+
+.keyInfoList {
+  list-style: none;
+  margin: 1.2rem 0 0 !important;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  color: #999;
+}
+
+.availability {
+  margin-top: 2.25em;
+  text-transform: uppercase;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+}
+
+.smallprint {
+  margin-top: 0.5em;
+  color: #999;
+}
+
+@media (max-width: 960px) {
+  .artworkInfo {
+    max-width: unset;
+  }
+}

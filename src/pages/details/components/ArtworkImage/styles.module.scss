@@ -1,0 +1,58 @@
+@use "../../../../common/styles/mixins";
+
+.artworkImage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  picture {
+    @include mixins.dropShadow;
+  }
+
+  img {
+    margin: 0 auto;
+    max-width: min(52vw, 900px);
+    max-height: clamp(600px, 50vh, 900px);
+  }
+
+  button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0.5rem 0;
+    transform: translateY(100%);
+    min-width: unset;
+    width: auto;
+    display: flex;
+    gap: 0.15rem;
+    align-items: center;
+    background: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+@media (max-width: 960px) {
+  .artworkImage {
+    img {
+      max-width: min(100%, 675px);
+      max-height: 650px;
+    }
+
+    button {
+      right: 50%;
+      transform: translate(50%, 100%);
+    }
+  }
+}
