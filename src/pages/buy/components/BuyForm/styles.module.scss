@@ -1,0 +1,29 @@
+.buy__options {
+  display: grid;
+  gap: 1rem;
+  gap: clamp(1rem, 2.5vmin, 1.5rem);
+}
+
+@media (max-width: 850px) {
+  .buy__options {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 570px) {
+  .buy__options {
+    grid-template-columns: 1fr;
+  }
+}
+
+.buy__options,
+.instructions {
+  grid-column: span 2;
+}
+
+@media (max-width: 730px) {
+  .buy__options,
+  .instructions {
+    grid-column: span 1;
+  }
+}
