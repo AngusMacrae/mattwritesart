@@ -1,4 +1,6 @@
-.gallery__item {
+@use "../../../../common/styles/mixins";
+
+.galleryItem {
   justify-self: center;
   align-self: center;
   text-align: center;
@@ -17,53 +19,54 @@
   display: none;
 }
 
-.gallery__item a {
+.galleryItem a {
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.2s;
 }
 
-.gallery__item a:hover {
+.galleryItem a:hover {
   text-decoration: none;
   transform: scale(1.02);
 }
 
-.gallery__item picture {
+.galleryItem picture {
   display: flex;
   justify-content: center;
 }
 
-.gallery__item img {
+.galleryItem img {
   max-height: 320px;
   max-width: 90%;
   margin-bottom: 0.5rem;
   width: auto;
+  @include mixins.dropShadow;
   /* opacity: 0;
   transform: scale(0.9);
   transition: opacity 0.9s, transform 0.7s ease; */
 }
 
-/* .gallery__item img.ready {
+/* .galleryItem img.ready {
   opacity: 1;
   transform: scale(1);
 }
 
-.gallery__item img.hidden {
+.galleryItem img.hidden {
   display: none;
 } */
 
 @media (max-width: 530px) {
-  .gallery__item img {
+  .galleryItem img {
     max-height: 450px;
     max-width: 90%;
   }
 }
 
-.gallery__item h2 {
+.galleryItem h2 {
   font-size: 1.25rem;
 }
 
-.gallery__item--availability {
+.availability {
   font-size: 1rem;
 }

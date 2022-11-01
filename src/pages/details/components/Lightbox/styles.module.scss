@@ -1,0 +1,56 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 999;
+  touch-action: none;
+}
+
+.lightbox {
+  position: relative;
+
+  img {
+    max-width: 85vw;
+    max-height: 85vh;
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    padding-left: 0.7rem;
+  }
+
+  button img {
+    height: 45px;
+    width: 45px;
+  }
+}
+
+@media (max-width: 960px) {
+  .lightbox img {
+    max-width: 92vw;
+    max-height: 92vh;
+  }
+}
+
+@media (max-width: 700px) {
+  .lightbox img {
+    max-width: unset;
+    max-height: unset;
+    height: 70vh;
+    width: 90vw;
+    object-fit: cover;
+  }
+}

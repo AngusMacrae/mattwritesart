@@ -2,12 +2,12 @@ import useEffectOnKeyUp from "../../../../common/hooks/useEffectOnKeyUp";
 
 import styles from "./styles.module.scss";
 
-export default function DetailsLightbox({ imageSrc, closeLightbox }) {
+export default function Lightbox({ imageSrc, closeLightbox }) {
   useEffectOnKeyUp("Escape", closeLightbox);
 
   return (
-    <div className={styles["details__lightbox"]} onClick={closeLightbox}>
-      <div className={styles["details__lightbox-content"]}>
+    <div className={styles.overlay} onClick={closeLightbox}>
+      <div className={styles.lightbox}>
         <img
           src={imageSrc}
           alt="Lines of text and negative space forming an image"

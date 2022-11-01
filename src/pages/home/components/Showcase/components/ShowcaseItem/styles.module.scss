@@ -1,4 +1,6 @@
-.showcase__item {
+@use "../../../../../../common/styles/mixins";
+
+.showcaseItem {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,6 +10,32 @@
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 0.9s, transform 0.7s ease;
+  @include mixins.dropShadow;
+
+  h3 {
+    position: absolute;
+    left: -0.2rem;
+    bottom: 0;
+    width: max-content;
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    line-height: 1.25;
+    text-shadow: 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white,
+      0 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white,
+      1px 0 6px white, 1px 0 6px white, -2px 0 6px white, -2px 0 6px white,
+      -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, 0 0 7px white,
+      0 0 8px white, 0 0 9px white;
+    padding: 0.2rem 0.8rem;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  &:hover h3 {
+    opacity: 1;
+  }
 }
 
 .hidden {
@@ -29,39 +57,14 @@
   grid-column-end: span 1;
 }
 
-.showcase__item h3 {
-  position: absolute;
-  left: -0.2rem;
-  bottom: 0;
-  width: max-content;
-  max-width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  font-size: 1rem;
-  line-height: 1.25;
-  text-shadow: 0 0 6px white, 0 0 6px white, 0 0 6px white, 0 0 6px white,
-    0 0 6px white, 1px 0 6px white, 1px 0 6px white, 1px 0 6px white,
-    1px 0 6px white, 1px 0 6px white, -2px 0 6px white, -2px 0 6px white,
-    -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, 0 0 7px white,
-    0 0 8px white, 0 0 9px white;
-  padding: 0.2rem 0.8rem;
-  opacity: 0;
-  transition: opacity 0.2s;
-}
-
-.showcase__item:hover h3 {
-  opacity: 1;
-}
-
 @media (max-width: 950px) {
-  .showcase__item h3 {
+  .showcaseItem h3 {
     display: none;
   }
 }
 
 @media (max-width: 589px) {
-  .showcase__item:not(.spotlight) {
+  .showcaseItem:not(.spotlight) {
     display: none;
   }
 }

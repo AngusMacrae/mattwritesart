@@ -12,12 +12,11 @@ export default function GalleryItem({ artwork }) {
   const availabilityText = getAvailabilityText(original, prints);
 
   return (
-    <li className={clsx(styles["gallery__item"], styles[imgStatus])}>
+    <li className={clsx(styles.galleryItem, styles[imgStatus])}>
       <Link href={`/art/${slug}`}>
         <picture>
           <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
           <img
-            className="shadow"
             src={`/art-images/${slug}.jpg`}
             alt={description}
             height={height * 1000}
@@ -29,9 +28,7 @@ export default function GalleryItem({ artwork }) {
         </picture>
         <div>
           <h2>{name}</h2>
-          <p className={styles["gallery__item--availability"]}>
-            {availabilityText}
-          </p>
+          <p className={styles.availability}>{availabilityText}</p>
         </div>
       </Link>
     </li>

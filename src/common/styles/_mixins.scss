@@ -1,0 +1,32 @@
+@mixin container-l {
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin container-m {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin container-s {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin page-side-padding {
+  padding-left: clamp(1rem, 4vmin, 2rem);
+  padding-right: clamp(1rem, 4vmin, 2rem);
+}
+
+@mixin flow {
+  > * + * {
+    margin-top: 1em;
+  }
+}
+
+@mixin dropShadow {
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.16);
+}

@@ -11,6 +11,7 @@ import art from "../../data/art";
 
 import styles from "./styles.module.scss";
 import Button from "../../common/components/Button/Button";
+import clsx from "clsx";
 
 export default function Buy({ artwork }) {
   const {
@@ -57,7 +58,7 @@ export default function Buy({ artwork }) {
       </Head>
       <Header />
       <main className="buy">
-        <section className="container-thin flow">
+        <section className="container-s flow">
           <h1>{name}</h1>
           <Form name="buy" subject={formSubject}>
             <fieldset className={styles["buy__options"]}>
@@ -87,11 +88,13 @@ export default function Buy({ artwork }) {
                 />
               ) : null}
             </fieldset>
-            <p>
-              To purchase, please fill in your details below. I&apos;ll get back
-              to you ASAP with payment details and to arrange shipping.
-            </p>
-            <p>Thanks so much!</p>
+            <div className={clsx(styles.instructions, "flow")}>
+              <p>
+                To purchase, please fill in your details below. I&apos;ll get
+                back to you ASAP with payment details and to arrange shipping.
+              </p>
+              <p>Thanks so much!</p>
+            </div>
             <input type="text" name="name" placeholder="Your name" required />
             <input
               type="email"

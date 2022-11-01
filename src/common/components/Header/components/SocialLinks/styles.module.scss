@@ -1,0 +1,32 @@
+.socialLinks {
+  display: flex;
+  font-size: 1.25rem;
+  gap: 1rem;
+
+  a {
+    display: block;
+    transition: transform 0.2s;
+
+    &:hover {
+      transform: scale(1.07);
+    }
+  }
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .socialLinks {
+    li {
+      padding: 0.5rem;
+    }
+
+    img {
+      height: 50px;
+      width: 50px;
+    }
+  }
+}

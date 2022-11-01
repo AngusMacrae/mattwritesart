@@ -16,7 +16,7 @@ export default function Contact() {
       </Head>
       <Header />
       <main className="contact">
-        <section className="container-thin flow">
+        <section className="container-s flow">
           <h1>Get in touch</h1>
           <p>
             If you&apos;re interested in commissioning an original piece, have a

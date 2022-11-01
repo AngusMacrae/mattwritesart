@@ -2,9 +2,10 @@ import Head from "next/head";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
 import Showcase from "./components/Showcase/Showcase";
-import About from "./components/About";
-import Faqs from "./components/Faqs";
+import About from "./components/About/About";
+import Faqs from "./components/Faqs/Faqs";
 import LinkButton from "../../common/components/LinkButton/LinkButton";
+import CtaGroup from "../../common/components/CtaGroup/CtaGroup";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       </Head>
       <Header />
       <main className="home">
-        <section className="container-thin standout flow">
+        <section className="container-s standout flow">
           <h1 style={{ display: "none" }}>mattwritesart - Home</h1>
           <p>
             <strong>Hi! I&apos;m matt and I write art.</strong>
@@ -28,24 +29,28 @@ export default function Home() {
             the illusion of distance.
           </p>
         </section>
-        <section className="cta-container">
-          <LinkButton href="/commissions" level="secondary">
-            Commissions
-          </LinkButton>
-          <LinkButton href="/art?clearFilters=true" as="/art">
-            Browse & Buy
-          </LinkButton>
+        <section>
+          <CtaGroup>
+            <LinkButton href="/commissions" level="secondary">
+              Commissions
+            </LinkButton>
+            <LinkButton href="/art?clearFilters=true" as="/art">
+              Browse & Buy
+            </LinkButton>
+          </CtaGroup>
         </section>
         <Showcase />
         <About />
         <Faqs />
-        <section className="cta-container">
-          <LinkButton href="/commissions" level="secondary">
-            Commissions
-          </LinkButton>
-          <LinkButton href="/art?clearFilters=true" as="/art">
-            Browse & Buy
-          </LinkButton>
+        <section>
+          <CtaGroup>
+            <LinkButton href="/commissions" level="secondary">
+              Commissions
+            </LinkButton>
+            <LinkButton href="/art?clearFilters=true" as="/art">
+              Browse & Buy
+            </LinkButton>
+          </CtaGroup>
         </section>
       </main>
       <Footer />

@@ -1,97 +1,57 @@
 @import "reset";
 @import "variables";
+@import "mixins";
 @import "utils";
 @import "base";
 
-.header,
-main,
-.footer {
-  padding-left: 1rem;
-  padding-right: 1rem;
-  padding-left: clamp(1rem, 4vmin, 2rem);
-  padding-right: clamp(1rem, 4vmin, 2rem);
-}
+main {
+  @include page-side-padding;
+  flex-grow: 1;
 
-main section,
-.container-wide {
-  max-width: 1400px;
-  max-width: clamp(1400px, 70vw, 2200px);
-  margin-left: auto;
-  margin-right: auto;
-}
+  section {
+    @include container-l;
+    margin-top: clamp(1.5rem, 6vmin, 10rem);
+    margin-bottom: clamp(1.5rem, 6vmin, 10rem);
 
-.container-med {
-  max-width: 1200px;
-  max-width: clamp(1200px, 50vw, 1600px);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container-thin {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.cta-container {
-  display: flex;
-  justify-content: center;
-}
-
-.cta-container .btn:not(:first-of-type) {
-  margin-left: 2rem;
-}
-
-@media (max-width: 520px) {
-  .cta-container {
-    flex-direction: column;
-  }
-  .cta-container .btn:not(:first-of-type) {
-    margin-left: 0;
-    margin-top: 2rem;
+    &:last-of-type {
+      margin-bottom: clamp(4.5rem, 10vmin, 15rem);
+    }
   }
 }
 
-.nav__page-links .nav__home {
-  display: none;
-}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 1.75rem;
 
-@media (max-width: 960px) {
-  .nav__page-links .nav__home {
-    display: block;
+  textarea[name="message"],
+  button {
+    grid-column: span 2;
   }
-}
 
-.buy form .buy__options,
-.buy form p {
-  grid-column: span 2;
+  button {
+    justify-self: end;
+  }
 }
 
 @media (max-width: 730px) {
-  .buy form .buy__options,
-  .buy form p {
-    grid-column: span 1;
+  form {
+    grid-template-columns: 1fr;
+
+    textarea[name="message"],
+    button {
+      grid-column: span 1;
+    }
+
+    button {
+      width: auto;
+      justify-self: stretch;
+    }
   }
 }
 
-main {
-  flex-grow: 1;
-}
-
-main section {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-  margin-top: clamp(1.5rem, 6vmin, 10rem);
-  margin-bottom: clamp(1.5rem, 6vmin, 10rem);
-}
-
-main section:last-of-type {
-  margin-bottom: 4.5rem;
-  margin-bottom: clamp(4.5rem, 10vmin, 15rem);
-}
-
 .home > section {
-  margin-bottom: 3rem;
   margin-bottom: clamp(3.5rem, 9vmin, 10.5rem);
 }
 
@@ -99,37 +59,15 @@ main section:last-of-type {
   margin-bottom: 0;
 }
 
-.about h3,
-.faqs h3 {
-  margin-top: 2rem;
-  margin-top: clamp(1.5rem, 6vmin, 2.5rem);
-}
-
-.faqs-list {
-  list-style-type: decimal !important;
-  padding-left: 1rem !important;
-}
-
-.commissions .cta-container {
-  margin-bottom: 7.5rem;
-}
-
-@media (max-width: 450px) {
-  .commissions .cta-container {
-    margin-bottom: 4rem;
-  }
-}
-
 .thankyou,
 .error {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
 
-.thankyou img,
-.error img {
-  padding: 1rem;
-  margin: 0 auto;
-  height: 150px;
+  img {
+    padding: 1rem;
+    margin: 0 auto;
+    height: 150px;
+  }
 }

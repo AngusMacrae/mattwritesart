@@ -1,4 +1,5 @@
 import Head from "next/head";
+import CtaGroup from "../../common/components/CtaGroup/CtaGroup";
 import LinkButton from "../../common/components/LinkButton/LinkButton";
 
 export default function Thankyou() {
@@ -13,7 +14,7 @@ export default function Thankyou() {
         <meta name="robots" content="noindex" />
       </Head>
       <main className="thankyou">
-        <section className="container-thin standout flow">
+        <section className="container-s standout flow">
           <img src="/logo/mwa-logo.svg" alt="" />
           <p>
             <strong>Thanks for your enquiry!</strong>
@@ -24,10 +25,16 @@ export default function Thankyou() {
           </p>
           <p>&#128394;</p>
         </section>
-        <section className="cta-container">
-          <LinkButton href="/art?clearFilters=true" as="/art" level="secondary">
-            Browse More Art
-          </LinkButton>
+        <section>
+          <CtaGroup>
+            <LinkButton
+              href="/art?clearFilters=true"
+              as="/art"
+              level="secondary"
+            >
+              Browse More Art
+            </LinkButton>
+          </CtaGroup>
         </section>
       </main>
     </>

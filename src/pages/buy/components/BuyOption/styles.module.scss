@@ -1,3 +1,5 @@
+@use "../../../../common/styles/mixins";
+
 .buy__option {
   position: relative;
   display: flex;
@@ -55,6 +57,7 @@
 .buy__option img {
   max-width: 150px;
   max-height: 150px;
+  @include mixins.dropShadow;
 }
 
 .buy__option--info-container {

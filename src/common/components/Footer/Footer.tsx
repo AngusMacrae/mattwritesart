@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <p className="container-wide">
+      <p>
         <small>
           &#169; mattwritesart {currentYear} | website by{" "}
           <a
@@ -14,7 +14,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             title="Angus Macrae"
-            className="link"
+            className={styles.link}
           >
             Angus Macrae
           </a>

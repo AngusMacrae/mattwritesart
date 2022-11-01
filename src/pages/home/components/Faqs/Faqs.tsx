@@ -1,9 +1,11 @@
+import styles from "./styles.module.scss";
+
 export default function Faqs() {
   return (
-    <section className="faqs container-thin flow">
+    <section className={styles.faqs}>
       <h2>FAQs</h2>
 
-      <ul className="faqs-list">
+      <ul>
         <li>
           <h3>Do you take commissions?</h3>
           <p>

@@ -8,14 +8,15 @@ export default function ShowcaseItem({ artwork }) {
   const { name, slug, spotlight, height, width, description } = artwork;
   const [imgStatus, onLoad, onError] = useImg();
 
+  const isPortrait = height > width;
+
   return (
     <li
       className={clsx(
-        styles["showcase__item"],
-        "shadow",
-        styles[height > width ? "portrait" : "landscape"],
+        styles.showcaseItem,
+        styles[isPortrait ? "portrait" : "landscape"],
         styles[imgStatus],
-        spotlight && "spotlight"
+        spotlight && styles.spotlight
       )}
     >
       <Link href={`/art/${slug}`}>

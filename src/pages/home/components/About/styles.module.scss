@@ -1,0 +1,6 @@
+@use "../../../../common/styles/mixins";
+
+.about {
+  @include mixins.container-s;
+  @include mixins.flow;
+}

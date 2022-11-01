@@ -1,0 +1,17 @@
+.menuToggleButton {
+  display: none;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  top: 9px;
+
+  img {
+    height: 36px;
+  }
+}
+
+@media (max-width: 960px) {
+  .menuToggleButton {
+    display: block;
+  }
+}

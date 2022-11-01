@@ -1,0 +1,27 @@
+.siteTitleWrapperLink {
+  display: flex;
+  align-items: baseline;
+
+  img {
+    width: clamp(25px, 8vmin, 46px);
+    height: clamp(25px, 8vmin, 46px);
+    align-self: center;
+    position: relative;
+    top: 2px;
+  }
+}
+
+.siteTitle {
+  font-size: clamp(1.6rem, 8vmin, 2.6rem);
+  font-weight: bold;
+
+  .deemphasised {
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 600px) {
+  .siteTitleWrapperLink img {
+    display: none;
+  }
+}

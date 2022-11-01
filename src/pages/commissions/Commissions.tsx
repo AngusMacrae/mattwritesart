@@ -1,8 +1,11 @@
 import Head from "next/head";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
-import CommissionsImages from "./components/CommissionsImages/CommissionsImages";
+import SampleImages from "./components/SampleImages/SampleImages";
 import LinkButton from "../../common/components/LinkButton/LinkButton";
+import CtaGroup from "../../common/components/CtaGroup/CtaGroup";
+
+import styles from "./styles.module.scss";
 
 export default function Commissions() {
   return (
@@ -18,9 +21,9 @@ export default function Commissions() {
         />
       </Head>
       <Header />
-      <main className="commissions">
-        <CommissionsImages />
-        <section className="commissions__text-container container-thin flow">
+      <main>
+        <SampleImages />
+        <section className="container-s flow">
           <h1>Commissions</h1>
           <p>
             I love the challenge and joy of commissions. From discussing a new
@@ -38,11 +41,17 @@ export default function Commissions() {
             and prints of any commissioned piece.
           </p>
         </section>
-        <section className="cta-container">
-          <LinkButton href="/art?clearFilters=true" as="/art" level="secondary">
-            View More Art
-          </LinkButton>
-          <LinkButton href="/contact">Commission Original Art</LinkButton>
+        <section className={styles.commissionsCtasContainer}>
+          <CtaGroup>
+            <LinkButton
+              href="/art?clearFilters=true"
+              as="/art"
+              level="secondary"
+            >
+              View More Art
+            </LinkButton>
+            <LinkButton href="/contact">Commission Original Art</LinkButton>
+          </CtaGroup>
         </section>
       </main>
       <Footer />

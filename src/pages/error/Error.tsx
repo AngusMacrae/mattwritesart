@@ -1,4 +1,5 @@
 import Head from "next/head";
+import CtaGroup from "../../common/components/CtaGroup/CtaGroup";
 import LinkButton from "../../common/components/LinkButton/LinkButton";
 
 export default function Error() {
@@ -10,20 +11,22 @@ export default function Error() {
         <meta name="robots" content="noindex" />
       </Head>
       <main className="error">
-        <section className="container-thin standout flow">
+        <section className="container-s standout flow">
           <img src="/logo/mwa-logo-sad.svg" alt="" />
           <p>
             <strong>Oh no! Nothing to see here.</strong>
           </p>
           <p>Would you like to browse some art?</p>
         </section>
-        <section className="cta-container">
-          <LinkButton href="/" level="secondary">
-            Home
-          </LinkButton>
-          <LinkButton href="/art?clearFilters=true" as="/art">
-            Browse Art
-          </LinkButton>
+        <section>
+          <CtaGroup>
+            <LinkButton href="/" level="secondary">
+              Home
+            </LinkButton>
+            <LinkButton href="/art?clearFilters=true" as="/art">
+              Browse Art
+            </LinkButton>
+          </CtaGroup>
         </section>
       </main>
     </>

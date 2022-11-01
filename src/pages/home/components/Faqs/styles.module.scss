@@ -1,0 +1,15 @@
+@use "../../../../common/styles/mixins";
+
+.faqs {
+  @include mixins.container-s;
+  @include mixins.flow;
+
+  ul {
+    list-style-type: decimal !important;
+    padding-left: 1rem !important;
+  }
+
+  h3 {
+    margin-top: clamp(1.5rem, 6vmin, 2.5rem);
+  }
+}

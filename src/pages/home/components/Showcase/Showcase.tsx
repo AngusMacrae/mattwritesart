@@ -7,8 +7,8 @@ export default function Showcase() {
   const filteredArt = art.filter((artwork) => artwork.showcase);
 
   return (
-    <section className={styles["showcase"]}>
-      <ul className={styles["showcase__grid"]}>
+    <section className={styles.showcaseContainer}>
+      <ul className={styles.showcase}>
         {filteredArt.map((artwork) => (
           <ShowcaseItem artwork={artwork} key={artwork.slug} />
         ))}

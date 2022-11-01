@@ -1,3 +1,5 @@
+@use "../../common/styles/mixins";
+
 .details__content {
   display: flex;
   justify-content: center;
@@ -11,6 +13,10 @@
   position: relative;
 }
 
+.details__img-container picture {
+  @include mixins.dropShadow;
+}
+
 .details__img-container img {
   margin: 0 auto;
   max-width: 750px;
@@ -20,6 +26,7 @@
 }
 
 .details__img-container button {
+  padding: 0.5rem 1.5rem;
   position: absolute;
   bottom: 0;
   right: 0;

@@ -1,0 +1,28 @@
+.navLink {
+  p {
+    display: inline;
+    cursor: pointer;
+  }
+
+  a,
+  p {
+    padding: 0.5rem 1rem;
+    position: relative;
+  }
+
+  a::before,
+  p::before {
+    content: "";
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: 0;
+    bottom: 0.35rem;
+    left: 1rem;
+  }
+
+  a:hover::before,
+  p::before {
+    width: calc(100% - 2rem);
+  }
+}

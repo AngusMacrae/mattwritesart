@@ -13,43 +13,26 @@ body {
   flex-direction: column;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: black;
-  border: 1px solid white;
-  padding: 2px;
-}
-
 h1 {
-  font-size: 1.7rem;
   font-size: clamp(1.5rem, 5vmin, 1.9rem);
   line-height: 1.25;
 }
 
 h2 {
-  font-size: 1.4rem;
   font-size: clamp(1.4rem, 4vmin, 1.6rem);
 }
 
 h3 {
-  font-size: 1.15rem;
   font-size: clamp(1.15rem, 3vmin, 1.25rem);
 }
 
 a {
   text-decoration: none;
   color: inherit;
-}
 
-a:hover {
-  text-decoration: none;
-}
-
-a.link:hover {
-  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 fieldset {
@@ -60,6 +43,8 @@ fieldset {
 
 input,
 textarea {
+  padding: 0.4rem 0.7rem;
+  width: 100%;
   border: 1px solid #ddd;
 }
 
@@ -67,44 +52,16 @@ textarea {
   resize: vertical;
 }
 
-form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  margin-top: 1.75rem;
-}
-
-form input,
-form textarea {
-  padding: 0.4rem 0.7rem;
-  width: 100%;
-}
-
-form textarea[name="message"],
-form button {
-  grid-column: span 2;
-}
-
-form button {
-  justify-self: end;
-}
-
 *::placeholder {
   opacity: 0.6;
 }
 
-@media (max-width: 730px) {
-  form {
-    grid-template-columns: 1fr;
-  }
+::-webkit-scrollbar {
+  width: 12px;
+}
 
-  form textarea[name="message"],
-  form button {
-    grid-column: span 1;
-  }
-
-  form button {
-    width: auto;
-    justify-self: stretch;
-  }
+::-webkit-scrollbar-thumb {
+  background: black;
+  border: 1px solid white;
+  padding: 2px;
 }

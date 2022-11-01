@@ -1,6 +1,8 @@
+import styles from "./styles.module.scss";
+
 export default function About() {
   return (
-    <section className="about container-thin flow">
+    <section className={styles.about}>
       <h2>About Me</h2>
       <p>
         I&apos;m matt and I write art! I&apos;ve been creating written drawings

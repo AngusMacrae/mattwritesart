@@ -30,11 +30,7 @@ export default function BuyOption({
       <div className={styles["buy__option--img-container"]}>
         <picture>
           <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
-          <img
-            className="shadow"
-            src={`/art-images/${slug}.jpg`}
-            alt={description}
-          />
+          <img src={`/art-images/${slug}.jpg`} alt={description} />
         </picture>
       </div>
       <div className={styles["buy__option--info-container"]}>

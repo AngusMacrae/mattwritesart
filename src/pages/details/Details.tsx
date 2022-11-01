@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Header from "../../common/components/Header/Header";
 import Footer from "../../common/components/Footer/Footer";
 import MetaData from "../../common/components/MetaData/MetaData";
-import DetailsLightbox from "./components/DetailsLightbox/DetailsLightbox";
+import Lightbox from "./components/Lightbox/Lightbox";
 import useToggle from "../../common/hooks/useToggle";
 import art from "../../data/art";
 
@@ -47,15 +47,11 @@ export default function Details({ artwork }) {
       </Head>
       <Header />
       <main>
-        <section className={clsx(styles["details__content"], "container-med")}>
+        <section className={clsx(styles["details__content"], "container-m")}>
           <div className={styles["details__img-container"]}>
             <picture>
               <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
-              <img
-                className="shadow"
-                src={`/art-images/${slug}.jpg`}
-                alt={description}
-              />
+              <img src={`/art-images/${slug}.jpg`} alt={description} />
             </picture>
             {closeups ? (
               <button onClick={openLightbox}>
@@ -114,7 +110,7 @@ export default function Details({ artwork }) {
           </div>
         </section>
         {lightboxOpen ? (
-          <DetailsLightbox
+          <Lightbox
             imageSrc={`/art-images/close-ups/${slug}_1.jpg`}
             closeLightbox={closeLightbox}
           />
