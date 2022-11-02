@@ -1,12 +1,12 @@
 @use "../../../../../../common/styles/mixins";
 
 .showcaseItem {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  font-size: 1rem;
   padding: 0.5rem;
+  font-size: 1rem;
   opacity: 0;
   transform: scale(0.9);
   transition: opacity 0.9s, transform 0.7s ease;
@@ -16,8 +16,9 @@
     position: absolute;
     left: -0.2rem;
     bottom: 0;
-    width: max-content;
     max-width: 100%;
+    width: max-content;
+    padding: 0.2rem 0.8rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -28,7 +29,6 @@
       1px 0 6px white, 1px 0 6px white, -2px 0 6px white, -2px 0 6px white,
       -2px 0 6px white, -2px 0 6px white, -2px 0 6px white, 0 0 7px white,
       0 0 8px white, 0 0 9px white;
-    padding: 0.2rem 0.8rem;
     opacity: 0;
     transition: opacity 0.2s;
   }
@@ -79,9 +79,4 @@
     grid-row-end: span 4;
     grid-column-end: span 2;
   }
-
-  /* square.spotlight {
-    grid-row-end: span 3;
-    grid-column-end: span 2;
-  } */
 }

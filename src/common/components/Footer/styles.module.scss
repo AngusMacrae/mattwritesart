@@ -2,9 +2,9 @@
 
 .footer {
   @include mixins.page-side-padding;
-  text-align: right;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  text-align: right;
   opacity: 0.5;
 
   p {

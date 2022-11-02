@@ -1,116 +1,107 @@
 @use "../../../../../../common/styles/mixins";
 
-.buy__option {
+.buyOptionRadio {
   position: relative;
   display: flex;
   align-items: center;
-  padding: 1rem;
   padding: clamp(1rem, 3vmin, 2rem);
   border: 1px solid transparent;
+
+  &.selected {
+    border: 1px solid black;
+  }
+
+  &:not(.selected):hover {
+    border: 1px solid #ddd;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+  }
+
+  img {
+    max-width: 150px;
+    max-height: 150px;
+    @include mixins.dropShadow;
+  }
 }
 
-.buy__option.selected {
-  border: 1px solid black;
-}
-
-.buy__option:not(.selected):hover {
-  border: 1px solid #ddd;
-}
-
-.buy__option input {
-  display: none;
-}
-
-.buy__option label {
-  cursor: pointer;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.buy__option .buy__option--selected {
-  display: none;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+.selectedText {
   position: absolute;
   top: -1px;
   right: -1px;
   padding: 0 0.4rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   color: white;
   background-color: black;
 }
 
-.buy__option.selected .buy__option--selected {
-  display: block;
-}
-
-.buy__option--img-container {
+.imgContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   min-width: 0;
 }
 
-.buy__option img {
-  max-width: 150px;
-  max-height: 150px;
-  @include mixins.dropShadow;
-}
-
-.buy__option--info-container {
-  margin-left: 2rem;
-  margin-right: 2rem;
+.infoContainer {
+  flex: 1;
   margin-left: clamp(1rem, 4vmin, 2rem);
   margin-right: clamp(1rem, 4vmin, 2rem);
-  flex: 1;
+
+  table {
+    margin-top: 0.65rem;
+  }
+
+  th,
+  td {
+    padding: 0.2rem 0.8rem 0.2rem 0;
+    font-size: 1rem;
+    line-height: 1.25;
+  }
+
+  th {
+    text-align: right;
+  }
 }
 
-.buy__option--info-container table {
-  margin-top: 0.65rem;
-}
-
-.buy__option--info-container th,
-.buy__option--info-container td {
-  padding: 0.2rem 0.8rem 0.2rem 0;
-  line-height: 1.25;
-}
-
-.buy__option--info-container th {
-  font-size: 1rem;
-  text-align: right;
-}
-
-.buy__option--info-container td {
-  font-size: 1rem;
-}
-
-.buy__option--price {
+.price {
   font-size: 1.35rem;
   font-weight: bold;
 }
 
 @media (max-width: 850px) {
-  .buy__option {
+  .buyOptionRadio {
     flex-direction: column;
     padding-top: 2rem;
+
+    &:only-of-type {
+      grid-column: span 2;
+      width: max-content;
+      max-width: min(100%, 500px);
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
-  .buy__option:only-of-type {
-    grid-column: span 2;
-    width: max-content;
-    max-width: min(100%, 500px);
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .buy__option--info-container {
+
+  .infoContainer {
     margin-left: 0;
     margin-right: 0;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
-  }
-  .buy__option--info-container h2 {
-    text-align: center;
+
+    h2 {
+      text-align: center;
+    }
   }
 }

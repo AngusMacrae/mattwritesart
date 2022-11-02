@@ -16,7 +16,7 @@ export default function BuyOption({
   const inputId = `buy-option-${value}`;
 
   return (
-    <div className={clsx(styles["buy__option"], selected && styles.selected)}>
+    <div className={clsx(styles.buyOptionRadio, selected && styles.selected)}>
       <input
         type="radio"
         name="order"
@@ -26,14 +26,14 @@ export default function BuyOption({
         onChange={handleChange}
       />
       <label htmlFor={inputId}></label>
-      <span className={styles["buy__option--selected"]}>Selected</span>
-      <div className={styles["buy__option--img-container"]}>
+      {selected ? <span className={styles.selectedText}>Selected</span> : null}
+      <div className={styles.imgContainer}>
         <picture>
           <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
           <img src={`/art-images/${slug}.jpg`} alt={description} />
         </picture>
       </div>
-      <div className={styles["buy__option--info-container"]}>
+      <div className={styles.infoContainer}>
         <h2>{caption}</h2>
         <table>
           <tbody>
@@ -52,7 +52,7 @@ export default function BuyOption({
           </tbody>
         </table>
       </div>
-      <div className={styles["buy__option--price"]}>£{price}</div>
+      <div className={styles.price}>£{price}</div>
     </div>
   );
 }

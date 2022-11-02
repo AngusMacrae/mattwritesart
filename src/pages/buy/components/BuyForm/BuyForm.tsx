@@ -1,5 +1,3 @@
-import clsx from "clsx";
-
 import NetlifyContactForm from "../../../../common/components/NetlifyContactForm/NetlifyContactForm";
 import Button from "../../../../common/components/Button/Button";
 import useBuyOptions from "../../hooks/useBuyOptions";
@@ -46,7 +44,7 @@ export default function BuyForm({ artwork }) {
 
   return (
     <NetlifyContactForm name="buy" subject={formSubject}>
-      <fieldset className={styles["buy__options"]}>
+      <fieldset className={styles.buyOptions}>
         {prints ? (
           <BuyOption
             value="print"
@@ -73,7 +71,7 @@ export default function BuyForm({ artwork }) {
           />
         ) : null}
       </fieldset>
-      <div className={clsx(styles.instructions, "flow")}>
+      <div className={styles.instructions}>
         <p>
           To purchase, please fill in your details below. I&apos;ll get back to
           you ASAP with payment details and to arrange shipping.

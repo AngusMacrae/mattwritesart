@@ -5,8 +5,8 @@
   @include mixins.flow;
 
   ul {
-    list-style-type: decimal !important;
     padding-left: 1rem !important;
+    list-style-type: decimal !important;
   }
 
   h3 {

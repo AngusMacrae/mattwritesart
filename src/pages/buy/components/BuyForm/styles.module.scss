@@ -1,28 +1,34 @@
-.buy__options {
+@use "../../../../common/styles/mixins";
+
+.buyOptions {
   display: grid;
   gap: 1rem;
   gap: clamp(1rem, 2.5vmin, 1.5rem);
 }
 
 @media (max-width: 850px) {
-  .buy__options {
+  .buyOptions {
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media (max-width: 570px) {
-  .buy__options {
+  .buyOptions {
     grid-template-columns: 1fr;
   }
 }
 
-.buy__options,
+.buyOptions,
 .instructions {
   grid-column: span 2;
 }
 
+.instructions {
+  @include mixins.flow;
+}
+
 @media (max-width: 730px) {
-  .buy__options,
+  .buyOptions,
   .instructions {
     grid-column: span 1;
   }
