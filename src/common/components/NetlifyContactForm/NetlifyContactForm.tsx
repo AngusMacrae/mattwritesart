@@ -1,7 +1,12 @@
 import { useRef } from "react";
 import { useRouter } from "next/router";
 
-export default function Form({ name, subject, children, className = "" }) {
+export default function NetlifyContactForm({
+  name,
+  subject,
+  children,
+  className = "",
+}) {
   const formRef = useRef();
   const router = useRouter();
 

@@ -1,9 +1,9 @@
-import Form from "../../../common/components/Form/Form";
+import NetlifyContactForm from "../../../common/components/NetlifyContactForm/NetlifyContactForm";
 import Button from "../../../common/components/Button/Button";
 
 export default function ContactForm() {
   return (
-    <Form name="contact" subject="Contact">
+    <NetlifyContactForm name="contact" subject="Contact">
       <input type="text" name="name" placeholder="Your name" required />
       <input type="email" name="email" placeholder="Your email" required />
       <textarea
@@ -13,6 +13,6 @@ export default function ContactForm() {
         required
       ></textarea>
       <Button type="submit">Send!</Button>
-    </Form>
+    </NetlifyContactForm>
   );
 }

@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-import Form from "../../../../common/components/Form/Form";
+import NetlifyContactForm from "../../../../common/components/NetlifyContactForm/NetlifyContactForm";
 import Button from "../../../../common/components/Button/Button";
 import useBuyOptions from "../../hooks/useBuyOptions";
 import getPrintDimensions from "../../utils/getPrintDimensions";
@@ -45,7 +45,7 @@ export default function BuyForm({ artwork }) {
   };
 
   return (
-    <Form name="buy" subject={formSubject}>
+    <NetlifyContactForm name="buy" subject={formSubject}>
       <fieldset className={styles["buy__options"]}>
         {prints ? (
           <BuyOption
@@ -90,6 +90,6 @@ export default function BuyForm({ artwork }) {
       <Button type="submit" onClick={recordPurchase}>
         Send!
       </Button>
-    </Form>
+    </NetlifyContactForm>
   );
 }
