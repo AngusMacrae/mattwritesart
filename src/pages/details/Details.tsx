@@ -1,14 +1,16 @@
 import Head from "next/head";
-import Header from "../../common/components/Header/Header";
-import Footer from "../../common/components/Footer/Footer";
-import MetaData from "../../common/components/MetaData/MetaData";
+
+import Header from "@/common/components/Header/Header";
+import Footer from "@/common/components/Footer/Footer";
+import MetaData from "@/common/components/MetaData/MetaData";
+import useToggle from "@/common/hooks/useToggle";
+import art from "@/data/art";
+
+import ArtworkImage from "./components/ArtworkImage/ArtworkImage";
 import Lightbox from "./components/Lightbox/Lightbox";
-import useToggle from "../../common/hooks/useToggle";
-import art from "../../data/art";
 import ArtworkInfo from "./components/ArtworkInfo/ArtworkInfo";
 
 import styles from "./styles.module.scss";
-import ArtworkImage from "./components/ArtworkImage/ArtworkImage";
 
 export default function Details({ artwork }) {
   const { name, slug, description, closeups } = artwork;

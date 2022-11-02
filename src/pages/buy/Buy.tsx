@@ -1,8 +1,10 @@
 import Head from "next/head";
-import Header from "../../common/components/Header/Header";
-import Footer from "../../common/components/Footer/Footer";
-import MetaData from "../../common/components/MetaData/MetaData";
-import art from "../../data/art";
+
+import Header from "@/common/components/Header/Header";
+import Footer from "@/common/components/Footer/Footer";
+import MetaData from "@/common/components/MetaData/MetaData";
+import art from "@/data/art";
+
 import BuyForm from "./components/BuyForm/BuyForm";
 
 import styles from "./styles.module.scss";

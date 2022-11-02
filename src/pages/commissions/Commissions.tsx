@@ -1,9 +1,11 @@
 import Head from "next/head";
-import Header from "../../common/components/Header/Header";
-import Footer from "../../common/components/Footer/Footer";
+
+import Header from "@/common/components/Header/Header";
+import Footer from "@/common/components/Footer/Footer";
+import CtaGroup from "@/common/components/CtaGroup/CtaGroup";
+import LinkButton from "@/common/components/LinkButton/LinkButton";
+
 import SampleImages from "./components/SampleImages/SampleImages";
-import LinkButton from "../../common/components/LinkButton/LinkButton";
-import CtaGroup from "../../common/components/CtaGroup/CtaGroup";
 
 import styles from "./styles.module.scss";
 

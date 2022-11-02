@@ -1,4 +1,4 @@
-import useFilter from "../../../../hooks/useFilter";
+import useFilter from "src/pages/gallery/hooks/useFilter";
 
 import styles from "./styles.module.scss";
 

@@ -1,9 +1,11 @@
 import Head from "next/head";
-import Header from "../../common/components/Header/Header";
-import Footer from "../../common/components/Footer/Footer";
+
+import Header from "@/common/components/Header/Header";
+import Footer from "@/common/components/Footer/Footer";
+import art, { FILTERS } from "@/data/art";
+
 import GalleryFilters from "./components/GalleryFilters/GalleryFilters";
 import GalleryGrid from "./components/GalleryGrid/GalleryGrid";
-import art, { FILTERS } from "../../data/art";
 
 import styles from "./styles.module.scss";
 

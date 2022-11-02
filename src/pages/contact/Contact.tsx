@@ -1,6 +1,8 @@
 import Head from "next/head";
-import Header from "../../common/components/Header/Header";
-import Footer from "../../common/components/Footer/Footer";
+
+import Header from "@/common/components/Header/Header";
+import Footer from "@/common/components/Footer/Footer";
+
 import ContactForm from "./components/ContactForm";
 
 export default function Contact() {

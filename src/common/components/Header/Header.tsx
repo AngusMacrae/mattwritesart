@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import clsx from "clsx";
-import useToggle from "../../hooks/useToggle";
-import useOnResize from "../../hooks/useOnResize";
+
+import useToggle from "@/common/hooks/useToggle";
+import useOnResize from "@/common/hooks/useOnResize";
 
 import SiteTitle from "./components/SiteTitle/SiteTitle";
 import MenuToggleButton from "./components/MenuToggleButton/MenuToggleButton";

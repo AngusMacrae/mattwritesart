@@ -1,5 +1,6 @@
+import art from "@/data/art";
+
 import ShowcaseItem from "./components/ShowcaseItem/ShowcaseItem";
-import art from "../../../../data/art";
 
 import styles from "./styles.module.scss";
 

@@ -1,6 +1,7 @@
 import Head from "next/head";
-import CtaGroup from "../../common/components/CtaGroup/CtaGroup";
-import LinkButton from "../../common/components/LinkButton/LinkButton";
+
+import CtaGroup from "@/common/components/CtaGroup/CtaGroup";
+import LinkButton from "@/common/components/LinkButton/LinkButton";
 
 export default function Error() {
   return (

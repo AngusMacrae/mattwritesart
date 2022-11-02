@@ -1,6 +1,7 @@
-import Router, { useRouter } from "next/router";
 import React from "react";
-import { SHOW_ALL_FILTER_VALUE } from "../../../common/constants";
+import Router, { useRouter } from "next/router";
+
+import { SHOW_ALL_FILTER_VALUE } from "@/common/constants";
 
 type TFilterTuple = [
   string,

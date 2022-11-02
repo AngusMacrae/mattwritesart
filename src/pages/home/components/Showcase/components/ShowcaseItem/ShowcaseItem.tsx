@@ -1,6 +1,6 @@
 import Link from "next/link";
 import clsx from "clsx";
-import useImg from "../../../../../../common/hooks/useImg";
+import useImg from "@/common/hooks/useImg";
 
 import styles from "./styles.module.scss";
 

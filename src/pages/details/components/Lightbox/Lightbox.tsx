@@ -1,4 +1,4 @@
-import useEffectOnKeyUp from "../../../../common/hooks/useEffectOnKeyUp";
+import useEffectOnKeyUp from "@/common/hooks/useEffectOnKeyUp";
 
 import styles from "./styles.module.scss";
 

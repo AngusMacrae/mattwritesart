@@ -1,4 +1,5 @@
-import { SHOW_ALL_FILTER_VALUE } from "../../../../common/constants";
+import { SHOW_ALL_FILTER_VALUE } from "@/common/constants";
+
 import GalleryFilterRadioGroup from "./components/GalleryFilterRadioGroup/GalleryFilterRadioGroup";
 import GalleryFilterSelect from "./components/GalleryFilterSelect/GalleryFilterSelect";
 

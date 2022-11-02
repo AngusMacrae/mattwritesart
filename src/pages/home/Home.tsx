@@ -1,11 +1,13 @@
 import Head from "next/head";
-import Header from "../../common/components/Header/Header";
-import Footer from "../../common/components/Footer/Footer";
+
+import Header from "@/common/components/Header/Header";
+import Footer from "@/common/components/Footer/Footer";
+import CtaGroup from "@/common/components/CtaGroup/CtaGroup";
+import LinkButton from "@/common/components/LinkButton/LinkButton";
+
 import Showcase from "./components/Showcase/Showcase";
 import About from "./components/About/About";
 import Faqs from "./components/Faqs/Faqs";
-import LinkButton from "../../common/components/LinkButton/LinkButton";
-import CtaGroup from "../../common/components/CtaGroup/CtaGroup";
 
 export default function Home() {
   return (

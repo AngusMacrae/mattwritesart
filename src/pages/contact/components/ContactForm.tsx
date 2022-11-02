@@ -1,5 +1,5 @@
-import NetlifyContactForm from "../../../common/components/NetlifyContactForm/NetlifyContactForm";
-import Button from "../../../common/components/Button/Button";
+import NetlifyContactForm from "@/common/components/NetlifyContactForm/NetlifyContactForm";
+import Button from "@/common/components/Button/Button";
 
 export default function ContactForm() {
   return (

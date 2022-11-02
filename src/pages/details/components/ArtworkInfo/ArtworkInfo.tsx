@@ -1,4 +1,4 @@
-import LinkButton from "../../../../common/components/LinkButton/LinkButton";
+import LinkButton from "@/common/components/LinkButton/LinkButton";
 
 import styles from "./styles.module.scss";
 

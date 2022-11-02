@@ -1,8 +1,9 @@
-import NetlifyContactForm from "../../../../common/components/NetlifyContactForm/NetlifyContactForm";
-import Button from "../../../../common/components/Button/Button";
+import * as ga from "@/lib/ga";
+import NetlifyContactForm from "@/common/components/NetlifyContactForm/NetlifyContactForm";
+import Button from "@/common/components/Button/Button";
+
 import useBuyOptions from "../../hooks/useBuyOptions";
 import getPrintDimensions from "../../utils/getPrintDimensions";
-import * as ga from "../../../../lib/ga";
 
 import BuyOption from "./components/BuyOption/BuyOption";
 
