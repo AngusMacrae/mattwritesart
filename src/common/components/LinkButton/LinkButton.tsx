@@ -5,16 +5,16 @@ import clsx from "clsx";
 import styles from "../Button/styles.module.scss";
 
 interface IProps {
-  level?: "primary" | "secondary";
   href: string;
   as?: string;
+  level?: "primary" | "secondary";
 }
 
 export default function LinkButton({
   children,
-  level = "primary",
-  as,
   href,
+  as,
+  level = "primary",
 }: PropsWithChildren<IProps>) {
   return (
     <Link href={href} as={as} className={clsx(styles.button, styles[level])}>
