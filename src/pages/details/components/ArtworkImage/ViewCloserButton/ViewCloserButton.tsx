@@ -1,3 +1,4 @@
+import { ICONS } from "@/common/constants";
 import useToggle from "@/common/hooks/useToggle";
 
 import Lightbox from "../Lightbox/Lightbox";
@@ -8,7 +9,7 @@ export default function ViewCloserButton({ slug }) {
   return (
     <>
       <button onClick={openLightbox}>
-        <img src="/icons/magnifying-glass.svg" alt="" />
+        <img src={ICONS.MAGNIFY} alt="" />
         View Closer
       </button>
       {lightboxOpen ? (

@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import CtaGroup from "@/common/components/CtaGroup/CtaGroup";
 import LinkButton from "@/common/components/LinkButton/LinkButton";
+import { LOGOS } from "@/common/constants";
 
 export default function Error() {
   return (
@@ -13,7 +14,7 @@ export default function Error() {
       </Head>
       <main className="error">
         <section className="container-s standout flow">
-          <img src="/logo/mwa-logo-sad.svg" alt="" />
+          <img src={LOGOS.MWA_FACE_SAD} alt="" />
           <p>
             <strong>Oh no! Nothing to see here.</strong>
           </p>

@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import CtaGroup from "@/common/components/CtaGroup/CtaGroup";
 import LinkButton from "@/common/components/LinkButton/LinkButton";
+import { LOGOS } from "@/common/constants";
 
 export default function Thankyou() {
   return (
@@ -16,7 +17,7 @@ export default function Thankyou() {
       </Head>
       <main className="thankyou">
         <section className="container-s standout flow">
-          <img src="/logo/mwa-logo.svg" alt="" />
+          <img src={LOGOS.MWA_FACE} alt="" />
           <p>
             <strong>Thanks for your enquiry!</strong>
           </p>

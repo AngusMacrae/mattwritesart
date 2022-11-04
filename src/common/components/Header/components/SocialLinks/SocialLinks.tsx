@@ -1,15 +1,17 @@
+import { ICONS } from "@/common/constants";
+
 import styles from "./styles.module.scss";
 
 const links = [
   {
     url: "https://www.instagram.com/mattwritesart/",
-    urlTitle: "Instagram",
-    iconImgSrc: "/icons/instagram.svg",
+    title: "Instagram",
+    iconSrc: ICONS.INSTAGRAM,
   },
   {
     url: "https://www.facebook.com/mattwritesart/",
-    urlTitle: "Facebook",
-    iconImgSrc: "/icons/facebook.svg",
+    title: "Facebook",
+    iconSrc: ICONS.FACEBOOK,
   },
 ];
 
@@ -18,14 +20,14 @@ export default function SocialLinks() {
     <ul className={styles.socialLinks}>
       {links.map((link) => {
         return (
-          <li key={link.urlTitle}>
+          <li key={link.title}>
             <a
               href={link.url}
-              title={link.urlTitle}
+              title={link.title}
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img src={link.iconImgSrc} alt="" />
+              <img src={link.iconSrc} alt="" />
             </a>
           </li>
         );
