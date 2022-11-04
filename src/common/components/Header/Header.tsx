@@ -13,17 +13,13 @@ import SocialLinks from "./components/SocialLinks/SocialLinks";
 import styles from "./styles.module.scss";
 
 export default function Header() {
-  const router = useRouter();
+  const { pathname } = useRouter();
+
   const [menuOpen, , closeMenu, toggleMenu] = useToggle(false);
+
   useOnResize(closeMenu);
 
-  useEffect(() => {
-    router.events.on("routeChangeStart", closeMenu);
-
-    return () => {
-      router.events.off("routeChangeStart", closeMenu);
-    };
-  }, [closeMenu, router.events]);
+  useEffect(closeMenu, [closeMenu, pathname]);
 
   return (
     <header className={styles.stickyHeader}>
@@ -33,7 +29,7 @@ export default function Header() {
           <MenuToggleButton onClick={toggleMenu} menuOpen={menuOpen} />
         </div>
         <nav className={clsx(styles.navSection, menuOpen && styles.active)}>
-          <SiteNav closeMenu={closeMenu} currentPath={router.pathname} />
+          <SiteNav closeMenu={closeMenu} currentPath={pathname} />
           <SocialLinks />
         </nav>
       </div>

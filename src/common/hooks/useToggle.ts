@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 type TReturn = [
   isActive: boolean,
@@ -10,18 +10,17 @@ type TReturn = [
 export default function useToggle(initialState = false): TReturn {
   const [isActive, setIsActive] = useState(initialState);
 
-  function activate() {
+  const activate = useCallback(() => {
     setIsActive(true);
-  }
+  }, []);
 
-  function deactivate() {
-    console.log("clicked");
+  const deactivate = useCallback(() => {
     setIsActive(false);
-  }
+  }, []);
 
-  function toggle() {
-    setIsActive((prevState) => !prevState);
-  }
+  const toggle = useCallback(() => {
+    setIsActive((prev) => !prev);
+  }, []);
 
   return [isActive, activate, deactivate, toggle];
 }
