@@ -6,8 +6,8 @@ export default function ArtworkImage({ slug, description, closeups }) {
   return (
     <div className={styles.artworkImage}>
       <picture>
-        <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
-        <img src={`/art-images/${slug}.jpg`} alt={description} />
+        <source srcSet={`/assets/images/art/${slug}.webp`} type="image/webp" />
+        <img src={`/assets/images/art/${slug}.jpg`} alt={description} />
       </picture>
       {closeups ? <ViewCloserButton slug={slug} /> : null}
     </div>

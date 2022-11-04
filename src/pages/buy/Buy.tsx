@@ -19,7 +19,7 @@ export default function Buy({ artwork }) {
           title={`${name} - mattwritesart`}
           description={description}
           url={`/art/${slug}`}
-          image={`/art-images/${slug}.jpg`}
+          image={`/assets/images/art/${slug}.jpg`}
         />
       </Head>
       <Header />

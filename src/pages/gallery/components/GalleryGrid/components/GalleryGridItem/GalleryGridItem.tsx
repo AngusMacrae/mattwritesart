@@ -15,9 +15,12 @@ export default function GalleryGridItem({ artwork }) {
     <li className={clsx(styles.galleryGridItem, styles[imgStatus])}>
       <Link href={`/art/${slug}`}>
         <picture>
-          <source srcSet={`/art-images/${slug}.webp`} type="image/webp" />
+          <source
+            srcSet={`/assets/images/art/${slug}.webp`}
+            type="image/webp"
+          />
           <img
-            src={`/art-images/${slug}.jpg`}
+            src={`/assets/images/art/${slug}.jpg`}
             alt={description}
             height={height * 1000}
             width={width * 1000}

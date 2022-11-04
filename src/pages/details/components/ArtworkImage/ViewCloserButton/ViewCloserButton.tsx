@@ -14,7 +14,7 @@ export default function ViewCloserButton({ slug }) {
       </button>
       {lightboxOpen ? (
         <Lightbox
-          imageSrc={`/art-images/close-ups/${slug}_1.jpg`}
+          imageSrc={`/assets/images/art/closeups/${slug}_1.jpg`}
           closeLightbox={closeLightbox}
         />
       ) : null}
