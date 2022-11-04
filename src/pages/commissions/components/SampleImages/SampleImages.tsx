@@ -1,22 +1,22 @@
-import clsx from "clsx";
+import Image from "next/image";
+
+import peteDoherty from "public/assets/images/art/pete-doherty.webp";
+import bjoernGelotte from "public/assets/images/art/bjoern-gelotte.webp";
+import frankTurner from "public/assets/images/art/frank-turner-3.webp";
 
 import styles from "./styles.module.scss";
 
 export default function SampleImages() {
   return (
     <section className={styles.sampleImages}>
-      <picture>
-        <source srcSet="/art-images/pete-doherty.webp" type="image/webp" />
-        <img src="/art-images/pete-doherty.jpg" alt="Pete Doherty" />
-      </picture>
-      <picture>
-        <source srcSet="/art-images/bjoern-gelotte.webp" type="image/webp" />
-        <img src="/art-images/bjoern-gelotte.jpg" alt="Bjoern Gelotte" />
-      </picture>
-      <picture>
-        <source srcSet="/art-images/frank-turner-3.webp" type="image/webp" />
-        <img src="/art-images/frank-turner-3.jpg" alt="Frank Turner" />
-      </picture>
+      <Image src={peteDoherty} alt="Pete Doherty" placeholder="blur" />
+      <Image
+        src={bjoernGelotte}
+        alt="Bjoern Gelotte"
+        placeholder="blur"
+        priority
+      />
+      <Image src={frankTurner} alt="Frank Turner" placeholder="blur" />
     </section>
   );
 }
