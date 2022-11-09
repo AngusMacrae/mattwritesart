@@ -3,7 +3,7 @@ import Head from "next/head";
 import Header from "@/common/components/Header/Header";
 import Footer from "@/common/components/Footer/Footer";
 import MetaData from "@/common/components/MetaData/MetaData";
-import art from "@/data/art";
+import { getAllArt, getArtworkBySlug } from "@/models/art";
 
 import BuyForm from "./components/BuyForm/BuyForm";
 
@@ -35,8 +35,9 @@ export default function Buy({ artwork }) {
 }
 
 export async function getStaticPaths() {
-  const paths = art.map((artwork) => {
-    return { params: { slug: artwork.slug } };
+  const art = getAllArt();
+  const paths = art.map(({ slug }) => {
+    return { params: { slug } };
   });
 
   return {
@@ -46,7 +47,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const artwork = art.find((item) => item.slug === params.slug);
+  const artwork = getArtworkBySlug(params.slug);
 
   return {
     props: {

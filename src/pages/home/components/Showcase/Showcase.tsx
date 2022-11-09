@@ -1,10 +1,8 @@
-import art from "@/data/art";
-
 import ShowcaseItem from "./components/ShowcaseItem/ShowcaseItem";
 
 import styles from "./styles.module.scss";
 
-export default function Showcase() {
+export default function Showcase({ art }) {
   const filteredArt = art.filter((artwork) => artwork.showcase);
 
   return (

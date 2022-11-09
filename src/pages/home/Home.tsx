@@ -4,12 +4,13 @@ import Header from "@/common/components/Header/Header";
 import Footer from "@/common/components/Footer/Footer";
 import CtaGroup from "@/common/components/CtaGroup/CtaGroup";
 import LinkButton from "@/common/components/LinkButton/LinkButton";
+import { getAllArt } from "@/models/art";
 
 import Showcase from "./components/Showcase/Showcase";
 import About from "./components/About/About";
 import Faqs from "./components/Faqs/Faqs";
 
-export default function Home() {
+export default function Home({ art }) {
   return (
     <>
       <Head>
@@ -39,7 +40,7 @@ export default function Home() {
             <LinkButton href="/art">Browse & Buy</LinkButton>
           </CtaGroup>
         </section>
-        <Showcase />
+        <Showcase art={art} />
         <About />
         <Faqs />
         <section>
@@ -54,4 +55,14 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const art = getAllArt();
+
+  return {
+    props: {
+      art,
+    },
+  };
 }

@@ -1,1 +1,1 @@
-export { default } from "@/pages/gallery/Gallery";
+export { default, getStaticProps } from "@/pages/gallery/Gallery";
