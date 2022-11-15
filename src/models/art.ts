@@ -1,4 +1,5 @@
-import { ART, FILTERS } from "@/data";
+import { SHOW_ALL_FILTER_VALUE } from "@/common/constants";
+import { ART } from "@/data";
 
 export function getAllArt() {
   return ART;
@@ -9,5 +10,16 @@ export function getArtworkBySlug(slug) {
 }
 
 export function getAllFilters() {
-  return FILTERS;
+  const allCategoryTags = ART.map((artwork) => artwork.tags)
+    .flat()
+    .filter((tag) => tag !== "");
+
+  const uniqueCategories = [...new Set(allCategoryTags)];
+
+  const filters = {
+    availability: [SHOW_ALL_FILTER_VALUE, "original", "prints"],
+    category: [SHOW_ALL_FILTER_VALUE, ...uniqueCategories],
+  };
+
+  return filters;
 }

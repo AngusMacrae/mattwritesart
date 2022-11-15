@@ -1,5 +1,3 @@
-import { SHOW_ALL_FILTER_VALUE } from "@/common/constants";
-
 import GalleryFilterRadioGroup from "./components/GalleryFilterRadioGroup/GalleryFilterRadioGroup";
 import GalleryFilterSelect from "./components/GalleryFilterSelect/GalleryFilterSelect";
 
@@ -15,14 +13,8 @@ export default function GalleryFilters({ filters }: IProps) {
       <div className={styles.galleryFiltersContainer}>
         {Object.entries(filters).map(([name, values]) => (
           <div className={styles.galleryFilter} key={name}>
-            <GalleryFilterRadioGroup
-              filterName={name}
-              filterValues={[SHOW_ALL_FILTER_VALUE, ...values]}
-            />
-            <GalleryFilterSelect
-              filterName={name}
-              filterValues={[SHOW_ALL_FILTER_VALUE, ...values]}
-            />
+            <GalleryFilterRadioGroup filterName={name} filterValues={values} />
+            <GalleryFilterSelect filterName={name} filterValues={values} />
           </div>
         ))}
       </div>
