@@ -9,13 +9,13 @@ export default function GalleryGrid({ art }) {
     query: { availability, category },
   } = useRouter();
 
-  const filteredArt = art
-    .filter((artwork) => {
-      return availability ? artwork[availability as string] : true;
-    })
-    .filter((artwork) => {
-      return category ? artwork.tags.includes(category) : true;
-    });
+  const filteredArt = art.filter((artwork) => {
+    const isAvailabilityMatch =
+      !availability || artwork[availability as string];
+    const isCategoryMatch = !category || artwork.tags.includes(category);
+
+    return isAvailabilityMatch && isCategoryMatch;
+  });
 
   return filteredArt.length ? (
     <ul className={styles.galleryGrid}>
